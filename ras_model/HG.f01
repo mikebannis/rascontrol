@@ -1,0 +1,88 @@
+Flow Title=Harvard Gulch_FU_Calibrated_FP
+Program Version=4.10
+Number of Profiles= 4 
+Profile Names=10-yr,50-yr,100-yr,500-yr
+River Rch & RM=HG,02              ,16790   
+     866    1627    2003    2619
+River Rch & RM=HG,02              ,15889   
+     887    1677    2068    2716
+River Rch & RM=HG,02              ,15212   
+     957    1817    2242    2954
+River Rch & RM=HG,02              ,13998   
+    1006    1927    2388    3144
+River Rch & RM=HG,02              ,12634   
+    1216    2405    3016    4006
+River Rch & RM=HG,02              ,11493   
+    1302    2567    3190    4337
+River Rch & RM=HG,02              ,8457    
+    1346    2663    3300    4463
+River Rch & RM=HG,02              ,7289    
+    1457    2873    3559    4747
+River Rch & RM=HG,02              ,7258    
+    1393    1170    1570    2150
+River Rch & RM=HG,02              ,7227    
+    1393    1780    2060    2150
+River Rch & RM=HG,02              ,7159    
+    1393    1780    1823    2150
+River Rch & RM=HG,02              ,7114    
+    1393    1780    1823    1920
+River Rch & RM=HG,01              ,5221    
+    1995    3905    4894    6385
+River Rch & RM=HG Split,01              ,2122    
+      64    1703    1989    2597
+River Rch & RM=HG Split,01              ,2089    
+      64    1093    1499    2597
+River Rch & RM=HG Split,01              ,2016    
+      64    1093    1736    2597
+River Rch & RM=HG Split,01              ,1966    
+      64    1093    1736    2827
+Boundary for River Rch & Prof#=HG,02              , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG,02              , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG,02              , 3 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG,02              , 4 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG,01              , 1 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5303.67
+Boundary for River Rch & Prof#=HG,01              , 2 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5305.92
+Boundary for River Rch & Prof#=HG,01              , 3 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5306.36
+Boundary for River Rch & Prof#=HG,01              , 4 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5306.89
+Boundary for River Rch & Prof#=HG Split,01              , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG Split,01              , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG Split,01              , 3 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=HG Split,01              , 4 
+Up Type= 0 
+Dn Type= 0 
+Gate Openings=HG,02,4100    ,Gate #1     ,
+       4       1       4       1       4       1       4       1
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 
