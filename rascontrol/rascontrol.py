@@ -280,7 +280,7 @@ class RasController(object):
 
 def main():
     rc = RasController()
-    rc.open_project('x:/python/rascontroller/ras_model/HG.prj')
+    rc.open_project('x:/python/rascontroller/rascontrol/models/HG.prj')
     #rc.open_project('x:/python/rascontroller/ras_model/GHC.prj')
 
     plans = rc.get_plans()
