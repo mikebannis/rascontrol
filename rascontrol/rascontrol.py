@@ -12,10 +12,29 @@ STA_WS_RGT = 37
 RIGHT_STA = 264  # right station of a XS
 LEFT_STA = 263  # left station of a XS
 
+DEBUG = False
 
-class LockedPlan(Exception):
+class RCException(Exception):
+    """ Base class for all rascontrol exceptions """
     pass
 
+class RASOpen(RCException):
+    """ rascontrol won't currently run if RAS is already open """
+    pass
+
+class LockedPlan(RCException):
+    pass
+
+
+class Plan(object):
+    """ Holds information for a plan """
+    def __init__(self, name, rc):
+        self.name = name  # Plan name, string
+        self.filename = None  # Still working on this one
+        self.rc = rc   # RasController object
+
+    def __repr__(self):
+        return 'Plan name = "'+self.name + '"'
 
 class Profile(object):
     def __init__(self, name, code, rc):
@@ -104,13 +123,44 @@ class Node(object):
 
 
 class RasController(object):
+    """
+    Opens, runs, and retrieves information from HEC-RAS. Checks if RAS is open during __init__(). If open, raises RASOpen.
+
+    Methods -
+        close(self): - Closes RAS, not implemented yet, will only work in RAS5
+
+        def get_current_plan(self): Returns current plan as Plan object
+
+        def get_plans(self, basedir=None): Returns plans in current project as list of Plan objects
+            :param basedir: ???? unknown
+
+        def run_current_plan(self): Runs current plan in RAS
+
+        def set_plan(self, plan): Sets current plan in RAS, plan is Plan object from get_plans()
+            :param plan: Plan object
+
+        def get_profiles(self): Returns list of all profiles as Profile objects
+
+        def get_rivers(self): Returns list of all rivers as River objects
+
+        def is_output_current(self, plan, show=False): Returns True if output is up to date for plan (Plan object)
+            :param plan: string, name of plan to check
+            :param show: boolean - whether or not to show the window
+
+        def open_project(self, project): Opens project in RAS
+            :param project: string - full path to RAS project file (*.prj)
+
+        def show(self): Makes RAS window visible
+    """
+
     def __init__(self):
         # See if RAS is open and abort if so
         if True:
             for p in psutil.process_iter():
                 try:
                     if p.name() == 'ras.exe':
-                        sys.exit('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
+                        raise RASOpen('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
+                        #sys.exit('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
                 except psutil.Error:
                     pass
 
@@ -119,6 +169,19 @@ class RasController(object):
         self.com_rc = win32com.client.DispatchEx('RAS41.HECRASController')
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
     
+    def open_project(self, project):
+        """
+        Opens project in RAS
+        :param project: string - full path to RAS project file (*.prj)
+        """
+        self.com_rc.Project_Open(project)
+
+    def show(self):
+        """
+        Makes RAS window visible
+        """
+        self.com_rc.ShowRas()
+
     def close(self):
         """
         closes RAS
@@ -134,15 +197,35 @@ class RasController(object):
         :return: string
         """
         pass
-    
+ 
+    # TODO - Add plan filename to plan objects
     def get_plans(self, basedir=None):
         """
-        returns list of plan names
+        returns list of Plan objects
         :param basedir: ???? unknown
         :return: list of strings
         """
-        _, names, _ = self.com_rc.Plan_Names(None, None, basedir)
-        return names
+        a, names, b = self.com_rc.Plan_Names(None, None, basedir)
+        # a appears to be number of plans
+        # names is a list of plan names (NOT filenames)
+        # b is a boolean, typically false, not sure what it represents
+        # print '>>>', a, names, b
+        plans = []
+        for name in names:
+            temp_plan = Plan(name, self)
+            plans.append(temp_plan)
+        return plans
+
+    def set_plan(self, plan):
+        """
+        Sets current plan in RAS
+        :param plan: Plan object of plan to use
+        """
+        # Check if get_profiles() has already been run
+        if self._plan_lock:
+            raise LockedPlan('The plan can not be changed after running get_profiles(). I don\'t know why')
+        self.com_rc.Plan_SetCurrent(plan.name)
+        self.com_rc.PlanOutput_SetCurrent(plan.name)
 
     def run_current_plan(self):
         """
@@ -152,17 +235,7 @@ class RasController(object):
         status, _, messages = self.com_rc.Compute_CurrentPlan(None, None)
         return status, messages
 
-    def set_plan(self, plan):
-        """
-        Sets current plan in RAS
-        :param plan: string - name of plan to use
-        """
-        # Check if get_profiles() has already been run
-        if self._plan_lock:
-            raise LockedPlan('The plan can not be changed after running get_profiles(). I don\'t know why')
-        self.com_rc.Plan_SetCurrent(plan)
-        self.com_rc.PlanOutput_SetCurrent(plan)
-
+    
     def get_profiles(self):
         """
         Returns list of all profiles as Profile objects
@@ -192,31 +265,22 @@ class RasController(object):
         return rivers
 
     #----------------------   
-    # is_output_current() does not appear to work!!!!
+    # There was a note from before that is_output_current() wasn't working
+    # It appears to be working now (3/30/17 MJB)
     #----------------------
     def is_output_current(self, plan, show=False):
         """
         Returns True if output matches plan
-        :param plan: string, name of plan to check
+        :param plan: Plan object of plan to check
         :param show: boolean - whether or not to show the window
         :return: boolean, string (error messages)
         """
-        result, plan_name, unknown_bool, message = self.com_rc.PlanOutput_IsCurrent(plan, show, None)
-        print (unknown_bool, message)
+        result, plan_name, unknown_bool, message = self.com_rc.PlanOutput_IsCurrent(plan.name, show, None)
+        if DEBUG:
+            print '>>> In is_output_current'
+            print '>>>', (result, unknown_bool, message)
         return result, message
 
-    def open_project(self, project):
-        """
-        Opens project in RAS
-        :param project: string - full path to RAS project file (*.prj)
-        """
-        self.com_rc.Project_Open(project)
-
-    def show(self):
-        """
-        Makes RAS window visible
-        """
-        self.com_rc.ShowRas()
 
     # Methods below here are semi-private and are intended to be called from the River, Reach, and Node classes
     def output_getnodes(self, river_id, reach_id):
@@ -284,16 +348,36 @@ def main():
     #rc.open_project('c:/python/rascontroller/ras_model/GHC.prj')
 
     plans = rc.get_plans()
-    print '***************Plans', plans
-    print 'current plan at start', rc._current_plan_file()
+    print '***************Plans', plans  # returns plan names
+    print 'current plan at start', rc._current_plan_file(), '\n'
     plan = plans[0]
-    print plan
-    #rc.set_plan(plan)
+    print 'setting plan to',plan
+    rc.set_plan(plan)
+    
+    result, message = rc.is_output_current(plan, show=True)
+    print 'is output current?', result
+    
+    print '\nrunning current plan...'
+    print rc.run_current_plan()
+    result, message = rc.is_output_current(plan, show=True)
+    print 'Ran. is output current?', result
+    
+    plan = plans[1]
+    print '\nsetting plan to',plan
+    rc.set_plan(plan)
+    
     print 'current plan after set_plan()', rc._current_plan_file()
     result, message = rc.is_output_current(plan, show=True)
-    print result
+    print 'is output current?', result
+    
+    print '\nrunning current plan...'
+    print rc.run_current_plan()
+    result, message = rc.is_output_current(plan, show=True)
+    print 'Ran. is output current?', result
+    sys.exit()
+
     otherterm = rc.get_profiles()
-    print otherterm
+    print 'profiles in current plan', otherterm
     print
     """
     the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
@@ -306,6 +390,7 @@ def main():
     plan = plans[0]
     print plan
     rc.set_plan(plan)
+
     print 'current plan after set_plan()', rc._current_plan_file()
     result, message = rc.is_output_current(plan, show=True)
     print result

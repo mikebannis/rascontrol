@@ -2,5 +2,5 @@ Steady Flow Simulation Version 4.1.0 Jan 2010
 Finished Steady Flow Simulation
 
 Task	Time
-Complete Process	2.42 sec
+Complete Process	1.97 sec
 
