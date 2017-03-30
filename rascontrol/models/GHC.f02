@@ -1,0 +1,210 @@
+Flow Title=GHC_0.5_Floodway
+Program Version=4.10
+Number of Profiles= 2 
+Profile Names=100-yr,0.5 Floodway
+River Rch & RM=104th Ave Trib,104th Ave Trib  ,302139  
+     173     173
+River Rch & RM=104th Ave Trib,104th Ave Trib  ,301030  
+     187     187
+River Rch & RM=Grant Overflow,Grant Overflow  ,929084  
+     271     271
+River Rch & RM=Gravel Pond Splt,Gravel Pond Splt,804726  
+     773     773
+River Rch & RM=Gravel Pond Splt,Gravel Pond Splt,803548  
+    1094    1094
+River Rch & RM=Gravel Pond Splt,Gravel Pond Splt,802563  
+     791     791
+River Rch & RM=Larson Split,Larson Split    ,703527  
+     884     884
+River Rch & RM=Larson Split,Larson Split    ,701202  
+    1780    1780
+River Rch & RM=Mainstem,Upper Upper     ,130430  
+     329     329
+River Rch & RM=Mainstem,Upper Upper     ,129185  
+    1006    1006
+River Rch & RM=Mainstem,Upper           ,128299  
+    1006    1006
+River Rch & RM=Mainstem,Upper           ,125667  
+    1249    1249
+River Rch & RM=Mainstem,Thomas Park     ,124928  
+    1249    1249
+River Rch & RM=Mainstem,Thomas Park     ,123665  
+    1354    1354
+River Rch & RM=Mainstem,Railroad        ,122757  
+    2131    2131
+River Rch & RM=Mainstem,Railroad        ,121126  
+    1143    1143
+River Rch & RM=Mainstem,Fox Run         ,119280  
+    1422    1422
+River Rch & RM=Mainstem,Carpenter       ,116455  
+    2216    2216
+River Rch & RM=Mainstem,Middle          ,109697  
+    2402    2402
+River Rch & RM=Mainstem,Valente         ,108794  
+    2614    2614
+River Rch & RM=Mainstem,Valente         ,104578  
+    2705    2705
+River Rch & RM=Mainstem,Valente         ,102314  
+    1821    1821
+River Rch & RM=Mainstem,Valente         ,101727  
+    1047    1047
+River Rch & RM=Mainstem,Valente         ,101188  
+     727     727
+River Rch & RM=Mainstem,Valente         ,100675  
+    1029    1029
+River Rch & RM=Mainstem,Valente         ,100476  
+     141     141
+River Rch & RM=Marion Overflow,Marion Overflow ,925607  
+    1095    1095
+River Rch & RM=North Trib,North Trib      ,502415  
+     462     462
+River Rch & RM=Northeast Trib,Northeast Trib  ,407785  
+     221     221
+River Rch & RM=Northeast Trib,Northeast Trib  ,405373  
+     625     625
+River Rch & RM=Northeast Trib,Northeast Trib  ,401666  
+     999     999
+River Rch & RM=Riverdale Trib,Riverdale Trib  ,204952  
+     474     474
+River Rch & RM=Riverdale Trib,Riverdale Trib  ,204163  
+     106     106
+River Rch & RM=Riverdale Trib,Riverdale Trib  ,201258  
+     217     217
+River Rch & RM=South Trib,South Trib      ,609984  
+    1085    1085
+River Rch & RM=South Trib,South Trib      ,607638  
+    1247    1247
+River Rch & RM=South Trib,South Trib      ,601742  
+    1208    1208
+Boundary for River Rch & Prof#=104th Ave Trib,104th Ave Trib  , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=104th Ave Trib,104th Ave Trib  , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Grant Overflow,Grant Overflow  , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Grant Overflow,Grant Overflow  , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Gravel Pond Splt,Gravel Pond Splt, 1 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5048.4
+Boundary for River Rch & Prof#=Gravel Pond Splt,Gravel Pond Splt, 2 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5048.4
+Boundary for River Rch & Prof#=Larson Split,Larson Split    , 1 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5041.7
+Boundary for River Rch & Prof#=Larson Split,Larson Split    , 2 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5041.7
+Boundary for River Rch & Prof#=Mainstem,Upper Upper     , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Upper Upper     , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Upper           , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Upper           , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Thomas Park     , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Thomas Park     , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Railroad        , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Railroad        , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Fox Run         , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Fox Run         , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Carpenter       , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Carpenter       , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Middle          , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Middle          , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Mainstem,Valente         , 1 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5043.8
+Boundary for River Rch & Prof#=Mainstem,Valente         , 2 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=5043.8
+Boundary for River Rch & Prof#=Marion Overflow,Marion Overflow , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Marion Overflow,Marion Overflow , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=North Trib,North Trib      , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=North Trib,North Trib      , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Northeast Trib,Northeast Trib  , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Northeast Trib,Northeast Trib  , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Riverdale Trib,Riverdale Trib  , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Riverdale Trib,Riverdale Trib  , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=South Trib,South Trib      , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=South Trib,South Trib      , 2 
+Up Type= 0 
+Dn Type= 0 
+Set Internal Change=Mainstem        ,Upper           ,127887  , 2 , 3 ,5290.31
+Set Internal Change=Mainstem        ,Upper           ,127887  , 1 , 3 ,5290.31
+Set Internal Change=Mainstem        ,Railroad        ,122424  , 2 , 3 ,5229.64
+Set Internal Change=Mainstem        ,Railroad        ,122424  , 1 , 3 ,5229.64
+Set Internal Change=Mainstem        ,Railroad        ,121126  , 2 , 3 ,5218.17
+Set Internal Change=Mainstem        ,Railroad        ,121126  , 1 , 3 ,5218.17
+Set Internal Change=Mainstem        ,Carpenter       ,113963  , 2 , 3 ,5148.3
+Set Internal Change=Mainstem        ,Carpenter       ,113963  , 1 , 3 ,5148.3
+Set Internal Change=Riverdale Trib  ,Riverdale Trib  ,204163  , 2 , 3 ,5204.76
+Set Internal Change=Riverdale Trib  ,Riverdale Trib  ,204163  , 1 , 3 ,5204.76
+Set Internal Change=South Trib      ,South Trib      ,609542  , 2 , 3 ,5338.07
+Set Internal Change=South Trib      ,South Trib      ,609542  , 1 , 3 ,5338.07
+Set Internal Change=South Trib      ,South Trib      ,607638  , 2 , 3 ,5322.5
+Set Internal Change=South Trib      ,South Trib      ,607638  , 1 , 3 ,5322.5
+Set Internal Change=South Trib      ,South Trib      ,604726  , 2 , 3 ,5292.47
+Set Internal Change=South Trib      ,South Trib      ,604726  , 1 , 3 ,5292.47
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 
