@@ -30,11 +30,19 @@ class Plan(object):
     """ Holds information for a plan """
     def __init__(self, name, rc):
         self.name = name  # Plan name, string
-        self.filename = None  # Still working on this one
         self.rc = rc   # RasController object
+        self.filename = self._get_filename(self.name)  # filename with full path
+
+    def __str__(self):
+        return self.name
 
     def __repr__(self):
-        return 'Plan name = "'+self.name + '"'
+        return 'Plan name = "' + self.name + '", Filename = "' + self.filename + '"'
+
+    def _get_filename(self, name):
+        fname, _ = self.rc.com_rc.Plan_GetFilename(name)
+        # _ is the plan name, as we already have this it's ignored
+        return fname
 
 class Profile(object):
     def __init__(self, name, code, rc):
@@ -349,6 +357,12 @@ def main():
 
     plans = rc.get_plans()
     print '***************Plans', plans  # returns plan names
+    fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
+    print fname, name
+    x = rc.com_rc.Plan_GetFilename(plans[1].name)
+    print x
+
+    sys.exit()
     print 'current plan at start', rc._current_plan_file(), '\n'
     plan = plans[0]
     print 'setting plan to',plan
