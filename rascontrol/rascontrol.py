@@ -1,6 +1,7 @@
 import win32com.client
 import psutil
 import sys
+import time
 
 # Codes for RAS output types
 WSEL = 2
@@ -19,7 +20,14 @@ class RCException(Exception):
     pass
 
 class RASOpen(RCException):
-    """ rascontrol won't currently run if RAS is already open """
+    """ 
+    rascontrol won't currently run if RAS is already open and raise RASOpen if
+    it is.  I'm not sure why I did this. In HydrologyManager I blocked HM from
+    starting if excel was already running to prevent accidently closing all
+    excel spreadsheets on the computer. It may be a carry over habit from that
+    project. There may also be a HEC-RAS controller specific reason for it as
+    well that I can't remember.
+    """
     pass
 
 class LockedPlan(RCException):
@@ -137,31 +145,39 @@ class RasController(object):
     Methods -
         close(self): - Closes RAS, not implemented yet, will only work in RAS5
 
-        def get_current_plan(self): Returns current plan as Plan object
+        get_current_plan(self): Returns current plan as Plan object
 
-        def get_plans(self, basedir=None): Returns plans in current project as list of Plan objects
+        get_plans(self, basedir=None): Returns plans in current project as list of Plan objects
             :param basedir: ???? unknown
 
-        def run_current_plan(self): Runs current plan in RAS
+        run_current_plan(self): Runs current plan in RAS
 
-        def set_plan(self, plan): Sets current plan in RAS, plan is Plan object from get_plans()
+        set_plan(self, plan): Sets current plan in RAS, plan is Plan object from get_plans()
             :param plan: Plan object
 
-        def get_profiles(self): Returns list of all profiles as Profile objects
+         get_profiles(self): Returns list of all profiles as Profile objects
 
-        def get_rivers(self): Returns list of all rivers as River objects
+         get_rivers(self): Returns list of all rivers as River objects
 
-        def is_output_current(self, plan, show=False): Returns True if output is up to date for plan (Plan object)
+         is_output_current(self, plan, show=False): Returns True if output is up to date for plan (Plan object)
             :param plan: string, name of plan to check
             :param show: boolean - whether or not to show the window
 
-        def open_project(self, project): Opens project in RAS
+         open_project(self, project): Opens project in RAS
             :param project: string - full path to RAS project file (*.prj)
 
-        def show(self): Makes RAS window visible
+         show(self): Makes RAS window visible
     """
 
-    def __init__(self):
+    def __init__(self, version='41'):
+        """
+        version seletions the RAS version, options include
+            '41' - 4.1
+            '501' - 5.0.1
+            '503' - 5.0.3
+        """
+        self.version = version
+
         # See if RAS is open and abort if so
         if True:
             for p in psutil.process_iter():
@@ -173,8 +189,8 @@ class RasController(object):
                     pass
 
         # RAS is not open yet, open it
-        # self.com_rc = win32com.client.DispatchEx('RAS500.HECRASController')
-        self.com_rc = win32com.client.DispatchEx('RAS41.HECRASController')
+        self.com_rc = win32com.client.DispatchEx('RAS' + version + '.HECRASController')
+        # self.com_rc = win32com.client.DispatchEx('RAS41.HECRASController')
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
     
     def open_project(self, project):
@@ -192,12 +208,12 @@ class RasController(object):
 
     def close(self):
         """
-        closes RAS
+        closes RAS, this is only available in RAS5
         """
-        raise NotImplementedError('This functionality is not yet supported.')
-        # QuitRAS() is only in RAS 5, this is currently only set for RAS 4
-        # TODO - detect RAS version and respond appropriately
-        self.com_rc.QuitRAS()
+        if int(self.version[0]) >= 5:
+            self.com_rc.QuitRAS()
+        else:
+            raise NotImplementedError('close() is only availble in RAS 5')
 
     def get_current_plan(self):
         """
@@ -351,9 +367,9 @@ class RasController(object):
 
 
 def main():
-    rc = RasController()
-    rc.open_project('c:/python/rascontroller/rascontrol/models/HG.prj')
-    #rc.open_project('c:/python/rascontroller/ras_model/GHC.prj')
+    rc = RasController(version='503')
+    # rc.open_project('x:/python/rascontrol/rascontrol/models/HG.prj')
+    rc.open_project("c:/Users/mike.bannister/Downloads/ras5/HEC-RAS_5.0_Beta_2015-08-21/RAS_50 Test Data/BaldEagleCrkMulti2D/BaldEagleDamBrk.prj")
 
     plans = rc.get_plans()
     print '***************Plans', plans  # returns plan names
@@ -361,6 +377,12 @@ def main():
     print fname, name
     x = rc.com_rc.Plan_GetFilename(plans[1].name)
     print x
+    rc.show()
+    time.sleep(2)
+    print 'running...'
+    rc.run_current_plan()
+
+    rc.close()
 
     sys.exit()
     print 'current plan at start', rc._current_plan_file(), '\n'
