@@ -256,7 +256,11 @@ class RasController(object):
         Run current plan in RAS
         :return: status, messages - ??, ??
         """
-        status, _, messages = self.com_rc.Compute_CurrentPlan(None, None)
+        # RAS 5 appears to return and extra boolean, this should be tested more extensively
+        if self.version[0] == 4:
+            status, _, messages = self.com_rc.Compute_CurrentPlan(None, None)
+        else:
+            status, _, messages, _ = self.com_rc.Compute_CurrentPlan(None, None)
         return status, messages
 
     
@@ -377,7 +381,7 @@ def main():
     print fname, name
     x = rc.com_rc.Plan_GetFilename(plans[1].name)
     print x
-    rc.show()
+    # rc.show()
     time.sleep(2)
     print 'running...'
     rc.run_current_plan()
