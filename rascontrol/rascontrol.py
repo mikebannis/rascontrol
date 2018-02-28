@@ -10,6 +10,10 @@ import win32com.client
 import psutil
 import sys
 import time
+from collections import namedtuple
+
+
+SimpleXS = namedtuple('SimpleXS', ['xs_id', 'river', 'reach'])
 
 # Codes for RAS output types, used in Node.value()
 WSEL = 2
@@ -47,6 +51,7 @@ class LockedPlan(RCException):
 
 class CrossSectionNotFound(RCException):
     pass
+
 
 class Plan(object):
     """ Holds information for a plan """
@@ -172,6 +177,7 @@ class RasController(object):
 
         get_xs(self, xs_id, river=None, reach=None): return cross section Node object
 
+
     Other methods -
         close(self): - Closes RAS, only works in RAS5
 
@@ -191,6 +197,8 @@ class RasController(object):
 
         set_plan(self, plan): Sets plan in RAS, plan is Plan object from get_plans()
             :param plan: Plan object
+
+        simple_xs_list(self): returns list of XS as SimpleXS objects
 
         show(self): Makes RAS window visible
     """
@@ -219,6 +227,25 @@ class RasController(object):
         # RAS is not open yet, open it
         self.com_rc = win32com.client.DispatchEx('RAS' + version + '.HECRASController')
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
+
+    def simple_xs_list(self): 
+        """
+        Returns list of XS as SimpleXS objects, all names are strip()ed
+
+        This is primarily for interacting with parserasgeo
+        """
+        # Check for xs list, create if necessary
+        if self.xs_list is None:
+            if not self.project_is_open:
+                raise NoProject('Project must be opened before calling RasController.get_xs()')
+            self.xs_list = self._load_xs_list()
+
+        simple_list = []
+        for xs in self.xs_list:
+            temp = SimpleXS(xs_id=xs.node_id.strip(), river=xs.river.name.strip(), reach=xs.reach.name.strip())
+            simple_list.append(temp)
+        return simple_list
+
     
     def get_xs(self, xs_id, river=None, reach=None):
         """
@@ -582,10 +609,10 @@ def main():
     
     #import pdb; pdb.set_trace()
 
-    for xs in rc.xs_list:
-        x = rc.get_xs(xs.node_id, river=xs.river.name, reach=xs.reach.name)
-        print x.node_id, x.river.name, x.reach.name, x.value(profs[2], WSEL)
-    
+    x= rc.simple_xs_list()
+    for y in x:
+        print y
+
     if not True:
         with open('out.txt', 'wt') as outfile:
             rivers = rc.get_rivers()
