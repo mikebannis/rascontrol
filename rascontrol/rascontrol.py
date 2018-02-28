@@ -1,9 +1,17 @@
+"""
+rascontrol.py
+
+Provides API to control HEC-RAS through the win32com interface. Primary object is RasController.
+
+Mike Bannister 2018
+"""
+
 import win32com.client
 import psutil
 import sys
 import time
 
-# Codes for RAS output types
+# Codes for RAS output types, used in Node.value()
 WSEL = 2
 MIN_CH_EL = 5
 STA_WS_LFT = 36
@@ -30,9 +38,15 @@ class RASOpen(RCException):
     """
     pass
 
+class NoProject(RCException):
+    """ Indicates a project has not yet been opened """
+    pass
+
 class LockedPlan(RCException):
     pass
 
+class CrossSectionNotFound(RCException):
+    pass
 
 class Plan(object):
     """ Holds information for a plan """
@@ -45,7 +59,7 @@ class Plan(object):
         return self.name
 
     def __repr__(self):
-        return 'Plan name = "' + self.name + '", Filename = "' + self.filename + '"'
+        return 'Plan name = "' + self.name + '"/Filename = "' + self.filename + '"'
 
     def _get_filename(self, name):
         fname, _ = self.rc.com_rc.Plan_GetFilename(name)
@@ -59,7 +73,7 @@ class Profile(object):
         self.rc = rc   # RasController object
 
     def __repr__(self):
-        return 'Profile name = "'+self.name + '", Profile code = "' + str(self.code)+'"'
+        return 'Profile name = "'+self.name + '"/Profile code = "' + str(self.code)+'"'
 
 
 class River(object):
@@ -115,6 +129,9 @@ class Reach(object):
 
 
 class Node(object):
+    """
+    Holds information for RAS Node (XS, hydraulic structure, etc)
+    """
     def __init__(self, node_id, node_type, code, reach):
         self.node_id = node_id  # Node name, string
         self.node_type = node_type  # node type: '' (XS), 'BR', 'Culv', 'IS', ... etc
@@ -126,6 +143,12 @@ class Node(object):
         self.rc = self.river.rc   # RasController object
 
     def value(self, profile, value_type):
+        """ 
+        Returns HEC-RAS node output value (WSEL, MIN_CH_EL, etc) for profile
+        
+        :param profile: Profile object for desired profile
+        :param value_type: desired output value, these are defined at the top of this file
+        """
         # TODO - this should likely check if this is a bridge due to the 0 in output_nodeoutput
         return self.rc.output_nodeoutput(self.river.code, self.reach.code, self.code, profile.code, value_type)
 
@@ -140,43 +163,48 @@ class Node(object):
 
 class RasController(object):
     """
-    Opens, runs, and retrieves information from HEC-RAS. Checks if RAS is open during __init__(). If open, raises RASOpen.
+    Opens, runs, and retrieves information from HEC-RAS. Checks if RAS is open during __init__(). If open, raises 
+    RASOpen.
 
-    Methods -
-        close(self): - Closes RAS, not implemented yet, will only work in RAS5
+    Primary methods -
+        open_project(self, project): Opens project in RAS
+           :param project: string - full path to RAS project file (*.prj)
+
+        get_xs(self, xs_id, river=None, reach=None): return cross section Node object
+
+    Other methods -
+        close(self): - Closes RAS, only works in RAS5
 
         get_current_plan(self): Returns current plan as Plan object
 
         get_plans(self, basedir=None): Returns plans in current project as list of Plan objects
-            :param basedir: ???? unknown
+
+        get_profiles(self): Returns list of all profiles as Profile objects
+
+        get_rivers(self): Returns list of all rivers as River objects
+ 
+        get_xs(self, xs_id, river=None, reach=None): return cross section Node object
+
+        is_output_current(self, plan, show=False): Returns True if output is up to date for plan (Plan object)
 
         run_current_plan(self): Runs current plan in RAS
 
-        set_plan(self, plan): Sets current plan in RAS, plan is Plan object from get_plans()
+        set_plan(self, plan): Sets plan in RAS, plan is Plan object from get_plans()
             :param plan: Plan object
 
-         get_profiles(self): Returns list of all profiles as Profile objects
-
-         get_rivers(self): Returns list of all rivers as River objects
-
-         is_output_current(self, plan, show=False): Returns True if output is up to date for plan (Plan object)
-            :param plan: string, name of plan to check
-            :param show: boolean - whether or not to show the window
-
-         open_project(self, project): Opens project in RAS
-            :param project: string - full path to RAS project file (*.prj)
-
-         show(self): Makes RAS window visible
+        show(self): Makes RAS window visible
     """
 
     def __init__(self, version='41'):
         """
-        version seletions the RAS version, options include
+        version selects the RAS version, options include
             '41' - 4.1
             '501' - 5.0.1
             '503' - 5.0.3
         """
         self.version = version
+        self.xs_list = None  # list of cross sections (Nodes)
+        self.project_is_open = False  # has a project been opened? set by self.open_project()
 
         # See if RAS is open and abort if so
         if True:
@@ -190,15 +218,53 @@ class RasController(object):
 
         # RAS is not open yet, open it
         self.com_rc = win32com.client.DispatchEx('RAS' + version + '.HECRASController')
-        # self.com_rc = win32com.client.DispatchEx('RAS41.HECRASController')
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
     
+    def get_xs(self, xs_id, river=None, reach=None):
+        """
+        Returns XS requested, ignores river and reach if not specified
+        Raises CrossSectionNotFound if XS is not in model
+
+        :param xs_id: id of cross section (cast to string automatically)
+        :param river: river name (string)
+        :param reach: reach name (string)
+        :return: Node object for cross section
+        """
+        # Either river and reach is specified or not, no half way allowed
+        if river is None and reach is not None or river is not None and reach is None:
+            raise RCException('Both river and reach must be specified or not specified')
+
+        # strip white space
+        xs_id = str(xs_id).strip()
+        if river is not None:
+            river = river.strip()
+            reach = reach.strip()
+
+        # Check for xs list, create if necessary
+        if self.xs_list is None:
+            if not self.project_is_open:
+                raise NoProject('Project must be opened before calling RasController.get_xs()')
+            self.xs_list = self._load_xs_list()
+
+        # Search for XS
+        for xs in self.xs_list:
+            if river is None and reach is None:
+                #print '*'+ str(xs.node_id)+'*'+str(xs_id)+'*'
+                if xs.node_id.strip() == xs_id:
+                    return xs
+            else:
+                if xs.node_id.strip() == xs_id and xs.river.name.strip() == river and xs.reach.name.strip() == reach:
+                    return xs
+        raise CrossSectionNotFound('Cross section ' + str(xs_id) + ' not found')
+        
+
     def open_project(self, project):
         """
         Opens project in RAS
         :param project: string - full path to RAS project file (*.prj)
         """
         self.com_rc.Project_Open(project)
+        self.project_is_open = True
 
     def show(self):
         """
@@ -309,6 +375,20 @@ class RasController(object):
             print '>>>', (result, unknown_bool, message)
         return result, message
 
+    def _load_xs_list(self):
+        """ 
+        Returns list of all cross sections (Node objects)
+        """
+        xs_list = []
+        rivers = self.get_rivers()
+        for riv in rivers:
+            for reach in riv.reaches:
+                print 'river/reach', riv, reach
+                for node in reach.nodes:
+                    # blank node type indicates XS
+                    if node.node_type == '':
+                        xs_list.append(node)
+        return xs_list
 
     # Methods below here are semi-private and are intended to be called from the River, Reach, and Node classes
     def output_getnodes(self, river_id, reach_id):
@@ -370,10 +450,12 @@ class RasController(object):
         return node_ids, node_types
 
 
-def main():
+def main_old():
     rc = RasController(version='503')
+    #rc = RasController(version='41')
     # rc.open_project('x:/python/rascontrol/rascontrol/models/HG.prj')
-    rc.open_project("c:/Users/mike.bannister/Downloads/ras5/HEC-RAS_5.0_Beta_2015-08-21/RAS_50 Test Data/BaldEagleCrkMulti2D/BaldEagleDamBrk.prj")
+    # rc.open_project("c:/Users/mike.bannister/Downloads/ras5/HEC-RAS_5.0_Beta_2015-08-21/RAS_50 Test Data/BaldEagleCrkMulti2D/BaldEagleDamBrk.prj")
+    rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
 
     plans = rc.get_plans()
     print '***************Plans', plans  # returns plan names
@@ -384,60 +466,62 @@ def main():
     # rc.show()
     time.sleep(2)
     print 'running...'
-    rc.run_current_plan()
+    #rc.run_current_plan()
 
-    rc.close()
+    if not True:
+        #rc.close()
 
-    sys.exit()
-    print 'current plan at start', rc._current_plan_file(), '\n'
-    plan = plans[0]
-    print 'setting plan to',plan
-    rc.set_plan(plan)
-    
-    result, message = rc.is_output_current(plan, show=True)
-    print 'is output current?', result
-    
-    print '\nrunning current plan...'
-    print rc.run_current_plan()
-    result, message = rc.is_output_current(plan, show=True)
-    print 'Ran. is output current?', result
-    
-    plan = plans[1]
-    print '\nsetting plan to',plan
-    rc.set_plan(plan)
-    
-    print 'current plan after set_plan()', rc._current_plan_file()
-    result, message = rc.is_output_current(plan, show=True)
-    print 'is output current?', result
-    
-    print '\nrunning current plan...'
-    print rc.run_current_plan()
-    result, message = rc.is_output_current(plan, show=True)
-    print 'Ran. is output current?', result
-    sys.exit()
+        #sys.exit()
+        print 'current plan at start', rc._current_plan_file(), '\n'
+        plan = plans[0]
+        print 'setting plan to',plan
+        rc.set_plan(plan)
+        
+        result, message = rc.is_output_current(plan, show=True)
+        print 'is output current?', result
+        
+        print '\nrunning current plan...'
+        print rc.run_current_plan()
+        result, message = rc.is_output_current(plan, show=True)
+        print 'Ran. is output current?', result
+        
+        plan = plans[1]
+        print '\nsetting plan to',plan
+        rc.set_plan(plan)
+        
+        print 'current plan after set_plan()', rc._current_plan_file()
+        result, message = rc.is_output_current(plan, show=True)
+        print 'is output current?', result
+        
+        print '\nrunning current plan...'
+        print rc.run_current_plan()
+        result, message = rc.is_output_current(plan, show=True)
+        print 'Ran. is output current?', result
+        rc.close()
+        sys.exit()
 
-    otherterm = rc.get_profiles()
-    print 'profiles in current plan', otherterm
-    print
-    """
-    the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
-    or similar even after the get_profiles() for right profiles after swapping plans. or bail and just stop the damn
-    user from changing the profile =P
-    """
-    plans = rc.get_plans()
-    print '***************Plans', plans
-    print 'current plan before set_plan()', rc._current_plan_file()
-    plan = plans[0]
-    print plan
-    rc.set_plan(plan)
+        otherterm = rc.get_profiles()
+        print 'profiles in current plan', otherterm
+        print
+        """
+        the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
+        or similar even after the get_profiles() for right profiles after swapping plans. or bail and just stop the damn
+        user from changing the profile =P
+        """
+        plans = rc.get_plans()
+        print '***************Plans', plans
+        print 'current plan before set_plan()', rc._current_plan_file()
+        plan = plans[0]
+        print plan
+        rc.set_plan(plan)
 
-    print 'current plan after set_plan()', rc._current_plan_file()
-    result, message = rc.is_output_current(plan, show=True)
-    print result
-    profs = rc.get_profiles()
-    print profs
-    sys.exit()  # ------------------------------------------------------------------------
-    
+        print 'current plan after set_plan()', rc._current_plan_file()
+        result, message = rc.is_output_current(plan, show=True)
+        print result
+        profs = rc.get_profiles()
+        print profs
+        sys.exit()  # ------------------------------------------------------------------------
+        
     
     print rc._current_plan_file()
     #rc.show()
@@ -465,16 +549,58 @@ def main():
 
     profs = rc.get_profiles()
     print profs
+    with open('out.txt', 'wt') as outfile:
+        rivers = rc.get_rivers()
+        for riv in rivers:
+            for reach in riv.reaches:
+                print riv
+                print reach
+                for node in reach.nodes:
+                    if node.node_type == '':
+                        #print node, node.value(profs[0], MIN_CH_EL)
+                        min_el = node.value(profs[0], MIN_CH_EL)
+                        outfile.write(','.join([str(riv), str(reach), str(node), str(min_el)]))
+                        for prof in profs:
+                            outfile.write(','+str(node.value(prof, WSEL)))
+                        outfile.write('\n')
+    rc.close()
 
-    rivers = rc.get_rivers()
-    for riv in rivers:
-        for reach in riv.reaches:
-            print riv
-            print reach
-            for node in reach.nodes:
-                print node, node.value(profs[0], MIN_CH_EL)
-                for prof in profs:
-                    print prof.name, node.value(prof, WSEL)
+def main():
+    rc = RasController(version='503')
+    rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
+
+    plans = rc.get_plans()
+    print '***************Plans', plans  # returns plan names
+    fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
+    print 'fname, name', fname, name
+    
+    print 'current plan file', rc._current_plan_file()
+    
+    profs = rc.get_profiles()
+    print profs
+    print rc.get_xs(300138)
+    
+    #import pdb; pdb.set_trace()
+
+    for xs in rc.xs_list:
+        x = rc.get_xs(xs.node_id, river=xs.river.name, reach=xs.reach.name)
+        print x.node_id, x.river.name, x.reach.name, x.value(profs[2], WSEL)
+    
+    if not True:
+        with open('out.txt', 'wt') as outfile:
+            rivers = rc.get_rivers()
+            for riv in rivers:
+                for reach in riv.reaches:
+                    print 'river/reach', riv, reach
+                    for node in reach.nodes:
+                        if node.node_type == '':
+                            #print node, node.value(profs[0], MIN_CH_EL)
+                            min_el = node.value(profs[0], MIN_CH_EL)
+                            outfile.write(','.join([str(riv), str(reach), str(node), node.node_id, str(min_el)]))
+                            for prof in profs:
+                                outfile.write(','+str(node.value(prof, WSEL)))
+                            outfile.write('\n')
+    rc.close()
 
 if __name__ == '__main__':
     main()

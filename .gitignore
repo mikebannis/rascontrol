@@ -1,0 +1,6 @@
+
+*.lock
+.idea
+.idea/*
+*.pyc
+rascontrol/models/2D/*

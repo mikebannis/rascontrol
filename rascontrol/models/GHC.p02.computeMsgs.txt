@@ -1,0 +1,82 @@
+Message  | Plan: 'GHC 0.5 Floodway' (x:/python/rascontrol/rascontrol/models/GHC.p02)
+Message  | Simulation started at: 01Feb2018 04:33:22 PM
+Message  | Using 64 Bit Computation Engines
+Message  | PROCESS:RasGeomWriter
+Message  | 
+Message  | Writing Geometry
+Progress | 1
+Message  | Completed Writing Geometry
+Message  | 
+Message  | Writing Event Conditions
+Message  | Event Conditions Complete
+Message  | PROCESS:RasSteady
+Progress | 0.1
+Progress | 0.2
+Message  | 	
+Message  | Steady Flow Simulation HEC-RAS 5.0.3 September 2016
+Progress | 0.1
+Progress | 0.3
+Progress | 0.4
+Progress | 0.5
+Progress | 0.6
+Progress | 0.7
+Progress | 0.8000001
+Progress | 0.9000001
+Progress | 1
+Progress | 3.036437E-03
+Progress | 0.0242915
+Progress | 0.0465587
+Progress | 6.781376E-02
+Progress | 8.906882E-02
+Progress | 0.1093117
+Progress | 0.1305668
+Progress | 0.1508097
+Progress | 0.1730769
+Progress | 0.1953441
+Progress | 0.2165992
+Progress | 0.2388664
+Progress | 0.2591093
+Progress | 0.2813765
+Progress | 0.3036437
+Progress | 0.3248988
+Progress | 0.347166
+Progress | 0.368421
+Progress | 0.388664
+Progress | 0.409919
+Progress | 0.4311741
+Progress | 0.4534413
+Progress | 0.4746964
+Progress | 0.4959514
+Progress | 0.5182186
+Progress | 0.5404859
+Progress | 0.5617409
+Progress | 0.582996
+Progress | 0.6062753
+Progress | 0.6275303
+Progress | 0.6477733
+Progress | 0.6700405
+Progress | 0.6923077
+Progress | 0.7135627
+Progress | 0.7348178
+Progress | 0.7560729
+Progress | 0.7783401
+Progress | 0.8006073
+Progress | 0.8218623
+Progress | 0.8441296
+Progress | 0.8653846
+Progress | 0.888664
+Progress | 0.909919
+Progress | 0.9311741
+Progress | 0.9534413
+Progress | 0.9746964
+Progress | 0.9959514
+Message  | 
+Message  | Finished Steady Flow Simulation
+Message  | 
+Message  | 
+Message  | Computations Summary
+Message  | 
+Message  | Computation Task	Time(hh:mm:ss)
+Message  | Completing Geometry	<1
+Message  | Steady Flow Computations(64)	       2
+Message  | Complete Process	       2
