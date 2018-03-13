@@ -20,10 +20,14 @@ WSEL = 2
 MIN_CH_EL = 5
 STA_WS_LFT = 36
 STA_WS_RGT = 37
+FROUDE_CHL = 48  # Froude number for channel
+FROUDE_XS = 49  # Froude number for entire XS
 
 # Stations for below codes should probably be pulled from geometry, not from the RAS controller
 RIGHT_STA = 264  # right station of a XS
 LEFT_STA = 263  # left station of a XS
+CH_STA_L = 158  # left station of channel
+CH_STA_R = 159  # right station of channel
 
 DEBUG = False
 
@@ -410,7 +414,6 @@ class RasController(object):
         rivers = self.get_rivers()
         for riv in rivers:
             for reach in riv.reaches:
-                print 'river/reach', riv, reach
                 for node in reach.nodes:
                     # blank node type indicates XS
                     if node.node_type == '':
