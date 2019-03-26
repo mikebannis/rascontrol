@@ -30,6 +30,8 @@ FROUDE_XS = 49  # Froude number for entire XS
 Q_WEIR = 94
 Q_CULVERT_GROUP = 73
 Q_CULVERT_TOT = 242 
+WSUS = 75
+WSDS = 213
 
 # Stations for below codes should probably be pulled from geometry, not from the RAS controller
 RIGHT_STA = 264  # right station of a XS
