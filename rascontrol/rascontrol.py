@@ -275,9 +275,12 @@ class RasController(object):
             for p in psutil.process_iter():
                 try:
                     if p.name() == 'ras.exe':
+                    # TODO: As of 4/1/2019, the line above should be the line below. 'ras.exe' is not currently working,
+                    # So this test completely fails.
+                    #if p.name() == 'ras.exe' or p.name() == 'Ras.exe':
                         raise RASOpen('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
-                        #sys.exit('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
                 except psutil.Error:
+                    # TODO: This should be handled better. 
                     pass
 
         # RAS is not open yet, open it
@@ -506,6 +509,8 @@ class RasController(object):
     def close(self):
         """
         closes RAS, this is only available in RAS5
+
+        ******** This function does not appear to work!
         """
         if int(self.version[0]) >= 5:
             self.com_rc.QuitRAS()
