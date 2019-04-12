@@ -9,6 +9,7 @@ Mike Bannister 2018
 import win32com.client
 import psutil
 import sys
+import os
 import time
 from collections import namedtuple
 
@@ -41,6 +42,9 @@ CH_STA_R = 159  # right station of channel
 
 DEBUG = False
 
+class FileNotFound(Exception):
+    pass
+
 class RCException(Exception):
     """ Base class for all rascontrol exceptions """
     pass
@@ -61,6 +65,10 @@ class NoProject(RCException):
     pass
 
 class LockedPlan(RCException):
+    pass
+
+class CurrentPlanNotRun(RCException):
+    """Indicates that the current plan has not yet been run"""
     pass
 
 class CrossSectionNotFound(RCException):
@@ -288,6 +296,9 @@ class RasController(object):
         # RAS is not open yet, open it
         self.com_rc = win32com.client.DispatchEx('RAS' + version + '.HECRASController')
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
+        
+        # flag to determine if the model has been run
+        self. _model_ran = False
 
     def simple_xs_list(self):
         """
@@ -558,15 +569,41 @@ class RasController(object):
     def run_current_plan(self):
         """
         Run current plan in RAS
-        :return: status, messages - ??, ??
+        :return: status, messages
         """
         # RAS 5 appears to return and extra boolean, this should be tested more extensively
         if self.version[0] == 4:
             status, _, messages = self.com_rc.Compute_CurrentPlan(None, None)
         else:
             status, _, messages, _ = self.com_rc.Compute_CurrentPlan(None, None)
+        self._model_ran = True
         return status, messages
-
+    
+    def read_compute_msg(self, plan):
+        """
+        Read the ComputeMsgs.txt file
+        This will enable the user to scan it for errors
+        
+        e.g.
+        if "FLOW OPTIMIZATION FAILED TO CONVERGE, PROFILE    <n>" is in the file
+        then the user will that the flow was not optimized for profile n
+        
+        :param plan: plan file used to run the current plan (.p**)
+        :return: computation messages as a list of string
+        """
+        compute_msg_file = '{}.computeMsgs.txt'.format(plan)
+        
+        if self._model_ran is False:
+            raise CurrentPlanNotRun('Run the current plan before reading the compute message.')
+        if not os.path.isfile(compute_msg_file):
+            raise FileNotFound('{} does not exist. The model needs to run for this file to be created'.format(compute_msg_file))
+        
+        return_strings = []
+        with open(compute_msg_file, 'r') as compute_msg:
+            for line in compute_msg:
+                temp = line.strip()
+                return_strings.append(temp)
+        return return_strings
     
     def get_profiles(self):
         """
