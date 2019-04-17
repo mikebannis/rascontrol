@@ -16,7 +16,7 @@ appropriate rainfall data and hydrology.
 ## Basic usage
 
     import rascontrol
-    rc = rascontrol.RasController(version='506)
+    rc = rascontrol.RasController(version='506')
     rc.open_project('my_model.prj')
     rc.run_current_plan()
     
