@@ -19,6 +19,11 @@ appropriate rainfall data and hydrology.
     rc = rascontrol.RasController(version='506)
     rc.open_project('my_model.prj')
     rc.run_current_plan()
+    
+    # Get results
+    profile = rc.get_profiles()[0]
+    cross_sections = [100, 200, 300]
+    wsels = [rc.get_xs(xs).value(profile, rascontrol.WSEL) for xs in cross_sections]
 
 ## Known issues
 close() does not currently appear to be working. This does not typically cause problems during Monte Carlo simulations as rascontrol 
