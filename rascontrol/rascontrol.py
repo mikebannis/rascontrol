@@ -578,6 +578,10 @@ class RasController(object):
             status, _, messages, _ = self.com_rc.Compute_CurrentPlan(None, None)
         self._model_ran = True
         return status, messages
+
+    def hide_compute_window(self):
+        """ Hides computation windows """
+        self.com_rc.Compute_HideComputationWindow()
     
     def read_compute_msg(self, plan):
         """
