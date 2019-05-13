@@ -42,6 +42,9 @@ CH_STA_R = 159  # right station of channel
 
 DEBUG = False
 
+class NoOutputFile(Exception):
+    pass
+
 class FileNotFound(Exception):
     pass
 
@@ -712,6 +715,8 @@ class RasController(object):
         :return: list of strings
         """
         _, rivers = self.com_rc.Output_GetRivers(0, None)
+        if rivers is None:
+            raise NoOutputFile('Output file does not appear to exist. Model may not have run successfully.')
         return rivers
 
     # TODO - remove this, only in for testing
