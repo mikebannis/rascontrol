@@ -8,24 +8,29 @@ be used for sensitivity studies, Monte Carlo analyses, and real-time predication
 appropriate rainfall data and hydrology.  
 
 ## Installation
+The appropriate version of HEC-RAS must already be installed to use rascontrol.
 
-    git clone https://github.com/mikebannis/rascontrol.git
-    cd rascontrol
-    pip install .
-
-## Basic usage
-
-    import rascontrol
-    rc = rascontrol.RasController(version='506')
-    rc.open_project('my_model.prj')
-    rc.run_current_plan()
+    c:\> git clone https://github.com/mikebannis/rascontrol.git
     
-    # Get results
-    profile = rc.get_profiles()[0]
-    cross_sections = [100, 200, 300]
-    wsels = [rc.get_xs(xs).value(profile, rascontrol.WSEL) for xs in cross_sections]
+    c:\> cd rascontrol
+    
+    c:\rascontrol> pip install .
 
-## Known issues
+## Basic Usage
+```python
+>>> import rascontrol
+>>> rc = rascontrol.RasController(version='506')
+>>> rc.open_project('my_model.prj')
+>>> rc.run_current_plan()
+    
+>>> # Get results
+>>> profile = rc.get_profiles()[0]
+>>> cross_sections = [100, 200, 300]  # Get results for cross sections 100, 200, & 300
+>>> wsels = [rc.get_xs(xs).value(profile, rascontrol.WSEL) for xs in cross_sections]
+>>> print(wsels)
+[5002.3, 5003.5, 5005.1]
+```
+## Known Issues
 close() does not currently appear to be working. This does not typically cause problems during Monte Carlo simulations as rascontrol 
 will use any RAS instance that is currently open. Because of this, rascontrol will simply reuse an open model if large numbers 
 of simulations are required, versus opening multiple instances of RAS. Make sure you save any open models 
