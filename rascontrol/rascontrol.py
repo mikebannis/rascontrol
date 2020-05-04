@@ -653,8 +653,8 @@ class RasController(object):
         """
         result, plan_name, unknown_bool, message = self.com_rc.PlanOutput_IsCurrent(plan.name, show, None)
         if DEBUG:
-            print '>>> In is_output_current'
-            print '>>>', (result, unknown_bool, message)
+            print('>>> In is_output_current')
+            print('>>>', (result, unknown_bool, message))
         return result, message
 
     # Methods below here are semi-private and are intended to be called from the River, Reach, and Node classes
@@ -737,75 +737,75 @@ def main_old():
     rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
 
     plans = rc.get_plans()
-    print '***************Plans', plans  # returns plan names
+    print('***************Plans', plans)  # returns plan names
     fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
-    print fname, name
+    print(fname, name)
     x = rc.com_rc.Plan_GetFilename(plans[1].name)
-    print x
+    print(x)
     # rc.show()
     time.sleep(2)
-    print 'running...'
+    print('running...')
     #rc.run_current_plan()
 
     if not True:
         #rc.close()
 
         #sys.exit()
-        print 'current plan at start', rc._current_plan_file(), '\n'
+        print('current plan at start', rc._current_plan_file(), '\n')
         plan = plans[0]
-        print 'setting plan to',plan
+        print('setting plan to',plan)
         rc.set_plan(plan)
         
         result, message = rc.is_output_current(plan, show=True)
-        print 'is output current?', result
+        print('is output current?', result)
         
-        print '\nrunning current plan...'
-        print rc.run_current_plan()
+        print('\nrunning current plan...')
+        print(rc.run_current_plan())
         result, message = rc.is_output_current(plan, show=True)
-        print 'Ran. is output current?', result
+        print('Ran. is output current?', result)
         
         plan = plans[1]
-        print '\nsetting plan to',plan
+        print('\nsetting plan to', plan)
         rc.set_plan(plan)
         
-        print 'current plan after set_plan()', rc._current_plan_file()
+        print('current plan after set_plan()', rc._current_plan_file())
         result, message = rc.is_output_current(plan, show=True)
-        print 'is output current?', result
+        print('is output current?', result)
         
-        print '\nrunning current plan...'
-        print rc.run_current_plan()
+        print('\nrunning current plan...')
+        print(rc.run_current_plan())
         result, message = rc.is_output_current(plan, show=True)
-        print 'Ran. is output current?', result
+        print('Ran. is output current?', result)
         rc.close()
         sys.exit()
 
         otherterm = rc.get_profiles()
-        print 'profiles in current plan', otherterm
-        print
-        """
-        the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
-        or similar even after the get_profiles() for right profiles after swapping plans. or bail and just stop the damn
-        user from changing the profile =P
-        """
+        print('profiles in current plan', otherterm)
+        print(
+            """
+            the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
+            or similar even after the get_profiles() for right profiles after swapping plans. or bail and just stop the damn
+            user from changing the profile =P
+            """
+        )
         plans = rc.get_plans()
-        print '***************Plans', plans
-        print 'current plan before set_plan()', rc._current_plan_file()
+        print('***************Plans', plans)
+        print('current plan before set_plan()', rc._current_plan_file())
         plan = plans[0]
-        print plan
+        print(plan)
         rc.set_plan(plan)
 
-        print 'current plan after set_plan()', rc._current_plan_file()
+        print('current plan after set_plan()', rc._current_plan_file())
         result, message = rc.is_output_current(plan, show=True)
-        print result
+        print(result)
         profs = rc.get_profiles()
-        print profs
+        print(profs)
         sys.exit()  # ------------------------------------------------------------------------
-        
-    
-    print rc._current_plan_file()
+
+    print(rc._current_plan_file())
     #rc.show()
     #print rc.run_current_plan()
-    print 'done'
+    print('done')
     # print rc.run_current_plan()
     river_id = 2
     reach_id = 1
@@ -816,24 +816,23 @@ def main_old():
         for x, y in zip(node_ids, node_types):
             # Get numeric node code
             temp = rc.com_rc.Geometry_GetNode(river_id, reach_id, x)
-            print temp
+            print(temp)
             node_id = temp[0]
             # 0 below is for BR up/down, 2 is code for wsel
             wsel1 = rc.com_rc.Output_NodeOutput(river_id, reach_id, node_id, 0, profile_id, 2)[0]
             #wsel2 = rc.com_rc.Output_NodeOutput(river_id, reach_id, node_id, 0, 2, 2)[0]
-            print x,'/', y,'/', node_id,'/', wsel1
+            print(x, '/', y, '/', node_id, '/', wsel1)
             #kkprint x,'/', y,'/', node_id,'/', wsel1, wsel2, wsel1-wsel2
             #sys.exit()
 
-
     profs = rc.get_profiles()
-    print profs
+    print(profs)
     with open('out.txt', 'wt') as outfile:
         rivers = rc.get_rivers()
         for riv in rivers:
             for reach in riv.reaches:
-                print riv
-                print reach
+                print(riv)
+                print(reach)
                 for node in reach.nodes:
                     if node.node_type == '':
                         #print node, node.value(profs[0], MIN_CH_EL)
@@ -844,33 +843,34 @@ def main_old():
                         outfile.write('\n')
     rc.close()
 
+
 def main():
     rc = RasController(version='503')
     rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
 
     plans = rc.get_plans()
-    print '***************Plans', plans  # returns plan names
+    print('***************Plans', plans)  # returns plan names
     fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
-    print 'fname, name', fname, name
-    
-    print 'current plan file', rc._current_plan_file()
-    
+    print('fname, name', fname, name)
+
+    print('current plan file', rc._current_plan_file())
+
     profs = rc.get_profiles()
-    print profs
-    print rc.get_xs(300138)
-    
+    print(profs)
+    print(rc.get_xs(300138))
+
     #import pdb; pdb.set_trace()
 
     x= rc.simple_xs_list()
     for y in x:
-        print y
+        print(y)
 
     if not True:
         with open('out.txt', 'wt') as outfile:
             rivers = rc.get_rivers()
             for riv in rivers:
                 for reach in riv.reaches:
-                    print 'river/reach', riv, reach
+                    print('river/reach', riv, reach)
                     for node in reach.nodes:
                         if node.node_type == '':
                             #print node, node.value(profs[0], MIN_CH_EL)
@@ -880,6 +880,7 @@ def main():
                                 outfile.write(','+str(node.value(prof, WSEL)))
                             outfile.write('\n')
     rc.close()
+
 
 if __name__ == '__main__':
     main()
