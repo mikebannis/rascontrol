@@ -1,10 +1,12 @@
 """
-rascontrol.py
+rascontroller.py
 
 Provides API to control HEC-RAS through the win32com interface. Primary object is RasController.
 
 Mike Bannister 2018
 """
+from pathlib import Path
+from typing import Tuple, Union
 
 import win32com.client
 import psutil
@@ -13,6 +15,11 @@ import os
 import time
 from collections import namedtuple
 
+from rascontrol.exceptions.rascontroller import RASOpenError, NoProjectError, RCException, CrossSectionNotFoundError, \
+    CulvertNotFoundError, BridgeNotFoundError, MultipleOpeningNotFoundError, InlineStructureNotFoundError, \
+    LateralStructureNotFoundError, LockedPlanError
+from rascontrol.node import Node
+from rascontrol.plan import Plan
 
 SimpleXS = namedtuple('SimpleXS', ['xs_id', 'river', 'reach'])
 SimpleCulvert = namedtuple('SimpleCulvert', ['culvert_id', 'river', 'reach'])
@@ -41,202 +48,6 @@ CH_STA_L = 158  # left station of channel
 CH_STA_R = 159  # right station of channel
 
 DEBUG = False
-
-
-class NoOutputFile(Exception):
-    pass
-
-
-class FileNotFound(Exception):
-    pass
-
-
-class RCException(Exception):
-    """ Base class for all rascontrol exceptions """
-    pass
-
-
-class RASOpen(RCException):
-    """ 
-    rascontrol won't currently run if RAS is already open and raise RASOpen if
-    it is.  I'm not sure why I did this. In HydrologyManager I blocked HM from
-    starting if excel was already running to prevent accidently closing all
-    excel spreadsheets on the computer. It may be a carry over habit from that
-    project. There may also be a HEC-RAS controller specific reason for it as
-    well that I can't remember.
-    """
-    pass
-
-
-class NoProject(RCException):
-    """ Indicates a project has not yet been opened """
-    pass
-
-
-class LockedPlan(RCException):
-    pass
-
-
-class CurrentPlanNotRun(RCException):
-    """Indicates that the current plan has not yet been run"""
-    pass
-
-
-class CrossSectionNotFound(RCException):
-    pass
-
-
-class CulvertNotFound(RCException):
-    pass
-
-
-class BridgeNotFound(RCException):
-    pass
-
-
-class MultipleOpeningNotFound(RCException):
-    pass
-
-
-class InlineStructureNotFound(RCException):
-    pass
-
-
-class LateralStructureNotFound(RCException):
-    pass
-
-
-class Plan(object):
-    """ Holds information for a plan """
-    def __init__(self, name, rc):
-        self.name = name  # Plan name, string
-        self.rc = rc   # RasController object
-        self.filename = self._get_filename(self.name)  # filename with full path
-
-    def __str__(self):
-        return self.name
-
-    def __repr__(self):
-        return 'Plan name = "' + self.name + '"/Filename = "' + self.filename + '"'
-
-    def _get_filename(self, name):
-        fname, _ = self.rc.com_rc.Plan_GetFilename(name)
-        # _ is the plan name, as we already have this it's ignored
-        return fname
-
-
-class Profile(object):
-    def __init__(self, name, code, rc):
-        self.name = name  # Profile name, string
-        self.code = code  # Profile code, int - these start at 1, not 0
-        self.rc = rc   # RasController object
-
-    def __repr__(self):
-        return 'Profile name = "'+self.name + '"/Profile code = "' + str(self.code)+'"'
-
-
-class River(object):
-    def __init__(self, name, code, rc):
-        self.name = name  # River name, string
-        self.code = code  # River code, int - these start at 1, not 0
-        self.rc = rc   # RasController object
-        self.reaches = self._get_reaches()  # list of Reach objects
-        self._update_reach_codes()
-
-    # TODO -  the reach code should probably be pulled from the rascontller, although i+1 seems to work
-    def _get_reaches(self):
-        """
-        Gets list of reaches for river represented by self
-        :return: list of Reach objects
-        """
-        reaches = []
-        reach_names = self.rc.geometry_getreaches(self.code)
-        for i, name in enumerate(reach_names):
-            new_reach = Reach(name, i+1, self)
-            reaches.append(new_reach)
-        return reaches
-
-    def _update_reach_codes(self):
-        """
-        Sometimes the reach codes switch between the geometry and output files.
-        This switches the codes after assigning each reach their respective nodes
-        """
-        
-        if self.rc.output_getreaches(self.code)==self.rc.geometry_getreaches(self.code):
-            pass
-        else:
-            new_reach_codes = {}
-            new_reach_names = self.rc.output_getreaches(self.code)
-            for code, reach in enumerate(new_reach_names):
-                new_reach_codes[reach] = code+1
-            
-            for reach in self.reaches:
-                updated_code = new_reach_codes[reach.name]
-                reach.code = updated_code
-        
-    def __repr__(self):
-        return 'River name = "'+self.name + '", River code = "' + str(self.code)+'"'
-
-
-class Reach(object):
-    def __init__(self, name, code, river):
-        self.name = name  # Reach name, string
-        self.code = code  # Reach code, int - these start at 1, not 0
-        self.river = river  # parent River object
-        self.rc = self.river.rc   # RasController object
-        self.nodes = self._get_nodes()  # list of Reach objects
-
-    # TODO -  the reach code should probably be pullled from the rascontller, although i+1 seems to work
-    def _get_nodes(self):
-        """
-        Gets list of reaches for river represented by self
-        :return: list of Reach objects
-        """
-        reach_id = self.code
-        river_id = self.river.code
-        nodes = []
-        node_ids, node_types = self.rc.geometry_getnodes(river_id, reach_id)
-        for i, node_stuff in enumerate(zip(node_ids, node_types)):
-            node_id, node_type = node_stuff
-            new_node = Node(node_id, node_type, i+1, self)
-            nodes.append(new_node)
-        return nodes
-
-    def __repr__(self):
-        return 'Reach name = "'+self.name + '", Reach code = "' + str(self.code)+'"'
-
-
-class Node(object):
-    """
-    Holds information for RAS Node (XS, hydraulic structure, etc)
-    """
-    def __init__(self, node_id, node_type, code, reach):
-        self.node_id = node_id  # Node name, string
-        self.node_type = node_type  # node type: '' (XS), 'BR', 'Culv', 'IS', ... etc
-        self.code = code  # Node code, int - these start at 1, not 0
-        # The line below is how the code should really be gotten
-        # self.code = self.rc.com_rc.Geometry_GetNode(self.river.code, self.reach.code, self.node_id)[0]
-        self.reach = reach
-        self.river = self.reach.river
-        self.rc = self.river.rc   # RasController object
-
-    def value(self, profile, value_type):
-        """ 
-        Returns HEC-RAS node output value (WSEL, MIN_CH_EL, etc) for profile
-        
-        :param profile: Profile object for desired profile
-        :param value_type: desired output value, these are defined at the top of this file
-        """        
-        # TODO - this should likely check if this is a bridge due to the 0 in output_nodeoutput
-        return self.rc.output_nodeoutput(self.river.code, self.reach.code, self.code, profile.code, value_type)
-
-    def __repr__(self):
-        if self.node_type == '':
-            node_type = 'XS'
-        else:
-            node_type = self.node_type
-        return 'Node name ="' + self.node_id + '", Node type ="' + node_type + '", Node code = "' + str(self.code) + \
-                '"'
 
 
 class RasController(object):
@@ -278,7 +89,7 @@ class RasController(object):
         show(self): Makes RAS window visible
     """
 
-    def __init__(self, version='506'):
+    def __init__(self, version: str = '506') -> None:
         """
         version selects the RAS version, options include
             '41' - 4.1
@@ -306,7 +117,7 @@ class RasController(object):
                     # TODO: As of 4/1/2019, the line above should be the line below. 'ras.exe' is not currently working,
                     # So this test completely fails.
                     #if p.name() == 'ras.exe' or p.name() == 'Ras.exe':
-                        raise RASOpen('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
+                        raise RASOpenError('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
                 except psutil.Error:
                     # TODO: This should be handled better. 
                     pass
@@ -318,7 +129,8 @@ class RasController(object):
         # flag to determine if the model has been run
         self. _model_ran = False
 
-    def simple_xs_list(self):
+    # todo make it a property?
+    def simple_xs_list(self) -> Tuple[SimpleXS]:
         """
         Returns list of XS as SimpleXS objects
         This is primarily for interacting with parserasgeo
@@ -326,9 +138,9 @@ class RasController(object):
         :return: list of XS as SimpleXS objects, all names are strip()ed
         """
         simple_list = self._simple_node_list('xs')
-        return simple_list 
+        return simple_list
 
-    def get_xs(self, xs_id, river = None, reach = None):
+    def get_xs(self, xs_id: str, river: str = None, reach: str = None) -> Node:
         """
         Returns requested cross section, ignores river and reach if not specified
         Raises CrossSectionNotFound if cross section is not in model
@@ -341,7 +153,7 @@ class RasController(object):
         node = self._get_node('xs', xs_id, river, reach)
         return node
 
-    def simple_culvert_list(self):
+    def simple_culvert_list(self) -> Tuple[SimpleCulvert]:  # todo change to Union of Simple objects
         """
         Returns list of culverts as SimpleCulvert objects
         This is primarily for interacting with parserasgeo
@@ -351,7 +163,7 @@ class RasController(object):
         simple_list = self._simple_node_list('culvert')
         return simple_list 
 
-    def get_culvert(self, culvert_id, river = None, reach = None):
+    def get_culvert(self, culvert_id: str, river: str = None, reach: str = None) -> Node:
         """
         Returns requested culvert, ignores river and reach if not specified
         Raises CulvertNotFound if culvert is not in model
@@ -368,7 +180,8 @@ class RasController(object):
     # semi-private methods for get_<node> and simple_<node>_list
     # - - - - - - - - - - - - -
 
-    def _simple_node_list(self, node_type): 
+    def _simple_node_list(
+            self, node_type: str) -> Tuple[Union[SimpleXS, SimpleCulvert, SimpleBridge, SimpleMO, SimpleIS, SimpleLS]]:
         """
         Returns list of station as Simple<node> objects
         <node> can be a cross section, bridge, culvert, multiple opening, inline structure, or lateral structure
@@ -380,7 +193,7 @@ class RasController(object):
         :return: a list of all Simple<node>s of node_type in the model (i.e. SimpleXS, SimpleCulvert, SimpleBridge, SimpleMO, SimpleIS, SimpleLS)
         """
         if not self.project_is_open:
-            raise NoProject('Project must be opened before calling RasController._simple_node_list()')
+            raise NoProjectError('Project must be opened before calling RasController._simple_node_list()')
 
         # populate self.node_list if it is None
         # use self.node_list to create the simple_list
@@ -423,7 +236,7 @@ class RasController(object):
                 simple_list.append(temp)
         return tuple(simple_list)
     
-    def _get_node(self, node_type, node_id, river=None, reach=None):
+    def _get_node(self, node_type: str, node_id: str, river: str = None, reach: str = None) -> Node:
         """
         Returns requested node, ignores river and reach if not specified
         Raises <node>NotFound if station is not in model where <node> depends on node_type
@@ -481,19 +294,19 @@ class RasController(object):
                     return node
                 
         if node_type == 'xs':
-            raise CrossSectionNotFound('Cross section ' + str(node_id) + ' not found')
+            raise CrossSectionNotFoundError('Cross section ' + str(node_id) + ' not found')
         elif node_type == 'culvert':
-            raise CulvertNotFound('Culvert ' + str(node_id) + ' not found')
+            raise CulvertNotFoundError('Culvert ' + str(node_id) + ' not found')
         elif node_type == 'bridge':
-            raise BridgeNotFound('Bridge ' + str(node_id) + ' not found')
+            raise BridgeNotFoundError('Bridge ' + str(node_id) + ' not found')
         elif node_type == 'mult_open':
-            raise MultipleOpeningNotFound('Multiple opening ' + str(node_id) + ' not found')
+            raise MultipleOpeningNotFoundError('Multiple opening ' + str(node_id) + ' not found')
         elif node_type == 'inline_struct':
-            raise InlineStructureNotFound('Inline structure ' + str(node_id) + ' not found')
+            raise InlineStructureNotFoundError('Inline structure ' + str(node_id) + ' not found')
         elif node_type == 'lateral_struct':
-            raise LateralStructureNotFound('Lateral structure ' + str(node_id) + ' not found')
+            raise LateralStructureNotFoundError('Lateral structure ' + str(node_id) + ' not found')
         
-    def _load_node_list(self, node_type):
+    def _load_node_list(self, node_type: str) -> Tuple[Node]:
         """ 
         Returns list of all nodes of node_type (Node objects)
         
@@ -523,7 +336,7 @@ class RasController(object):
                         node_list.append(node)
         return tuple(node_list)
 
-    def open_project(self, project):
+    def open_project(self, project: Union[str, Path]):
         """
         Opens project in RAS
         :param project: string - full path to RAS project file (*.prj)
@@ -580,7 +393,7 @@ class RasController(object):
         """
         # Check if get_profiles() has already been run
         if self._plan_lock:
-            raise LockedPlan('The plan can not be changed after running get_profiles(). I don\'t know why')
+            raise LockedPlanError('The plan can not be changed after running get_profiles(). I don\'t know why')
         self.com_rc.Plan_SetCurrent(plan.name)
         self.com_rc.PlanOutput_SetCurrent(plan.name)
 
