@@ -42,15 +42,19 @@ CH_STA_R = 159  # right station of channel
 
 DEBUG = False
 
+
 class NoOutputFile(Exception):
     pass
+
 
 class FileNotFound(Exception):
     pass
 
+
 class RCException(Exception):
     """ Base class for all rascontrol exceptions """
     pass
+
 
 class RASOpen(RCException):
     """ 
@@ -63,34 +67,44 @@ class RASOpen(RCException):
     """
     pass
 
+
 class NoProject(RCException):
     """ Indicates a project has not yet been opened """
     pass
 
+
 class LockedPlan(RCException):
     pass
+
 
 class CurrentPlanNotRun(RCException):
     """Indicates that the current plan has not yet been run"""
     pass
 
+
 class CrossSectionNotFound(RCException):
     pass
+
 
 class CulvertNotFound(RCException):
     pass
 
+
 class BridgeNotFound(RCException):
     pass
+
 
 class MultipleOpeningNotFound(RCException):
     pass
 
+
 class InlineStructureNotFound(RCException):
     pass
 
+
 class LateralStructureNotFound(RCException):
     pass
+
 
 class Plan(object):
     """ Holds information for a plan """
@@ -109,6 +123,7 @@ class Plan(object):
         fname, _ = self.rc.com_rc.Plan_GetFilename(name)
         # _ is the plan name, as we already have this it's ignored
         return fname
+
 
 class Profile(object):
     def __init__(self, name, code, rc):
