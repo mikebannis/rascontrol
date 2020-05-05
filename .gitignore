@@ -1,7 +1,7 @@
+# Modifications
 *.lock
 *.pyc
 .idea/
-
 rascontrol/models/2D/*
 
 # Byte-compiled / optimized / DLL files
