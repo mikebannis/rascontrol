@@ -1,0 +1,126 @@
+HEC-RAS 5.0.0 February 2016
+       1       1       1       0
+       0       0
+       F       F
+       1
+Initial Conditions Flow Information
+       1        Initial Profile
+    3000       2
+Flow and Seasonal Roughness Flag (plan)
+       F       F
+       2       0       0
+       4
+      20
+     200     500    1000    2000    3000    4000    5000    6000    7000    8000
+    9000   10000   11000   12000   13000   14000   16000   21000   26000   30000
+  204.14  206.09  207.26  208.47   209.3  209.83  210.25  210.68  210.99  211.27
+  211.53  211.78  212.02  212.25  212.47  212.68     213     214     215     216
+     210
+       1       1       1       0
+       0       0
+       F
+Project Title, Plan Title and Plan ShortID
+Culvert Flap Gates Test
+Unsteady with Lat
+Unstead lat                                                     
+Job Control Information
+  Computation Interval  = 5MIN
+  Warmup Interval       =  0 
+  Instantaneous Profile = 3HOUR
+  Hydrograph Interval   = 1HOUR
+  Theta Simulation      =        1
+  Theta Warmup          =        1
+  Friction Slope Method =        2
+  Maximum Iterations    =       20
+  Max Iter WOImprovement=        0
+  Number Warmup Steps   =       10
+  Abort DZ Tolerance    =      100
+  DZ Tolerance          =      .02
+  DZSA Tolerance        =      .02
+  DQ Tolerance          =  3.1E+38
+  Weir Flow Stability   =        2
+  Spillway Stability    =        2
+  Write Restart File    =        F       F
+  Echo Input TS         =        F
+  Echo Parameters       =        F
+  Echo Output TS        =        F
+  DSS Message Level     =        4
+  Write HDF5 File       =        T
+  Write DSS File        =        T
+d:\HEC Data\HEC-RAS\Example Data\1D Unsteady Flow Hydraulics\Culverts with Flap Gates\CulvertFlap.dss
+Computational Time Window
+  Start Date/Time       = 09Feb1999 2400
+  End Date/Time         = 15Feb1999 2400
+Initial Conditions (use restart file?)
+       F
+Log File Information
+       T     118     128
+Computation Level Output
+       F-3.4E+38 3.4E+38       F       F       F       F       F       F       F       F       F   1HOUR
+Mixed Flow - Acceleration term reduction based on Froude number
+       F      10       1       1
+Number of Gate Groups and Internal Boundaries with Gates
+       0       0       0       0
+Breach Data
+       0
+Hydrograph Data
+       1
+       F       F       T       F       F
+Upstream Flow Hydrograph
+     145
+       0 1052.04       1  1207.6       2 1464.96       3 1821.32       4 2272.76
+       5 2814.34       6 3440.12       7 4143.26       8 4916.04       9    5750
+      10    6636      11 7564.34      12 8524.84      13 9506.98      14   10500
+      1511493.02      1612475.16      1713435.66      18   14364      19   15250
+      2016083.96      2116856.74      2217559.88      2318185.66      2418727.24
+      2519178.68      2619535.04      27 19792.4      2819947.96      29   20000
+      3019947.96      31 19792.4      3219535.04      3319178.68      3418727.24
+      3518185.66      3617559.88      3716856.74      3816083.96      39   15250
+      40   14364      4113435.66      4212475.16      4311493.02      4410981.27
+      4510494.48      4610031.43      47 9590.96      48 9171.97      49 8773.42
+      50 8394.31      51 8033.68      52 7690.65      53 7364.34      54 7053.95
+      55 6758.69      56 6477.84      57 6210.68      58 5956.55      59 5714.82
+      60 5484.87      61 5266.14      62 5058.08      63 4860.17      64  4671.9
+      65 4492.82      66 4322.48      67 4160.44      68  4006.3      69 3859.68
+      70 3720.21      71 3587.55      72 3461.35      73 3341.31      74 3227.12
+      75  3118.5      76 3015.18      77  2916.9      78 2823.41      79 2734.49
+      80 2649.89      81 2569.43      82 2492.89      83 2420.08      84 2350.82
+      85 2284.94      86 2222.27      87 2162.66      88 2105.96      89 2052.02
+      90 2000.71      91 1951.91      92 1905.48      93 1861.32      94 1819.31
+      95 1779.35      96 1741.35      97 1705.19      98  1670.8      99 1638.08
+     100 1606.96     101 1577.36     102  1549.2     103 1522.42     104 1496.94
+     105  1472.7     106 1449.65     107 1427.72     108 1406.86     109 1387.02
+     110 1368.14     111 1350.19     112 1333.11     113 1316.86     114 1301.41
+     115 1286.71     116 1272.73     117 1259.43     118 1246.77     119 1234.74
+     120 1223.29     121  1212.4     122 1202.04     123 1192.19     124 1182.81
+     125  1173.9     126 1165.42     127 1157.35     128 1149.68     129 1142.38
+     130 1135.43     131 1128.83     132 1122.54     133 1116.57     134 1110.88
+     135 1105.47     136 1100.33     137 1095.44     138 1090.78     139 1086.36
+     140 1082.14     141 1078.14     142 1074.33     143  1070.7     144 1067.25
+ 3.4E+38
+       F       F       F       F       T
+Downstream Rating Curve
+      20
+  204.14     200  206.09     500  207.26    1000  208.47    2000   209.3    3000
+  209.83    4000  210.25    5000  210.68    6000  210.99    7000  211.27    8000
+  211.53    9000  211.78   10000  212.02   11000  212.25   12000  212.47   13000
+  212.68   14000     213   16000     214   21000     215   26000     216   30000
+Internal Observed Stage/Flow Boundaries
+       0
+Ground Water Interflows
+       0
+Old River Diversions
+       F
+Lateral Inflows, Ungaged Lateral Inflows, Outlet TS, and Observed DSS
+       0       0       0       0
+Stage and Flow Boundary and Ungaged Areas
+       0       0
+Time Slicing Parameters
+       F
+HYDROGRAPH LOCATIONS
+ 4 
+       2       5      40      59
+Rules (number of rule sets, number of lookbacks, number of tables)
+       0       0       0
+Extra Commands
+       0

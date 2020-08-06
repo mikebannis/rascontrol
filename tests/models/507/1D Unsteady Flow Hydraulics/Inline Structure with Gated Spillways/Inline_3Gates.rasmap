@@ -1,0 +1,12 @@
+<RASMapper>
+  <Version>2.0.0.0</Version>
+  <RASProjectionFilename Filename="" />
+  <RASPlans>
+    <RASPlan>
+      <Name>Inline Structure with 3 Gate Groups</Name>
+      <PlanFilename>.\Inline_3Gates.p01</PlanFilename>
+      <DelineateBoundary>False</DelineateBoundary>
+      <DelineationMethod>ConnectedToXS</DelineationMethod>
+    </RASPlan>
+  </RASPlans>
+</RASMapper>

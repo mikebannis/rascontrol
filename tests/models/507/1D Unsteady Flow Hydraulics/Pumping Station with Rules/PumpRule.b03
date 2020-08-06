@@ -1,0 +1,176 @@
+HEC-RAS 5.0.4 Beta 2 March 6, 2018
+       1       1       0       0
+       0       0
+       F
+       1
+Initial Conditions Flow Information
+       1        Initial Profile
+     100       2
+Flow and Seasonal Roughness Flag (plan)
+       F       F
+       2       0       0
+       1     106       0
+       1       1       0       0
+       0       0
+       F
+Project Title, Plan Title and Plan ShortID
+Simple PUMP
+Plan 03
+SIMPLE PUMP                                                     
+Job Control Information
+  Computation Interval  = 1MIN
+  Warmup Interval       =  0 
+  Instantaneous Profile = 1HOUR
+  Hydrograph Interval   = 1MIN
+  Theta Simulation      =        1
+  Theta Warmup          =        1
+  Friction Slope Method =        2
+  Maximum Iterations    =       20
+  Max Iter WOImprovement=        0
+  Number Warmup Steps   =        1
+  Abort DZ Tolerance    =      100
+  DZ Tolerance          =     .001
+  DZSA Tolerance        =       .1
+  DQ Tolerance          =       10
+  Weir Flow Stability   =        2
+  Spillway Stability    =        1
+  Write Restart File    =        F       F
+  Echo Input TS         =        F
+  Echo Parameters       =        F
+  Echo Output TS        =        F
+  DSS Message Level     =        4
+  Write HDF5 File       =        T
+  Write DSS File        =        T
+d:\HEC Data\HEC-RAS\Example Data\1D Unsteady Flow Hydraulics\Pumping Station with Rules\PumpRule.dss
+Computational Time Window
+  Start Date/Time       = 31Dec1999 2400
+  End Date/Time         = 01Jan2000 2300
+Initial Conditions (use restart file?)
+       F
+Log File Information
+       T-3.4E+38 3.4E+38
+Computation Level Output
+       F-3.4E+38 3.4E+38       F       F       F       F       F       F       F       F       F   1HOUR
+Mixed Flow - Acceleration term reduction based on Froude number
+       F      10       1       1
+Number of Gate Groups and Internal Boundaries with Gates
+       1       0       1       0
+Rule Based Controlled Gate Data for:RedFox          RedFox          2.5     
+      14       1       F       F       T
+Gate:Gate #1     
+       1       1      10       0      10
+Breach Data
+       0
+Hydrograph Data
+       2
+       F       F       T       F       F
+Upstream Flow Hydrograph
+      24
+       0     100       1     100       2     100       3     100       4     100
+       5     100       6     100       7     100       8     100       9     100
+      10     100      11     100      12     100      13     100      14     100
+      15     100      16     100      17     100      18     100      19     100
+      20     100      21     100      22     100      23     100
+ 3.4E+38
+       F       T       F       F       F
+Downstream Stage Hydrograph
+      24
+       0     106       1  106.08       2  106.17       3  106.25       4  106.33
+       5  106.42       6   106.5       7  106.85       8   107.2       9   107.2
+      10     107      11  106.83      12  106.67      13   106.5      14  106.36
+      15  106.23      16  106.09      17  105.95      18  105.82      19  105.68
+      20  105.55      21  105.41      22  105.27      23  105.14
+Internal Observed Stage/Flow Boundaries
+       0
+Ground Water Interflows
+       0
+Old River Diversions
+       F
+Lateral Inflows, Ungaged Lateral Inflows, Outlet TS, and Observed DSS
+       1       0       0       0
+      21       1       F       F                       F
+Lateral Inflow Time Series
+      24
+       0    1000       1    1875       2    2750       3    3625       4    4500
+       5    5375       6    6250       7    7125       8    8000       9    8000
+      10    6500      11    5000      12 4623.08      13 4246.15      14 3869.23
+      15 3492.31      16 3115.39      17 2738.46      18 2361.54      19 1984.62
+      20 1607.69      21 1230.77      22  853.85      23  476.92
+ 3.4E+38
+Stage and Flow Boundary and Ungaged Areas
+       0       0
+Time Slicing Parameters
+       F
+HYDROGRAPH LOCATIONS
+ 4 
+       2      13      15      26
+Rules (number of rule sets, number of lookbacks, number of tables)
+       2       0       0
+PUMP STA #1
+       1      11
+row:0008       2       2       F       T       F       F       F       FGateOpen
+Inline Structures                                               Gate.Opening (target position)                                         0      14Gate #1         
+       T       F       F       F       F       F       F       F                
+row:0010       3       6       F       F       F       T       F       F
+       2
+Exprsn:        F               T       1       F       0       F               F        
+comp(<)        1
+Exprsn:        F               F       0       F       0       F               T      .1
+row:0021       4       4       F       F       T       F       F       F
+Pump Stations                                                   Turn Pump On                                                           0        Group #1        Pump #1         
+Exprsn:        F               F       0       F       0       F               F        
+row:0022       5       5       F       F       T       F       F       F
+Pump Stations                                                   WSEL On                                                                0        Group #1        Pump #2         
+Exprsn:        F               F       0       F       0       F               T   106.8
+row:0023      10      10       F       F       T       F       F       F
+Pump Stations                                                   WSEL On                                                                0        Group #1        Pump #3         
+Exprsn:        F               F       0       F       0       F               T   106.9
+row:0025       7      10       F       F       F       T       F       F
+       2
+Exprsn:        F               T       1       F       0       F               F        
+comp(>)        3
+Exprsn:        F               F       0       F       0       F               T       9
+row:0032       8       8       F       F       T       F       F       F
+Pump Stations                                                   Turn Pump Off                                                          0        Group #1        Pump #1         
+Exprsn:        F               F       0       F       0       F               F        
+row:0033       9       9       F       F       T       F       F       F
+Pump Stations                                                   WSEL On                                                                0        Group #1        Pump #2         
+Exprsn:        F               F       0       F       0       F               T     200
+row:0034      10      10       F       F       T       F       F       F
+Pump Stations                                                   WSEL On                                                                0        Group #1        Pump #3         
+Exprsn:        F               F       0       F       0       F               T     200
+row:0036      11      11       F       F       F       F       F       F
+row:0037       0       0       F       F       T       F       F       F
+                                                                                                                                       0                        
+Exprsn:        F               F       0       F       0       F               F        
+RedFox RedFox 2.5
+      14       7
+row:0005       2       2       F       T       F       F       F       FWSEL_US
+Cross Sections                                                  WS Elevation                                                           0      13                
+       T       F       F       F       F       F       F       F                
+row:0006       3       3       F       T       F       F       F       FWSEL_DS
+Cross Sections                                                  WS Elevation                                                           0      16                
+       T       F       F       F       F       F       F       F                
+row:0010       4       5       F       F       F       T       F       F
+       2
+Exprsn:        F               T       2       F       0       F               F        
+comp(>)        3
+Exprsn:        F               F       0       F       0       F               T  106.66
+row:0016       7       7       F       F       T       F       F       F
+Inline Structures                                               Gate.Opening                                                           0        Gate #1         
+Exprsn:        F               F       0       F       0       F               T       0
+row:0018       6       7       F       F       F       T       F       F
+       4
+Exprsn:        F               T       2       F       0       F               F        
+comp(<)        1
+Exprsn:        F               F       0       F       0       F               T   106.5
+       F
+Exprsn:        F               T       1       F       0       F               F        
+comp(>)        3
+Exprsn:        F               T       2       F       0       F               T      .2
+row:0024       7       7       F       F       T       F       F       F
+Inline Structures                                               Gate.Opening                                                           0        Gate #1         
+Exprsn:        F               F       0       F       0       F               T      10
+row:0026       0       0       F       F       F       F       F       F
+Extra Commands
+       0

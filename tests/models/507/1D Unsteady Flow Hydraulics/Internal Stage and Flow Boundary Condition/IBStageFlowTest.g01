@@ -1,0 +1,693 @@
+Geom Title=Gate Geometry with 3 Gate Groups
+Version=Version 3.1 Beta  Jan 2002
+Viewing Rectangle= 0.287535348716061 , 0.518352109418653 , 0.920047554051495 , 0.110572694232536 
+
+River Reach=Nittany River   ,Weir Reach      
+Reach XY= 16 
+        .2909501         .911523        .3590507        .8635502
+         .389114        .8217532        .4261192        .7623599
+        .4472569        .7049631        .4520062        .6404652
+        .4749764        .5808323        .4864225        .5306454
+        .4852363         .473121         .488796        .4103674
+         .504224        .3563294          .51253         .307521
+        .5101566        .2360516        .5160892        .1942157
+         .505514        .1558664         .480303          .11883
+Rch Text X Y=0.2993478,0.5078494
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,60.1    ,3160,3160,3160
+BEGIN DESCRIPTION:
+60.1
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 57 
+    1000    37.5    1002    38.5    1005    38.9    1028      39    1069    27.5
+    1091    24.3    1116      26    1128       3    1134      .5    1140      -6
+    1146   -10.5    1152     -11    1158     -12    1164   -11.5    1170     -12
+    1176     -13    1185     -13    1194     -13    1203   -13.5    1212     -13
+    1221     -13    1230     -13    1239     -13    1248     -13    1266     -12
+    1278     -10    1290    -9.5    1302     -11    1314     -13    1326   -12.5
+    1341     -10    1356     -10    1371      -9    1386      -9    1401      -9
+    1406    -8.8    1416      -8    1431    -7.5    1446      -7    1461      -7
+    1476      -5    1491      -5    1506      -5    1521      -4    1536    -3.5
+    1551      -3    1566      -2    1581      -2    1596      -2    1611      -2
+    1626       0    1644       3    1656      26    1681    24.3    1703    27.5
+    1744      39    1767    38.9
+#Mann= 3 , 0 , 0 
+    1000    .036       0    1116    .036       0    1656    .036       0
+Bank Sta=1116,1656
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-12.5,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,59.5    ,3695,3695,3695
+BEGIN DESCRIPTION:
+59.5
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 28 
+       0    35.7       9    35.8      19    31.7      29    25.8      39      20
+      70     3.8      75     1.8     112    -8.4     151   -14.2     212   -11.8
+     262   -11.7     295   -10.9     336   -12.5     350   -11.5     389   -12.5
+     431   -14.9     472     -11     598   -16.2     616   -15.2     693      .3
+     703     3.9     731     6.2     747      18     779      22     809    22.6
+     836    32.6     846    38.4     855    38.4
+#Mann= 3 , 0 , 0 
+       0    .035       0       9     .03       0     846    .035       0
+Bank Sta=9,846
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-15.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,58.8    ,3960,3960,3960
+BEGIN DESCRIPTION:
+58.8
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 35 
+       0      37      30    33.7      31    34.5      32    22.4      45    16.8
+      55    10.4      70     3.7      78     2.2     122   -10.5     157   -12.8
+     174   -16.3     254   -16.2     287   -17.5     340   -17.7     356   -18.8
+     411   -17.5     429   -18.9     468   -15.1     493   -15.1     503   -13.3
+     526   -12.3     553   -14.2     577   -11.1     600   -12.9     612   -12.4
+     638   -13.3     668      -4     700      .1     715     3.7     733     6.4
+     760    14.5     765    18.9     780    34.4     840    34.4     841    37.4
+#Mann= 3 , 0 , 0 
+       0    .035       0      31     .03       0     780    .035       0
+Bank Sta=31,780
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-17.9,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,58.05   ,5544,5544,5544
+BEGIN DESCRIPTION:
+58.05
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 36 
+       0      35      10    29.1      30    21.2      40    16.4      48    14.2
+      65     9.9      66     5.1      81     3.6      86     2.1     113    -6.5
+     151   -13.4     198   -14.1     207   -15.2     264     -16     271   -14.8
+     313   -12.8     344   -13.3     393   -12.7     420   -11.6     463   -11.6
+     474   -12.4     496   -14.4     522   -11.6     530   -12.1     547   -10.8
+     566   -12.8     577   -12.5     597   -14.4     685   -14.7     723    -2.6
+     738     3.6     744    11.4     760    18.9     770    26.2     788    33.8
+     812    34.7
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     812     .03       0
+Bank Sta=0,812
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-15,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,57      ,6020,6020,6020
+BEGIN DESCRIPTION:
+57
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 38 
+       0    40.8      24    40.1      51     3.3      57     -.9     104   -21.3
+     109   -25.6     117   -25.1     127   -26.7     133   -31.7     144   -28.7
+     154   -29.6     164   -28.2     180     -28     222   -24.1     235     -24
+     254   -21.8     266   -22.4     287   -20.1     294   -20.4     317   -18.2
+     349   -16.5     361     -15     371     -15     403   -13.6     418   -14.1
+     471   -12.9     504     -11     572     -.5     582     3.3     626       9
+     632    13.5     651    16.9     691    17.6     712    21.9     719    27.9
+     726      34     736    38.1     759    39.4
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     759     .03       0
+Bank Sta=0,759
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-30.7,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,55.86   ,7180,7180,7180
+BEGIN DESCRIPTION:
+55.86
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 25 
+       0      39       9    38.4      35    30.5      97     3.1     103    -2.9
+     117    -3.7     155   -20.9     209   -30.4     332   -23.2     346   -23.9
+     380   -21.4     407   -20.4     431   -17.3     459   -16.4     521     -.8
+     531     -.5     541     3.1     556     5.2     567     8.7     572    14.6
+     601    20.8     611    27.9     619    33.6     631    37.9     644      39
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     644     .03       0
+Bank Sta=0,644
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-29.4,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,54.5    ,7365,7365,7365
+BEGIN DESCRIPTION:
+54.5
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 26 
+       0      38       8      37      40    22.5     110    19.8     194    17.7
+     226      18     320    16.3     324    12.4     330     8.4     354       3
+     364     1.5     412    -1.4     455    -5.5     502     -17     584     -27
+     668     -48     677   -47.4     700     -52     780   -12.4     825      -2
+     835       3     882    19.4     902    27.4     912      34     930    38.9
+     942    39.5
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     942     .03       0
+Bank Sta=0,942
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-30,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,53.1    ,4755,4755,4755
+BEGIN DESCRIPTION:
+53.1
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 30 
+       0      34       8      34      22    25.1      28    17.9      71     2.7
+      81     -.8     101    -4.1     139   -25.3     149   -25.3     166     -24
+     202   -25.1     239   -22.1     289   -21.7     322     -21     344   -17.8
+     359     -19     379   -17.3     394   -17.4     426   -20.3     441   -18.1
+     462   -13.1     479   -12.8     510    -1.3     530     1.2     540     2.7
+     575    18.2     592    26.4     603    31.2     622    37.3     634    37.8
+#Mann= 3 , 0 , 0 
+       0    .033       0       8     .03       0     634     .03       0
+Bank Sta=8,634
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-24.3,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,52.2    ,5280,5280,5280
+BEGIN DESCRIPTION:
+52.2
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 32 
+       0    33.4      36    31.7      56    17.5      70    15.8      84    10.8
+      96     5.5     108     2.6     123    -2.2     144    -6.1     163    -6.8
+     184    -8.3     199    -7.6     238    -7.4     295    -9.3     385   -11.9
+     489   -12.5     511   -12.1     522   -12.5     536   -12.1     561   -12.7
+     580   -14.5     599   -13.5     679   -15.6     702   -15.5     723   -16.1
+     740   -13.5     758    -6.9     791    -1.4     799     2.6     836      20
+     870      36     885    36.5
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     885     .03       0
+Bank Sta=0,885
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-15.1,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,51.2    ,2112,2112,2112
+BEGIN DESCRIPTION:
+51.2
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 31 
+       0    32.1      11    31.4      56    18.7      69      18      74    17.7
+      86    12.8     101     3.5     111    -2.5     173   -19.5     216   -10.1
+     226   -10.9     254    -4.9     294     -24     315     -20     336   -21.2
+     355   -20.5     382   -16.7     400     -16     492   -17.2     530   -19.1
+     571   -16.1     586   -17.9     596   -17.7     612   -18.4     633   -20.1
+     696    -1.7     703     3.5     732    17.1     745    25.5     768    35.9
+     789    37.4
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     789     .03       0
+Bank Sta=0,789
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-23,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,50.8    ,4224,4224,4224
+BEGIN DESCRIPTION:
+50.8
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 37 
+       0      33      10    32.5      19    32.1      48    17.7      81     3.5
+      91      .5     121    -6.9     159    -9.7     219   -14.2     240   -16.5
+     263   -15.9     273   -14.4     290   -15.4     325   -14.9     416   -17.3
+     442   -18.4     461   -20.5     474   -20.2     499   -14.8     505   -15.2
+     531    -9.7     542    -8.7     545    -9.2     553    -8.1     564    -9.9
+     578    -9.7     591    -6.9     602    -7.6     613    -6.2     637     -.1
+     647      .7     655     3.5     675    11.2     688    15.9     710    25.8
+     724    33.6     744    34.8
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     744     .03       0
+Bank Sta=0,744
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-19.5,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,50      ,3695,3695,3695
+BEGIN DESCRIPTION:
+50
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 34 
+       0    31.9      15    28.6      46      19      71    18.6      92    19.2
+     113     3.4     128    -6.7     188   -17.8     208   -15.6     234   -16.2
+     246     -18     291   -17.6     305   -18.6     336   -14.4     351   -15.6
+     381   -13.6     425   -12.8     489     -14     563   -15.7     590   -16.8
+     631    -7.4     642    -7.1     672    -1.2     690       0     733     -.1
+     760     1.9     770     3.4     790     6.7     813    11.4     847    14.7
+     910    15.9     985    27.7     987    29.5    1009    30.9
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0    1009     .03       0
+Bank Sta=0,1009
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-17.6,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,49.3    ,4224,4224,4224
+BEGIN DESCRIPTION:
+49.3
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 30 
+       0    32.5      56    23.8     124    22.5     147    13.8     175     3.3
+     185      .5     241   -11.5     270    -9.2     312     -16     330   -16.3
+     386   -15.2     404   -15.7     419   -14.9     462   -15.1     476     -16
+     485   -15.2     537   -15.1     577   -14.8     587   -11.2     620   -12.7
+     631   -15.2     648   -15.3     698   -12.1     750   -11.2     795     1.8
+     805     3.3     859    16.7     880    21.3     894    31.1     912    33.7
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     912     .03       0
+Bank Sta=0,912
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-15.3,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,48.5    ,2640,2640,2640
+BEGIN DESCRIPTION:
+48.5
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 29 
+       0    31.6       9    30.9      35    18.5      67    19.2     100     3.1
+     105       0     127    -6.3     156    -9.4     188   -12.8     227   -13.3
+     249   -14.1     274   -13.9     305   -15.5     322   -18.5     334   -19.9
+     352   -20.5     386   -19.3     500   -24.1     508   -22.5     517   -22.9
+     539     -19     566   -11.9     594     -.4     604     3.1     618    10.7
+     620    12.6     660    27.4     664    29.8     684    31.1
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     684     .03       0
+Bank Sta=0,684
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-23.1,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,48      ,3695,3695,3695
+BEGIN DESCRIPTION:
+48
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 34 
+       0    31.2      10    30.4      36    19.4      54    13.5      72     2.9
+      82    -2.1     122   -16.9     142   -14.1     159   -18.6     173   -17.5
+     191   -18.9     198   -18.4     211   -20.9     232   -18.7     272     -16
+     339   -13.5     348     -15     364   -14.5     382   -15.1     403   -13.5
+     442   -12.9     513   -11.5     601   -12.9     629   -12.6     660    -9.6
+     684    -2.7     722    -1.3     739     1.4     750     2.9     784     8.2
+     790    12.6     820    28.2     829    30.8     850    31.8
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     850     .03       0
+Bank Sta=0,850
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-19.9,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,47.3    ,3696,3696,3696
+BEGIN DESCRIPTION:
+47.3
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 29 
+       0    31.7       9    30.6      47    15.9      73     2.8      81    -1.6
+      95      -2     120    -6.8     135   -16.2     144   -19.3     196   -15.2
+     224   -15.9     267   -13.4     362   -10.3     401   -11.6     468    -9.5
+     500     -10     569    -7.3     623    -3.9     641    -6.6     657      -7
+     688    -5.8     741    -7.4     758    -9.4     780    -6.2     790     2.8
+     810    14.2     843    28.4     851    30.2     861    30.7
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     861     .03       0
+Bank Sta=0,861
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-18.3,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,46.6    ,3168,3168,3168
+BEGIN DESCRIPTION:
+46.6
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 29 
+       0      31      15    29.9      52    16.5      89     2.7      99      .2
+     133    -4.6     160   -17.5     168   -24.3     185   -24.7     211   -26.5
+     237   -26.3     254   -23.4     291   -22.1     345     -23     386   -21.1
+     402   -23.9     428   -22.6     433   -23.9     469   -20.9     481   -20.8
+     488   -19.5     509   -17.3     535    -7.4     545     2.7     570    15.7
+     590    18.3     617    28.9     621    29.9     634    30.5
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     634     .03       0
+Bank Sta=0,634
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-25.5,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,46      ,3696,3696,3696
+BEGIN DESCRIPTION:
+46
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 19 
+       0    30.7      10    29.6      54      15      69    11.3      90     2.6
+      98    -2.9     143    -9.2     195   -17.9     252   -16.1     342   -17.7
+     438   -15.6     519   -19.2     557   -18.3     619   -21.2     664    -3.9
+     672     2.6     716    22.7     730    30.5     747    31.8
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     747     .03       0
+Bank Sta=0,747
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-20.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,45.3    ,3168,3168,3168
+BEGIN DESCRIPTION:
+45.3
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 19 
+       0    28.1      24    27.2      88     4.7      98    -2.3     132   -12.3
+     158   -17.3     172   -15.9     263   -15.8     312   -14.6     362   -15.8
+     408   -15.3     473   -15.7     581   -14.5     606   -15.1     625    -9.8
+     657    -1.3     710     4.7     750    31.2     763      31
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     750    .035       0
+Bank Sta=0,750
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.3,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,44.7    ,3696,3696,3696
+BEGIN DESCRIPTION:
+44.7
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 15 
+       0    30.5      16    29.8      29    27.3      75     4.8      85       1
+     124   -12.2     167   -34.2     266     -29     402   -17.9     464   -15.6
+     493    -6.6     516    -2.1     526     4.8     579    31.3     592    30.8
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     579    .035       0
+Bank Sta=0,579
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-33.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,44      ,2112,2112,2112
+BEGIN DESCRIPTION:
+44
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0    31.2      13    30.4      21    29.6      57     4.8      67    -.69
+     118   -15.2     149   -27.2     182   -25.8     299   -24.8     357   -22.2
+     416   -20.6     455   -17.2     485    -6.6     504    -1.5     514     4.8
+     569    30.7     588    30.8
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     588     .03       0
+Bank Sta=0,588
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-26.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,43.6    ,3696,3696,3696
+BEGIN DESCRIPTION:
+43.6
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 20 
+       0    30.1      16    30.4      76       5      86      -2     144    -9.9
+     238    -9.2     301     -12     322   -10.9     400   -12.5     422   -13.7
+     521   -14.2     617   -18.2     666   -22.5     687   -26.2     706   -24.8
+     734   -15.6     791    -3.2     801       5     846    30.3     866    31.3
+#Mann= 3 , 0 , 0 
+       0    .035       0      16     .03       0     866     .03       0
+Bank Sta=16,866
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-25.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,42.9    ,4752,4752,4752
+BEGIN DESCRIPTION:
+42.9
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 18 
+       0    29.7      16    29.3      26    25.3      58     5.3      63     1.3
+      97    -4.1     136   -15.5     216   -21.5     397   -31.7     411   -33.4
+     425   -30.5     469   -16.4     489    -8.3     510    -1.7     520     5.3
+     568    27.6     581    32.1     603    32.6
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     603     .03       0
+Bank Sta=0,603
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-32.4,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,42      ,1180,1180,1180
+BEGIN DESCRIPTION:
+42
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0    28.4      20    27.4      67     5.3      72     2.3     121    -4.7
+     153     -16     166   -17.7     347     -15     480   -14.5     522   -13.1
+     601   -13.5     678   -14.7     708   -17.1     749    -6.7     761     5.3
+     794    26.4     818    26.7
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     818     .03       0
+Bank Sta=0,818
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.7,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,41.78   ,100,100,100
+BEGIN DESCRIPTION:
+41.78
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0   28.73      20   27.73      67    5.63      72    2.63     121   -4.37
+     153  -15.67     166  -17.37     347  -14.67     480  -14.17     522  -12.77
+     601  -13.17     678  -14.37     708  -16.77     749   -6.37     761    5.63
+     794   26.73     818   27.03
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     818     .03       0
+Bank Sta=0,818
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.37,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,41.76   ,90,90,90
+BEGIN DESCRIPTION:
+41.76
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0   28.73      20   27.73      67    5.63      72    2.63     121   -4.37
+     153  -15.67     166  -17.37     347  -14.67     480  -14.17     522  -12.77
+     601  -13.17     678  -14.37     708  -16.77     749   -6.37     761    5.63
+     794   26.73     818   27.03
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     818     .03       0
+#XS Ineff= 2 , 0 
+       0     185     9.5     745       0      13
+Permanent Ineff=
+       F       F
+Bank Sta=0,818
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.37,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 5 ,41.75   ,,,
+BEGIN DESCRIPTION:
+Inline Weir and Gated Spillway
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+IW Pilot Flow=0
+#Inline Weir SE= 6 
+       0    13.5      57    13.5      61     9.5     190     9.5     194    13.5
+    1000    13.5
+IW Dist,WD,Coef,Skew,MaxSub,Min_El,Is_Ogee,SpillHt,DesHd
+20,50,3.95,0,0.95,,-1 ,24,3,2,2,
+IW Gate Name Wd,H,Inv,GCoef,Exp_T,Exp_O,Exp_H,Type,WCoef,Is_Ogee,SpillHt,DesHd,#Openings
+Left Group  ,30,10,0,0.68,0,1,0.5, 1 ,3.91,-1 ,14,10, 5 ,10,0.8, 0 
+     220     255     290     325     360
+IW Gate Name Wd,H,Inv,GCoef,Exp_T,Exp_O,Exp_H,Type,WCoef,Is_Ogee,SpillHt,DesHd,#Openings
+Middle Group,30,10,0,0.68,0,1,0.5, 1 ,3.91,-1 ,14,10, 5 ,10,0.8, 0 
+     395     430     465     500     535
+IW Gate Name Wd,H,Inv,GCoef,Exp_T,Exp_O,Exp_H,Type,WCoef,Is_Ogee,SpillHt,DesHd,#Openings
+Right Group ,30,10,0,0.68,0,1,0.5, 1 ,3.91,-1 ,14,10, 5 ,10,0.8, 0 
+     570     605     640     675     710
+
+Type RM Length L Ch R = 1 ,41.74   ,200,200,200
+BEGIN DESCRIPTION:
+41.7
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 22 
+       0   29.27      22   27.47      67    4.97      72    1.97     115   -4.23
+     172  -17.03     196  -15.83     305  -14.53     346  -15.43     419  -14.13
+     471  -16.03     519  -14.03     563  -14.83     589  -16.93     659  -14.73
+     700  -10.63     736   -4.03     746    4.97     770   12.57     794   19.17
+     816   26.07     831   26.87
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     831     .03       0
+#XS Ineff= 2 , 0 
+       0     185     9.5     745       0    13.5
+Permanent Ineff=
+       F       F
+Bank Sta=0,831
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.03,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,41.70   ,1070,1070,1070
+BEGIN DESCRIPTION:
+41.70
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 22 
+       0   29.27      22   27.47      67    4.97      72    1.97     115   -4.23
+     172  -17.03     196  -15.83     305  -14.53     346  -15.43     419  -14.13
+     471  -16.03     519  -14.03     563  -14.83     589  -16.93     659  -14.73
+     700  -10.63     736   -4.03     746    4.97     770   12.57     794   19.17
+     816   26.07     831   26.87
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     831     .03       0
+Bank Sta=0,831
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-16.03,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,41.5    ,3696,3696,3696
+BEGIN DESCRIPTION:
+41.5
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 22 
+       0    29.6      22    27.8      67     5.3      72     2.3     115    -3.9
+     172   -16.7     196   -15.5     305   -14.2     346   -15.1     419   -13.8
+     471   -15.7     519   -13.7     563   -14.5     589   -16.6     659   -14.4
+     700   -10.3     736    -3.7     746     5.3     770    12.9     794    19.5
+     816    26.4     831    27.2
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     831     .03       0
+Bank Sta=0,831
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-15.7,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,40.8    ,4224,4224,4224
+BEGIN DESCRIPTION:
+40.8
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0    29.2      12      29      24    26.7      62     5.1     113    -3.1
+     131    -7.3     162   -22.7     190   -19.9     450   -12.9     486   -12.4
+     633   -16.6     672   -12.2     714    -2.7     728    -1.4     738     5.1
+     780      25     793    25.5
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     793     .03       0
+Bank Sta=0,793
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-21.7,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,40      ,3696,3696,3696
+BEGIN DESCRIPTION:
+40
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 21 
+       0    27.5      20    27.5      75    -3.1      95   -18.5     105   -23.1
+     115   -23.4     125   -25.7     257     -19     317   -19.4     387   -18.5
+     397   -19.4     417   -19.4     476     -18     495   -18.1     528     -19
+     557   -16.7     587   -16.3     610    -9.9     647     6.1     688    26.7
+     701    26.7
+#Mann= 3 , 0 , 0 
+       0    .035       0      20     .03       0     688    .035       0
+Bank Sta=20,688
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-24.7,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,39.3    ,2905,2905,2905
+BEGIN DESCRIPTION:
+39.3
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 17 
+       0    27.5      20    27.5      54    11.3     128   -30.4     198   -29.4
+     208     -29     310     -26     400     -22     460     -20     480     -21
+     491     -18     500     -12     540       3     555       5     580      14
+     681      26     700      26
+#Mann= 3 , 0 , 0 
+       0    .035       0      20     .03       0     681    .035       0
+Bank Sta=20,681
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-29.4,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,38.75   ,2376,2376,2376
+BEGIN DESCRIPTION:
+38.75
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 19 
+       0    28.3      20    28.3      70     5.5      95    -1.8     147   -14.6
+     156     -18     186   -22.6     208   -22.7     295   -28.6     360   -30.8
+     398   -32.8     455   -33.2     468   -19.8     478   -16.1     487   -15.6
+     498   -12.4     546     9.2     574    27.8     594    27.8
+#Mann= 3 , 0 , 0 
+       0    .035       0      20     .03       0     574    .035       0
+Bank Sta=20,574
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-32.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,38.3    ,7655,7655,7655
+BEGIN DESCRIPTION:
+38.3
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 15 
+       0      24      20    23.1      82   -10.8     105   -17.8     161   -27.2
+     212   -24.3     280   -23.8     365   -20.8     469   -19.4     545   -19.3
+     565   -14.4     595    -2.3     605    -1.1     656    26.5     676    26.5
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     656    .035       0
+Bank Sta=0,656
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-26.2,3, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,36.85   ,0,0,0
+BEGIN DESCRIPTION:
+36.85
+END DESCRIPTION:
+Node Last Edited Time=4/3/2000 2:53:56 PM 
+#Sta/Elev= 15 
+       0   22.78      20   21.88      82  -12.02     105  -19.02     161  -28.42
+     212  -25.52     280  -25.02     365  -22.02     469  -20.62     545  -20.52
+     565  -15.62     595   -3.52     605   -2.32     656   25.28     676   25.28
+#Mann= 3 , 0 , 0 
+       0     .03       0       0     .03       0     656    .035       0
+Bank Sta=0,656
+XS Rating Curve= 0 
+XS HTab Starting El and Incr=-27.42,3, 0 
+Exp/Cntr=0.3,0.1
+
+Chan Stop Cuts=-1 

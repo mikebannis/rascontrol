@@ -1,0 +1,142 @@
+HEC-RAS 5.0.4 Beta 2 March 6, 2018
+       1       1       0       0
+       0       0
+       T
+       1
+Initial Conditions Flow Information
+       1        Initial Profile
+     500       1
+Flow and Seasonal Roughness Flag (plan)
+       F       F
+       2       0       0
+       1    59.3       0
+       1       1       0       0
+       0       0
+       T
+Project Title, Plan Title and Plan ShortID
+Mixed Flow
+Unsteady with Mixed Flow Regime
+Mixed Flow                                                      
+Job Control Information
+  Computation Interval  = 30SEC
+  Warmup Interval       =  0 
+  Instantaneous Profile = 1HOUR
+  Hydrograph Interval   = 1HOUR
+  Theta Simulation      =        1
+  Theta Warmup          =        1
+  Friction Slope Method =        2
+  Maximum Iterations    =       20
+  Max Iter WOImprovement=        0
+  Number Warmup Steps   =        1
+  Abort DZ Tolerance    =      100
+  DZ Tolerance          =      .02
+  DZSA Tolerance        =       .1
+  DQ Tolerance          =  3.1E+38
+  Weir Flow Stability   =        2
+  Spillway Stability    =        1
+  Write Restart File    =        F       F
+  Echo Input TS         =        F
+  Echo Parameters       =        F
+  Echo Output TS        =        F
+  DSS Message Level     =        4
+  Write HDF5 File       =        T
+  Write DSS File        =        T
+d:\HEC Data\HEC-RAS\Example Data\1D Unsteady Flow Hydraulics\Mixed Flow Regime\MixedFlow.dss
+Computational Time Window
+  Start Date/Time       = 01Jan2000 0100
+  End Date/Time         = 04Jan2000 2400
+Initial Conditions (use restart file?)
+       F
+Log File Information
+       F       0       0
+Computation Level Output
+       F-3.4E+38 3.4E+38       F       F       F       F       F       F       F       F       F   1HOUR
+Mixed Flow - Acceleration term reduction based on Froude number
+       T       7     1.6       1
+Number of Gate Groups and Internal Boundaries with Gates
+       0       0       0       0
+Breach Data
+       0
+Hydrograph Data
+       2
+       F       F       T       F       F
+Upstream Flow Hydrograph
+      96
+       0     500       1     500       2     500       3     500       4     500
+       5     500       6     500       7     500       8     500       9     500
+      10     500      11     500      12     500      13  520.83      14  541.67
+      15   562.5      16  583.33      17  604.17      18     625      19  645.83
+      20  666.67      21   687.5      22  708.33      23  729.17      24     750
+      25  770.83      26  791.67      27   812.5      28  833.33      29  854.17
+      30     875      31  895.83      32  916.67      33   937.5      34  958.33
+      35  979.17      36    1000      37    1000      38    1000      39   991.8
+      40  983.61      41  975.41      42  967.21      43  959.02      44  950.82
+      45  942.62      46  934.43      47  926.23      48  918.03      49  909.84
+      50  901.64      51  893.44      52  885.25      53  877.05      54  868.85
+      55  860.66      56  852.46      57  844.26      58  836.07      59  827.87
+      60  819.67      61  811.48      62  803.28      63  795.08      64  786.89
+      65  778.69      66  770.49      67   762.3      68   754.1      69   745.9
+      70   737.7      71  729.51      72  721.31      73  713.11      74  704.92
+      75  696.72      76  688.52      77  680.33      78  672.13      79  663.93
+      80  655.74      81  647.54      82  639.34      83  631.15      84  622.95
+      85  614.75      86  606.56      87  598.36      88  590.16      89  581.97
+      90  573.77      91  565.57      92  557.38      93  549.18      94  540.98
+      95  532.79
+ 3.4E+38
+       F       T       F       F       F
+Downstream Stage Hydrograph
+      96
+       0    59.3       1   59.67       2   60.04       3   60.41       4   60.78
+       5   61.15       6   61.52       7   61.89       8   62.26       9   62.63
+      10      63      11   63.37      12   63.74      13   64.11      14   64.48
+      15   64.85      16   65.22      17   65.59      18   65.96      19   66.34
+      20   66.71      21   67.08      22   67.45      23   67.82      24   68.19
+      25   68.56      26   68.93      27    69.3      28   69.67      29   70.04
+      30   70.41      31   70.78      32   71.15      33   71.52      34   71.89
+      35   72.26      36   72.63      37      73      38   72.78      39   72.56
+      40   72.34      41   72.12      42    71.9      43   71.67      44   71.45
+      45   71.23      46   71.01      47   70.79      48   70.57      49   70.35
+      50   70.13      51   69.91      52   69.69      53   69.46      54   69.24
+      55   69.02      56    68.8      57   68.58      58   68.36      59   68.14
+      60   67.92      61    67.7      62   67.48      63   67.25      64   67.03
+      65   66.81      66   66.59      67   66.37      68   66.15      69   65.93
+      70   65.71      71   65.49      72   65.27      73   65.05      74   64.82
+      75    64.6      76   64.38      77   64.16      78   63.94      79   63.72
+      80    63.5      81   63.28      82   63.06      83   62.84      84   62.61
+      85   62.39      86   62.17      87   61.95      88   61.73      89   61.51
+      90   61.29      91   61.07      92   60.85      93   60.63      94    60.4
+      95   60.18
+Internal Observed Stage/Flow Boundaries
+       0
+Ground Water Interflows
+       0
+Old River Diversions
+       F
+Lateral Inflows, Ungaged Lateral Inflows, Outlet TS, and Observed DSS
+       0       0       0       0
+Stage and Flow Boundary and Ungaged Areas
+       0       0
+Time Slicing Parameters
+       F
+HYDROGRAPH LOCATIONS
+ 151 
+       1       2       3       4       5       6       7       8       9      10
+      11      12      13      14      15      16      17      18      19      20
+      21      22      23      24      25      26      27      28      29      30
+      31      32      33      34      35      36      37      38      39      40
+      41      42      43      44      45      46      47      48      49      50
+      51      52      53      54      55      56      57      58      59      60
+      61      62      63      64      65      66      67      68      69      70
+      71      72      73      74      75      76      77      78      79      80
+      81      82      83      84      85      86      87      88      89      90
+      91      92      93      94      95      96      97      98      99     101
+     103     104     105     106     107     108     109     110     111     112
+     113     114     115     116     117     118     119     120     121     122
+     123     124     125     126     127     128     129     130     131     132
+     133     134     135     136     137     138     139     140     141     142
+     143     144     145     146     147     148     149     150     151     152
+     153
+Rules (number of rule sets, number of lookbacks, number of tables)
+       0       0       0
+Extra Commands
+       0

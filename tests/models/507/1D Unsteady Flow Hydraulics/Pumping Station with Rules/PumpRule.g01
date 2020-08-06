@@ -1,0 +1,308 @@
+Geom Title=Redfox Geometry
+Program Version=4.20
+Viewing Rectangle= 0.093598508 , 0.748672292 , 0.950995 , 0.150805 
+
+River Reach=RedFox          ,RedFox          
+Reach XY= 2 
+           0.407          0.9034           0.566          0.1984
+Rch Text X Y=0.4742489,0.7849224
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,5       ,200,200,200
+BEGIN DESCRIPTION:
+RiverMile 5
+RiverMile5
+END DESCRIPTION:
+Node Last Edited Time=May/14/2010 14:02:43
+#Sta/Elev= 4 
+       0  130.05       0  100.05     500  100.05     500  130.05
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.14,2, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.9*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.05       0  100.05     500  100.05     500  130.05
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.8*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.05       0  100.05     500  100.05     500  130.05
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.7*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.05       0  100.05     500  100.05     500  130.05
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.6*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.05       0  100.05     500  100.05     500  130.05
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.5*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.4*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.3*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.2*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4.1*    ,200,200,200
+Node Last Edited Time=May/14/2010 14:03:21
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,4       ,100,100,100
+BEGIN DESCRIPTION:
+RiverMile 4
+END DESCRIPTION:
+Node Last Edited Time=May/16/2000 16:30:50
+#Sta/Elev= 4 
+       0  130.04       0  100.04     500  100.04     500  130.04
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.14,2, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,3       ,100,100,100
+BEGIN DESCRIPTION:
+RiverMile 3
+END DESCRIPTION:
+Node Last Edited Time=May/16/2000 16:30:50
+#Sta/Elev= 4 
+       0  130.03       0  100.03     500  100.03     500  130.03
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.13,2, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 5 ,2.5     ,,,
+Node Last Edited Time=May/14/2010 14:32:52
+IW Pilot Flow=0
+#Inline Weir SE= 2 
+       0     130     500     130
+IW Dist,WD,Coef,Skew,MaxSub,Min_El,Is_Ogee,SpillHt,DesHd
+20,60,2.6,0,0.98,, 0 ,,,0,0,
+IW Gate Name Wd,H,Inv,GCoef,Exp_T,Exp_O,Exp_H,Type,WCoef,Is_Ogee,SpillHt,DesHd,#Openings
+Gate #1     ,5,10,101,0.6,0,1,0.5, 0 ,3, 0 ,,, 1 ,,0.8, 0 ,,,0,0,0, 0 
+     100
+Inline Weir Flap Gates= 0 
+
+Type RM Length L Ch R = 1 ,2       ,100,100,100
+BEGIN DESCRIPTION:
+RiverMile 2
+END DESCRIPTION:
+Node Last Edited Time=May/16/2000 16:30:50
+#Sta/Elev= 4 
+       0  130.02       0  100.02     500  100.02     500  130.02
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.12,2, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,1       ,100,100,100
+BEGIN DESCRIPTION:
+RiverMile 1
+END DESCRIPTION:
+Node Last Edited Time=May/14/2010 13:58:04
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.11,2, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.9*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.8*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.7*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.6*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.5*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0  130.01       0  100.01     500  100.01     500  130.01
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.4*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0     130       0     100     500     100     500     130
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.3*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0     130       0     100     500     100     500     130
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.2*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0     130       0     100     500     100     500     130
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,.1*     ,100,100,100
+Node Last Edited Time=May/14/2010 13:58:20
+#Sta/Elev= 4 
+       0     130       0     100     500     100     500     130
+#Mann= 2 , 0 , 0 
+       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,0       ,100,100,100
+BEGIN DESCRIPTION:
+RiverMile 0
+River mile 0
+END DESCRIPTION:
+Node Last Edited Time=May/16/2000 16:30:50
+#Sta/Elev= 4 
+       0     130       0     100     500     100     500     130
+#Mann= 3 , 0 , 0 
+       0     .05       0       0     .03       0     500     .05       0
+Bank Sta=0,500
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=100.1,2, 0 
+Exp/Cntr=0.3,0.1
+
+Pump Station=PUMP STA #1     ,0.2869813,0.4033304,,,0.2869813,0.4033304
+Pump Station From=RedFox          ,RedFox          ,4       ,                ,
+Pump Station To=RedFox          ,RedFox          ,1       ,                ,
+Pump Station Reference=                ,                ,        ,                ,
+Pump Station Group=Group #1        ,False,5,5
+Pump Station Group Pump=Pump #1         ,200,150
+Pump Station Group Pump=Pump #2         ,200,106.5
+Pump Station Group Pump=Pump #3         ,200,106.525
+Pump Station Group HQ= 2 
+       0      50       3       0
+
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+User Specified Reach Order=RedFox          ,RedFox          
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5

@@ -1,0 +1,183 @@
+Flow Title=1972 Flood Event
+Program Version=4.00
+Use Restart= 0 
+Initial Flow Loc=Bald Eagle Cr.  ,Lock Haven      ,137520  ,547
+Initial Flow Loc=Bald Eagle Cr.  ,Lock Haven      ,81914   ,1000
+Initial Flow Loc=Bald Eagle Cr.  ,Lock Haven      ,-897    ,6000
+Initial Storage Elev=190             ,535
+Initial Storage Elev=191             ,537
+Initial Storage Elev=192             ,546
+Initial Storage Elev=193             ,559.7
+Initial Storage Elev=194             ,595
+Initial Storage Elev=195             ,615.6
+Initial Storage Elev=255             ,631
+Initial RRR Elev=Bald Eagle Cr.  ,Lock Haven      ,81914   ,630
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,137520  ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 150 
+    1000    1040    1080    1120    1160    1200    1960    2720    3480    4240
+    5000    6500    8000    9500   11000   12500   14000   15500   17000   18500
+   20000   22000   24000   26000   28000   30000   34000   38000   42000   46000
+   50000   54000   58000   62000   66000   70000   73000   76000   79000   82000
+   85000   87200   89400   91600   93800   96000   96800   97600   98400   99200
+  100000   99600   99200   98800   98400   98000   96400   94800   93200   91600
+   90000   88500   87000   85500   84000   82500   81000   79500   78000   76500
+   75000   73500   7200070666.6669333.34   6800066666.6665333.33   6400062666.67
+61333.33   6000058666.6757333.33   5600054666.6753333.33   5200050666.6749333.33
+   4800046666.6745333.33   4400042666.6741333.33   4000039166.6738333.33   37500
+36666.6735833.33   3500034166.6733333.33   3250031666.6730833.33   3000029166.67
+28333.33   2750026666.6725833.33   2500024166.6723333.33   2250021666.6720833.33
+   2000019655.1719310.3518965.5218620.6918275.8617931.0417586.2117241.3816896.55
+16551.72 16206.915862.0715517.2415172.4114827.5914482.7614137.93 13793.113448.28
+13103.4512758.6212413.7912068.9711724.1411379.3111034.4810689.6610344.83   10000
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//BALD EAGLE 40/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,81454   ,        ,                ,                
+Gate Name=Gate #1     
+Gate DSS Path=
+Gate Use DSS=False
+Gate Time Interval=1HOUR
+Gate Use Fixed Start Time=False
+Gate Fixed Start Date/Time=,
+Gate Openings= 200 
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+       1       1       1       1       1       1       1       1       1       1
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,28519   ,        ,                ,                
+Interval=1HOUR
+Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//FISHING CREEK/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,1       ,        ,                ,                
+Interval=1HOUR
+Lateral Inflow Hydrograph= 200 
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+    5000    5000    5000    5000    5000    5000    5000    5000    5000    5000
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,136948  ,82303   ,                ,                
+Interval=1HOUR
+Uniform Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//RESERVOIR LOCAL/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,80720   ,67130   ,                ,                
+Interval=1HOUR
+Uniform Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//LOCAL DOWNSTREAM OF DAM/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,76865   ,        ,                ,                
+Interval=1HOUR
+Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//MARSH CREEK/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,67130   ,        ,                ,                
+Interval=1HOUR
+Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//BEECH CREEK FLOW/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,66041   ,1       ,                ,                
+Interval=1HOUR
+Uniform Lateral Inflow Hydrograph= 0 
+DSS File=Bald_Eagle_Creek.dss
+DSS Path=//BALD EAGLE LOCAL/FLOW/01JUN1972/15MIN/RUN:1972 CALIBRATION EVENT/
+Use DSS=True
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Bald Eagle Cr.  ,Lock Haven      ,-1867   ,        ,                ,                
+Friction Slope=0.0003
+Observed DSS Loc=Bald Eagle Cr.  ,Lock Haven      ,137520  
+Observed DSS Filename=C:\GIS_data\Bald Eagle Creek\Observed Data\flowdata.dss
+Observed DSS Pathname=/WEST/BALD EAGLE AT MILESBURG/FLOW/01JUN1972/1HOUR/OBS/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Bald Eagle Cr.  ,Lock Haven      ,79463   
+Observed DSS Filename=C:\GIS_data\Bald Eagle Creek\Observed Data\flowdata.dss
+Observed DSS Pathname=/WEST/BLANC/FLOW/01JUN1972/1HOUR/OBS/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Bald Eagle Cr.  ,Lock Haven      ,66041   
+Observed DSS Filename=C:\GIS_data\Bald Eagle Creek\Observed Data\flowdata.dss
+Observed DSS Pathname=/WEST/BALD EAGLE BL BEECH/FLOW/01JUN1972/1HOUR/OBS/
+Observed DSS Dn Dist=
+
+Observed HWM=Bald Eagle Cr.  ,Lock Haven      ,137520  ,,667.98
+Observed HWM=Bald Eagle Cr.  ,Lock Haven      ,66041   ,,582.3

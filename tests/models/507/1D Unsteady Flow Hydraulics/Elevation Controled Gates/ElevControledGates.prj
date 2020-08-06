@@ -1,0 +1,29 @@
+Proj Title=Elevation Gates
+Current Plan=p01
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Unsteady File=u01
+Plan File=p01
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+DSS Caption Additional Text=Jensen
+BEGIN DESCRIPTION:
+
+END DESCRIPTION:
+DSS Start Date=4/08/1999
+DSS Start Time=0000
+DSS End Date=4/11/1999
+DSS End Time=2400
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Profiles= 0 

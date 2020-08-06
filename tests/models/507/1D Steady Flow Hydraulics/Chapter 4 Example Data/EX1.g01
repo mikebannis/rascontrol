@@ -1,0 +1,238 @@
+Geom Title=Base Geometry Data
+Program Version=4.00
+Viewing Rectangle= 0.0614 , 0.8779 , 1.0165 , 0.0426 
+
+Junct Name=Sutter          
+Junct Desc=Flow Confluence of Fall and Butte Creek, 0 , 0 ,-1 
+Junct X Y & Text X Y=0.4452555,0.4921348,0.3589316,0.4741573
+Up River,Reach=Butte Cr.       ,Tributary       
+Up River,Reach=Fall River      ,Upper Reach     
+Dn River,Reach=Fall River      ,Lower Reach     
+Junc L&A=60,0
+Junc L&A=50,0
+
+River Reach=Butte Cr.       ,Tributary       
+Reach XY= 15 
+           0.756       0.9830827           0.732       0.9755639
+             0.7       0.9567669       0.6746667       0.9172932
+           0.644       0.8721805       0.6306667       0.8289474
+       0.5986667       0.7932331       0.5718829       0.7725555
+       0.5426667            0.75       0.5146667       0.7142857
+       0.4893333       0.6578947            0.48       0.6109023
+       0.4746667       0.5601504       0.4600303       0.5263027
+       0.4452555       0.4921348
+Rch Text X Y=0.6506667,0.8590226
+Reverse River Text=-1 
+
+Type RM Length L Ch R = 1 ,0.2     ,500,500,500
+BEGIN DESCRIPTION:
+Upstream Boundary of Butte Cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.76654992940443 0.95100091453960.757316930017350.97887906106609
+           0.756       0.98308270.754683069982660.98728633893391
+0.748537396568381.00690332062549
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     210      90     220      82     260      80     265      70     270      71
+     275      81     300      83     310      91
+#Mann= 3 , 0 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,0.1     ,500,500,500
+BEGIN DESCRIPTION:
+Upstream Boundary of Butte Cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.59020551178268 0.74403505399820.572259239672030.76728092779905
+0.569567297985670.770767808197710.566875356299310.77425468859636
+0.554312965514880.79052680001996
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     210    89.4     220    81.4     260    79.4     265    69.4     270    70.4
+     275    80.4     300    82.4     310    90.4
+#Mann= 3 , 0 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,0.0     ,0,0,0
+BEGIN DESCRIPTION:
+Upstream Boundary of Butte Cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.484413027535690.497599132986690.457457886370460.50925501974819
+0.453414614630170.511003401454660.449371342889890.51275178316112
+ 0.43050274258970.52091090046108
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     210    89.1     220    81.1     260    79.1     265    69.1     270    70.1
+     275    80.1     300    82.1     310    90.1
+#Mann= 3 , 0 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+River Reach=Fall River      ,Upper Reach     
+Reach XY= 15 
+       0.1373333       0.9266917       0.1586667       0.8928571
+       0.1706667       0.8571429       0.1746667       0.8176692
+       0.1693333       0.7725564       0.1826667       0.7199248
+       0.2173333       0.6785714       0.2373333       0.6409774
+       0.2653333       0.6109023       0.3012218       0.5937515
+            0.34       0.5770677       0.3725577       0.5573916
+       0.4013333       0.5413534       0.4256371       0.5141189
+       0.4452555       0.4921348
+Rch Text X Y=0.1893333,0.7706767
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,10      ,450,500,550
+BEGIN DESCRIPTION:
+Upstream Boundary of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.19005079089383  0.9584796991190.146801539489830.93266161660408
+       0.1373333       0.92669170.127865060510170.92072178339592
+0.069402671114660.88766883035325
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110      90     120      80     200      78     210      70     230      71
+     240      79     350      81     360      91
+#Mann= 3 , 0 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.9     ,450,500,550
+BEGIN DESCRIPTION:
+River Mile 9.9 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.268480461118970.702111868213690.231226913261010.67628163808085
+ 0.2214644584929 0.67080606138090.211702003724790.66533048468094
+0.16306657121327 0.6294420863586
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110    89.5     119    79.5     191    77.5     201    69.5     221    70.5
+     231    78.5     330    80.5     339    90.5
+#Mann= 3 , 0 , 0 
+     110     .06       0     191    .035       0     231     .05       0
+Bank Sta=191,231
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.8     ,0,0,0
+BEGIN DESCRIPTION:
+River Mile 9.8 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=3
+0.451523673867090.54738145836086            0.42            0.52
+0.372070212379440.48367929713304
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110    89.1   117.2    79.1   174.8    77.1   184.8    69.1   204.8    70.1
+   214.8    78.1     294    80.1   301.2    90.1
+#Mann= 3 , 0 , 0 
+     110     .06       0   174.8    .035       0   214.8     .05       0
+Bank Sta=174.8,214.8
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+River Reach=Fall River      ,Lower Reach     
+Reach XY= 16 
+       0.4452555       0.4921348       0.4893255       0.4460849
+       0.5026667       0.4135338           0.524       0.3684211
+       0.5493333       0.3289474           0.576       0.2951128
+           0.604       0.2725564       0.6413333       0.2631579
+       0.6693333       0.2575188       0.6986667       0.2424812
+       0.7186667        0.212406       0.7413333       0.1766917
+            0.76       0.1578947       0.7866667       0.1390977
+       0.8066667       0.1221805       0.8325581       0.0874317
+Rch Text X Y=0.6333333,0.3082707
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,9.79    ,500,500,500
+BEGIN DESCRIPTION:
+River Mile 9.79 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=2
+            0.49             0.5            0.43            0.44
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110      89  118.64      79  187.76      77  199.76      69  223.76      70
+  235.76      78   330.8      80  339.44      90
+#Mann= 3 , 0 , 0 
+     110     .06       0  187.76    .035       0  235.76     .05       0
+Bank Sta=187.76,235.76
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.7     ,500,500,500
+BEGIN DESCRIPTION:
+River Mile 9.7 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.589855099063970.352741118480080.560989135569770.33190313719366
+0.552170478008440.325347600135590.543351820447110.31879206307752
+0.505411259456380.29026091367707
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110    88.5  120.37    78.5  203.31    76.5  217.71    68.5  246.51    69.5
+  260.91    77.5  374.96    79.5  385.33    89.5
+#Mann= 3 , 0 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.6     ,500,500,500
+BEGIN DESCRIPTION:
+River Mile 9.6 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.743643155941670.258429012772980.716839357492010.23499780065726
+0.707689466069580.228913125295220.698539574647150.22282844993317
+0.663688681501260.19059604541014
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110    88.2  120.37    78.2  203.31    76.2  217.71    68.2  246.51    69.2
+  260.91    77.2  374.96    79.2  385.33    89.2
+#Mann= 3 , 0 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.5     ,0,0,0
+BEGIN DESCRIPTION:
+River Mile 9.5 of Fall River
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.869917611411450.115268346265730.84136945072708 0.0939970549537
+       0.8325581       0.08743170.82374674927292 0.0808663450463
+0.785962436603880.05212859338527
+Node Last Edited Time=Jul/08/1997 13:59:46
+#Sta/Elev= 8 
+     110      88  120.37      78  203.31      76  217.71      68  246.51      69
+  260.91      77  374.96      79  385.33      89
+#Mann= 3 , 0 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+User Specified Reach Order=Butte Cr.       ,Tributary       
+User Specified Reach Order=Fall River      ,Upper Reach     
+User Specified Reach Order=Fall River      ,Lower Reach     
+GIS Ratio Cuts To Invert=-1

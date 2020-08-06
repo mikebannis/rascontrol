@@ -1,0 +1,542 @@
+Geom Title=JUnction Hydraulics On
+Program Version=4.20
+Viewing Rectangle= 0.0229 , 0.7303 , 0.9152 , 0.0608 
+
+Junct Name=Sutter          
+Junct Desc=FLow confluence of Yolo and Butte Creek, 0 , 0 , 0 ,-1
+Junct X Y & Text X Y=0.4030612,0.472973,0.2905983,0.4962687
+Up River,Reach=Fall River      ,Upper Reach     
+Up River,Reach=Butte Cr.       ,Butte Cr.       
+Dn River,Reach=Fall River      ,Lower Reach     
+Junc L&A=100,
+Junc L&A=120,
+
+River Reach=Butte Cr.       ,Butte Cr.       
+Reach XY= 14 
+       0.6760204       0.8986486       0.6602527       0.8861722
+       0.6479592       0.8581081       0.6426911       0.8299168
+       0.6462034       0.7939134       0.6356665       0.7511593
+       0.6022995       0.7039048       0.5021986       0.6296477
+0.463634358789390.558850637302740.455732279860510.54025751041127
+0.452013654482220.517016101796920.444808817811770.49482055657023
+0.424821206403440.48110812548776       0.4030612        0.472973
+Rch Text X Y=0.6324787,0.7350746
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,0.4     ,500,500,500
+BEGIN DESCRIPTION:
+upstream boundary of butte cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.684773722499950.887586133007720.677162137717390.89720566952275
+       0.6760204       0.89864860.674878662282620.90009153047725
+0.669550552934820.90682520603778
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     210   90.25     220   82.25     260   80.25     265   70.25     270   71.25
+     275   81.25     300   83.25     310   91.25
+#Mann= 3 ,-1 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.25,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,0.3     ,500,500,500
+BEGIN DESCRIPTION:
+butte cr riv sta  0.3
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.658387550678120.784529685052860.646298631526240.78661048763973
+0.644512084962850.787050788394130.642725538399460.78749108914854
+0.634331272096170.78929869225926
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     210    90.1     220    82.1     260    80.1     265    70.1     270    71.1
+     275    81.1     300    83.1     310    91.1
+#Mann= 9 ,-1 , 0 
+     210     .07       0     210     .07       0     260     .04       0
+     210     .07       0     260     .04       0     275     .07       0
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.1,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 1 ,0.24    ,120,120,120
+BEGIN DESCRIPTION:
+upstream of bridge
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.588333500900910.675980111491050.581025148785070.68583199938207
+ 0.57992889596770.687309782565720.578832643150320.68878756574937
+0.573716796669230.69568388727308
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     210      90     220      82     260      80     265      70     270      70
+     275      81     300      83     310      91
+#Mann= 3 ,-1 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+#XS Ineff= 2 ,-1 
+     210     260    81.9     275     310    81.9
+Permanent Ineff=
+       F       F
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 3 ,0.22    ,,,
+BEGIN DESCRIPTION:
+bridge crossing
+END DESCRIPTION:
+Node Last Edited Time=Jul/12/2002 10:35:45
+Bridge Culvert--1,-1,0,0, 0 
+Deck Dist Width WeirC Skew NumUp NumDn MinLoCord MaxHiCord MaxSubmerge Is_Ogee
+10,100,2.6,0, 2, 2, , , 0.95, 0, 0,0,2,5
+     200     320
+      82      82
+      79      79
+     200     320
+      82      82
+      79      79
+Pier Skew, UpSta & Num, DnSta & Num=  ,267, 2 ,267, 2 , 0 , 0 , 0 ,,
+       2       2
+      65      80
+       2       2
+      65      80
+BR Coef= 1 , 1 , 1 ,1.05, 0 ,,,0.8,0,1.33,0,
+WSPro=,,,, 1 ,,,, 0 ,,,, 0 ,,,,-1 ,-1 ,-1 , 0 , 0 , 0 , 0 , 0 
+BC Design=,, 0 ,, 0 ,,,,,,
+BC HTab HWMax=90
+BC HTab TWMax=88
+BC Use User HTab Curves=0
+BC User HTab FreeFlow(D)= 0 
+
+Type RM Length L Ch R = 1 ,0.20    ,500,500,500
+BEGIN DESCRIPTION:
+downstream of bridge
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.564688969962460.658440066413040.557380617846630.66829195430406
+0.556284365029250.669769737487710.555188112211880.67124752067137
+0.550072265730790.67814384219508
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     210      90     220      82     260      80     265      70     270      70
+     275      81     300      83     310      91
+#Mann= 3 ,-1 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+#XS Ineff= 2 ,-1 
+     210     260    81.7     275     310    81.7
+Permanent Ineff=
+       F       F
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 1 ,0.1     ,500,500,500
+BEGIN DESCRIPTION:
+river mile 0.1 of butte creek
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.488122253340820.574315825728480.477350033687770.58018361827872
+0.475734200739820.581063787161260.474118367791860.58194395604379
+0.466577814034720.58605141082896
+Node Last Edited Time=Apr/28/2009 11:42:14
+#Sta/Elev= 8 
+     210    89.4     220    81.4     260    79.4  264.45   73.09  271.27   73.56
+     275    80.4     300    82.4     310    90.4
+#Mann= 3 ,-1 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.4,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,0.0     ,500,500,500
+BEGIN DESCRIPTION:
+river mile 0.0 of butte creek
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.42372811867537 0.46829283382120.419791503464410.47726334992421
+0.419147162827820.478986845941480.418502822191230.48071034195874
+0.415515088047620.48773380505397
+Node Last Edited Time=Apr/28/2009 11:41:58
+#Sta/Elev= 8 
+     210    89.1     220    81.1     260    79.1  264.85   73.06  271.26   73.43
+     275    80.1     300    82.1     310    90.1
+#Mann= 3 ,-1 , 0 
+     210     .07       0     260     .04       0     275     .07       0
+Bank Sta=260,275
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.1,1, 0 
+Exp/Cntr=0.3,0.1
+
+River Reach=Fall River      ,Upper Reach     
+Reach XY= 8 
+          0.0313       0.8283582       0.1047571        0.832167
+       0.1913536       0.8096649       0.2457962       0.7759117
+       0.3072596       0.7241567       0.3617001       0.6453992
+0.379622587213970.55665903009373       0.4030612        0.472973
+Rch Text X Y=0.042735,0.7425373
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,10.4    ,450,500,550
+BEGIN DESCRIPTION:
+Upstream boundary of yolo cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.029860300805480.856124459110930.030960442707490.83490695393607
+          0.0313       0.82835820.031639557292510.82180944606393
+0.033106491599960.79351792639483
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110   87.93  120.37   77.93  203.31   75.93  217.71   67.93  246.51   68.93
+  260.91   76.93  374.96   78.93  385.33   88.93
+#Mann= 4 , 1 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+  385.33     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.93,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,10.3    ,450,500,500
+BEGIN DESCRIPTION:
+river mile 10.3 of fall cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.150051723947520.846275165519470.144897943025070.82644148823377
+0.143752658375640.822034004392510.142607373726210.81762652055124
+0.135735665829610.79118161750364
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    90.3     120    80.3     200    78.3     210    70.3     230    71.3
+     240    79.3     350    81.3     360    91.3
+#Mann= 6 ,-1 , 0 
+     110       0       0               0       0               0       0
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.3,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,10.2    ,100,100,100
+BEGIN DESCRIPTION:
+river mile 10.2 of fall cr.
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.261035935397080.79574425174177 0.24897007935390.77918069746091
+0.246261127767760.775520209509390.243552176181630.77185972155787
+0.227476253701270.74976632926473
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    90.1     120    80.1     200    78.1     210    70.1     235    70.1
+     240    79.1     350    81.1     360    91.1
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.1,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 1 ,10.11   ,110,110,110
+BEGIN DESCRIPTION:
+Upstream of culverts
+END DESCRIPTION:
+XS GIS Cut Line=5
+ 0.27981059557530.780012992408060.266611288552380.76433770910649
+0.263678109213950.760854312817250.260744929875530.75737091652802
+0.243364856099340.73628807274101
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    90.1     120    80.1     200    78.1     210    70.1     235    70.1
+     240    79.1     350    81.1     360    91.1
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+#XS Ineff= 2 ,-1 
+     110     203    79.9     236     360    79.9
+Permanent Ineff=
+       F       F
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.1,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 2 ,10.1    ,,,
+BEGIN DESCRIPTION:
+Culvert crossing
+END DESCRIPTION:
+Node Last Edited Time=Apr/28/2009 11:39:38
+Bridge Culvert--1,0,-1,-1, 0 
+Deck Dist Width WeirC Skew NumUp NumDn MinLoCord MaxHiCord MaxSubmerge Is_Ogee
+5,100,2,0, 2, 2, , , 0.95, 0, 0,0,,
+     100     400
+      80      80
+       0       0
+     100     400
+      80      80
+       0       0
+Culvert=1,8,,100,0.013,0.5,1,1,1,70.5,213,70.25,213,Circular    , 0 ,5
+Culvert Bottom n=0.013
+Multiple Barrel Culv=2,8,6,100,0.013,0.4,1,8,1,70.6,70.3, 2,Box         , 0 ,5
+     221     221     230     230
+Culvert Bottom n=0.013
+BC Design=,, 0 ,, 0 ,,,,,,
+BC HTab HWMax=90
+BC Use User HTab Curves=0
+BC User HTab FreeFlow(D)= 0 
+
+Type RM Length L Ch R = 1 ,10.09   ,290,290,290
+BEGIN DESCRIPTION:
+downstream of culverts
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.298969275166110.763880506046710.285769968143190.74820522274514
+0.28283678880476 0.74472182645590.279903609466330.74123843016667
+0.262304533435770.72033805243124
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    90.1     120    80.1     200    78.1     210    70.1     235    70.1
+     240    79.1     350    81.1     360    91.1
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+#XS Ineff= 2 ,-1 
+     110     206    79.7     236     360    79.7
+Permanent Ineff=
+       F       F
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71.1,1, 0 
+Exp/Cntr=0.4,0.2
+
+Type RM Length L Ch R = 1 ,10      ,450,500,550
+BEGIN DESCRIPTION:
+river mile 10 of fall creek
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.347254143302650.71034530150292  0.330397094921 0.6986929999136
+0.326651084169530.696103599560410.322905073418050.69351419920723
+0.300429008909180.67797779708813
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110      90     120      80     200      78     210      70     235      70
+     240      79     350      81     360      91
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.9     ,450,500,550
+BEGIN DESCRIPTION:
+river mile 9.9 of fall creek
+END DESCRIPTION:
+XS GIS Cut Line=5
+ 0.39457733306020.598777812010180.376499241918460.59512665427988
+0.372035515710620.594225133852650.367571789502790.59332361342542
+0.343467667980460.58845540311836
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    89.5     119    79.5     191    77.5     201    69.5     221    70.5
+     231    78.5     330    80.5     339    90.5
+#Mann= 6 ,-1 , 0 
+     110     .06       0     191    .035       0     231     .05       0
+     110     .06       0     191    .035       0     231     .05       0
+Bank Sta=191,231
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.5,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.8     ,450,500,550
+BEGIN DESCRIPTION:
+river mile 9.8 of fall creek
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.41842603561188 0.49033286537920.404183185029590.48534266955475
+0.399990768841060.483935773126290.395605659590540.48270760066271
+0.376661985620970.47740189505784
+Node Last Edited Time=Apr/28/2009 11:41:35
+#Sta/Elev= 8 
+     110    89.1   117.2    79.1   174.8    77.1  184.87   71.03  205.55   71.35
+   214.8    78.1     294    80.1   301.2    90.1
+#Mann= 3 ,-1 , 0 
+     110     .06       0   174.8    .035       0   214.8     .05       0
+Bank Sta=174.8,214.8
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.1,1, 0 
+Exp/Cntr=0.3,0.1
+
+River Reach=Fall River      ,Lower Reach     
+Reach XY= 7 
+       0.4030612        0.4729730.433957543154670.39565177094591
+       0.5186069       0.2949519       0.5674885       0.2703733
+       0.6028526       0.2432137        0.658797       0.1825279
+       0.6951567           0.082
+Rch Text X Y=0.6353276,0.3470149
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,9.79    ,500,500,500
+BEGIN DESCRIPTION:
+river mile 9.79 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.43090152517302 0.46933245795130.412916027722380.46351056282277
+0.407618515621210.461567855926630.402144046465990.45938034442845
+0.37849433790555 0.4499302940331
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110      89  118.64      79  187.76      77  199.76      69  223.76      70
+  235.76      78   330.8      80  339.44      90
+#Mann= 3 ,-1 , 0 
+     110     .06       0  187.76    .035       0  235.76     .05       0
+Bank Sta=187.76,235.76
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.7     ,500,500,500
+BEGIN DESCRIPTION:
+river mile 9.7 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.490272612316020.375273431007660.47272748406792 0.3605248140728
+0.467312204244640.355972673639340.461896924421370.35142053320587
+0.438502169155030.33175465907667
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110    88.5  120.37    78.5  203.31    76.5  217.71    68.5  246.51    69.5
+  260.91    77.5  374.96    79.5  385.33    89.5
+#Mann= 3 ,-1 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.5,1, 0 
+Exp/Cntr=0.5,0.3
+
+Type RM Length L Ch R = 1 ,9.6     ,100,100,100
+BEGIN DESCRIPTION:
+river mile 9.6 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.571532111812590.301885646131530.560294165003910.28190911544528
+0.557116147873730.275588716311470.553938130743560.26926831717766
+ 0.53863526135050.24281300830446
+Node Last Edited Time=Nov/07/2002 16:34:01
+#Sta/Elev= 8 
+     110    88.2  120.37    78.2  203.31    76.2  217.71    68.2  246.51    69.2
+  260.91    77.2  374.96    79.2  385.33    89.2
+#Mann= 3 ,-1 , 0 
+     110     .15       0  203.31    .035       0  260.91     .15       0
+#XS Ineff= 2 , 0 
+       0     193      83     270       0      83
+Permanent Ineff=
+       F       F
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.2,1, 0 
+Exp/Cntr=0.5,0.3
+
+Type RM Length L Ch R = 3 ,9.55    ,,,
+BEGIN DESCRIPTION:
+multiple opening
+END DESCRIPTION:
+Node Last Edited Time=Nov/07/2002 16:34:58
+Bridge Culvert--1,-1,0,0, 0 
+Deck Dist Width WeirC Skew NumUp NumDn MinLoCord MaxHiCord MaxSubmerge Is_Ogee
+10,80,2.6,0, 6, 6, , , 0.95, 0, 0,0,,
+     110  203.31  203.31  260.91  260.91  385.33
+      84      84      84      84      84      84
+    68.2    68.2      80      80    68.2    68.2
+     110  203.31  203.31  260.91  260.91  385.33
+      84      84      84      84      84      84
+    68.1    68.1      80      80    68.1    68.1
+Pier Skew, UpSta & Num, DnSta & Num=  ,225, 2 ,225, 2 , 0 , 0 , 0 ,,
+       2       2
+      65      80
+       2       2
+      65      80
+Pier Skew, UpSta & Num, DnSta & Num=  ,240, 2 ,240, 2 , 0 , 0 , 0 ,,
+       2       2
+      65      80
+       2       2
+      65      80
+BR Coef= 1 , 0 , 0 ,, 0 ,,,0.8,0,0,1,
+WSPro=,,,, 1 ,,,, 0 ,,,, 0 ,,,,-1 ,-1 ,-1 , 0 , 0 , 0 , 0 , 0 
+BC Design=84,80, 1 ,57.60001, 0 ,,,,,,
+BC HTab HWMax=88
+BC Use User HTab Curves=0
+BC User HTab FreeFlow(D)= 0 
+
+Type RM Length L Ch R = 1 ,9.5     ,400,400,400
+BEGIN DESCRIPTION:
+river mile 9.5 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+ 0.59527566240450.286828648251550.582071392026830.26809364169892
+ 0.57776239232840.262482959058690.573453392629970.25687227641847
+0.556182227155390.23165783566744
+Node Last Edited Time=Nov/07/2002 16:34:43
+#Sta/Elev= 8 
+     110    88.1  120.37    78.1  203.31    76.1  217.71    68.1  246.51    69.1
+  260.91    77.1  374.96    79.1  385.33    89.1
+#Mann= 3 ,-1 , 0 
+     110     .15       0  203.31    .035       0  260.91     .15       0
+#XS Ineff= 2 , 0 
+       0     193      83     270       0      83
+Permanent Ineff=
+       F       F
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.1,1, 0 
+Exp/Cntr=0.5,0.3
+
+Type RM Length L Ch R = 1 ,9.4     ,500,500,500
+BEGIN DESCRIPTION:
+river mile 9.4 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+ 0.67095971151240.213527326816570.653209016479130.19902677329026
+0.648007589139890.194231735050060.642806161800650.18943669680985
+0.618484930408770.17092889081293
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110      88  120.37      78  203.31      76  217.71      68  246.51      69
+  260.91      77  374.96      79  385.33      89
+#Mann= 3 ,-1 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69,1, 0 
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9.3     ,500,500,500
+BEGIN DESCRIPTION:
+river mile 9.3 of yolo river
+END DESCRIPTION:
+XS GIS Cut Line=5
+0.723363408426780.092202018110250.701809335203590.08440617599902
+       0.6951567           0.0820.688504064796410.07959382400098
+0.65976376373286 0.0691988120234
+Node Last Edited Time=Feb/01/2000 12:21:04
+#Sta/Elev= 8 
+     110   87.85  120.37   77.85  203.31   75.85  217.71   67.85  246.51   68.85
+  260.91   76.85  374.96   78.85  385.33   88.85
+#Mann= 3 ,-1 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.85,1, 0 
+Exp/Cntr=0.3,0.1
+
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5

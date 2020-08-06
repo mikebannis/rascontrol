@@ -1,1 +1,1 @@
-from rascontrol import *
+from rascontrol.rascontroller import *

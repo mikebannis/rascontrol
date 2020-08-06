@@ -1,0 +1,30 @@
+Proj Title=Wailupe River with GIS data -Example 17
+Current Plan=p01
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Geom File=g02
+Flow File=f01
+Plan File=p01
+Plan File=p02
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+DSS Caption Additional Text=Jensen
+BEGIN DESCRIPTION:
+In this example, GIS data have been imported from Arc Info for the Wailupe river.
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Profiles= 0 

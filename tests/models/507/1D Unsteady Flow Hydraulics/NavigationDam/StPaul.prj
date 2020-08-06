@@ -1,0 +1,29 @@
+Proj Title=St Paul
+Current Plan=p03
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g02
+Unsteady File=u01
+Plan File=p03
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+
+END DESCRIPTION:
+DSS Start Date=01/01/1992
+DSS Start Time=0000
+DSS End Date=12/30/1992
+DSS End Time=1800
+DSS File=DSS
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Profiles= 0 

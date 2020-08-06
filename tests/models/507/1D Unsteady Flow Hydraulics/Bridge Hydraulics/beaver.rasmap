@@ -1,0 +1,60 @@
+<RASMapper>
+  <Version>2.0.25968</Version>
+  <Geometries TopNode="True">
+    <Layer Name="Beaver Cr.  - bridge" Type="RASGeometry" Filename=".\beaver.g01.hdf">
+      <Layer Name="Rivers" Type="RASRiver" />
+      <Layer Name="XS" Type="RASXS" />
+      <Layer Name="Storage Areas" Type="RASStorageArea" />
+      <Layer Name="2D Flow Areas" Type="RASD2FlowArea" />
+      <Layer Name="..." Type="RASMoreLayers" />
+    </Layer>
+  </Geometries>
+  <Results Expanded="True">
+    <Layer Name="100 Y1 Evnt12345" Type="RASResults" Expanded="True" Selected="True" Filename=".\beaver.p03.hdf">
+      <Layer Name="Geometry" Type="RASGeometry" Filename=".\beaver.p03.hdf">
+        <Layer Name="Rivers" Type="RASRiver" />
+        <Layer Name="XS" Type="RASXS" />
+        <Layer Name="Storage Areas" Type="RASStorageArea" />
+        <Layer Name="2D Flow Areas" Type="RASD2FlowArea" />
+        <Layer Name="..." Type="RASMoreLayers" />
+      </Layer>
+      <Layer Name="depth" Type="RASResultsMap">
+        <SurfaceFill Alpha="150" Colors="-16711681,-16777077" Values="0,15" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="depth" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+      <Layer Name="velocity" Type="RASResultsMap">
+        <SurfaceFill Alpha="255" Colors="-16777077,-16776961,-7278960,-256,-23296,-47872,-7667712" Values="0,2,4,6,8,10,15" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="velocity" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+      <Layer Name="elevation" Type="RASResultsMap">
+        <SurfaceFill Alpha="255" Colors="-8388864,-16744448,-256,-23296,-65536,-16181,-65281" Values="204.996688842773,207.466725667318,209.936762491862,212.406799316406,214.876836140951,217.346872965495,219.816909790039" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="elevation" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+    </Layer>
+  </Results>
+  <MapLayers />
+  <Terrains />
+  <CurrentView>
+    <MaxX>0.9196</MaxX>
+    <MinX>-0.0392</MinX>
+    <MaxY>1.0719</MaxY>
+    <MinY>-0.1627</MinY>
+  </CurrentView>
+  <VelocitySettings>
+    <Density>1.5</Density>
+    <Lifetime>100</Lifetime>
+    <Radius>0.75</Radius>
+    <Method>2</Method>
+    <Timestep>1</Timestep>
+    <StaticColor>Black</StaticColor>
+  </VelocitySettings>
+  <AnimationSettings>
+    <DelayTimer>0</DelayTimer>
+  </AnimationSettings>
+  <CurrentSettings>
+    <Folders />
+  </CurrentSettings>
+</RASMapper>

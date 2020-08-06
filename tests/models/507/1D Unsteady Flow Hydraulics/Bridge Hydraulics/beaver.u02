@@ -1,0 +1,37 @@
+Flow Title=Unsteady flow data - May 1974 event
+Program Version=5.03
+Use Restart= 0 
+Restart Filename=beaver.p03.12FEB1990 2400.rst
+Initial Flow Loc=Beaver Creek    ,Kentwood        ,5.99    ,500
+Boundary Location=Beaver Creek    ,Kentwood        ,5.99    ,        ,                ,                ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+  317.58  429.91  615.75  873.08 1199.07 1590.14 2042.03 2549.76 3107.79    3710
+ 4349.79 5020.14 5713.72 6422.94    7140 7857.06 8566.28 9259.86 9930.21   10570
+11172.2111730.2412237.9712689.8613080.9313406.9213664.2513850.0913962.42   14000
+13962.4213850.0913664.2513406.9213080.9312689.8612237.9711730.2411172.21   10570
+ 9930.21 9259.86 8566.28 7857.06 7487.52 7136.01 6801.64 6483.58 6181.02 5893.23
+ 5619.47 5359.06 5111.35 4875.72 4651.59 4438.38 4235.58 4042.66 3859.15  3684.6
+ 3518.55  3360.6 3210.36 3067.44  2931.5 2802.18 2679.18 2562.17 2450.87 2344.99
+ 2244.28 2148.48 2057.36 1970.67 1888.22 1809.79 1735.18 1664.21 1596.69 1532.48
+ 1471.39 1413.29 1358.02 1305.44 1255.43 1207.86 1162.61 1119.56 1078.62 1039.67
+ 1002.62  967.38  933.85  901.96  871.63  842.78  815.33  789.22  764.39  740.76
+DSS File=dss
+DSS Path=/BEAVER CREEK KENTWOOD/5.99/FLOW/01FEB1999/1HOUR/10 YEAR EVNT/
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Beaver Creek    ,Kentwood        ,5.0     ,        ,                ,                ,                ,                
+Friction Slope=0.002
+Observed HWM=Beaver Creek    ,Kentwood        ,5.99    ,,220
+Observed HWM=Beaver Creek    ,Kentwood        ,5.875   ,,219.2
+Observed HWM=Beaver Creek    ,Kentwood        ,5.76    ,,218.4
+Observed HWM=Beaver Creek    ,Kentwood        ,5.685   ,,218.3
+Observed HWM=Beaver Creek    ,Kentwood        ,5.61    ,,218.1
+Observed HWM=Beaver Creek    ,Kentwood        ,5.41    ,,217.8
+Observed HWM=Beaver Creek    ,Kentwood        ,5.39    ,,215.2
+Observed HWM=Beaver Creek    ,Kentwood        ,5.13    ,,213.6
+Observed HWM=Beaver Creek    ,Kentwood        ,5.065   ,,212.5
+Observed HWM=Beaver Creek    ,Kentwood        ,5.0     ,,211.8

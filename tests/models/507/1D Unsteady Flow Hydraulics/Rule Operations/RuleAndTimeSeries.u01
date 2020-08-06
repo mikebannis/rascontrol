@@ -1,0 +1,143 @@
+Flow Title=Unsteady Flow Hydrograph
+Program Version=4.00
+Use Restart= 0 
+Initial Flow Loc=Nittany River   ,Weir Reach      ,60.1    ,350
+Initial Storage Elev=Dummy #1        ,1
+Initial Storage Elev=Dummy #2        ,1
+Initial RRR Elev=Nittany River   ,Weir Reach      ,41.76   ,16.5
+Boundary Location=Nittany River   ,Weir Reach      ,60.1    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+     350     375     393     412     416     417     412     411     413     419
+     428     439     452     467     484     501     515     522     525     523
+     518     509     497     484     469     453     436     418     399     381
+     362     343     324     304     285     265     245     227     209     195
+     185     181     201     233     269     304     338     369     398     425
+     449     472     492     511     529     546     563     579     592     608
+     622     636     650     663     677     686     702     714     726     738
+     750     762     775     786     797     809     819     830     841     852
+     863     874     883     893     903     913     924     935     947     959
+     973     983     993    1001    1011    1020    1029    1038    1047    1055
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Nittany River   ,Weir Reach      ,41.75   ,        ,                ,                
+BEGIN BOUNDARY DESCRIPTION:
+Rule example with a work around showing how to use time series data.
+END BOUNDARY DESCRIPTION:
+Rule Operation=Type=0,Var Type=1,Comment=There is no direct way for Operation Rules to access
+Rule Operation=Type=0,Var Type=1,Comment=time series data from the unsteady flow editor.
+Rule Operation=Type=0,Var Type=1,Comment=This example demonstrates a work around by using
+Rule Operation=Type=0,Var Type=1,Comment=two "dummy" storage areas and a "dummy" storage area connector.
+Rule Operation=Type=0,Var Type=1,Comment=The dummy structures are not hydraulicly connected to the rest
+Rule Operation=Type=0,Var Type=1,Comment=of the system.  The storage area connector is at a high enough
+Rule Operation=Type=0,Var Type=1,Comment=elevation that it will never have any flow.  Therefore the
+Rule Operation=Type=0,Var Type=1,Comment=net inflow to SA Dummy #1 is exactly equal to the lateral
+Rule Operation=Type=0,Var Type=1,Comment=inflow (that is specified on the Unsteady Flow Editor).
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the day of the month.
+Rule Operation=Type=2,Var Name=Day,Var Type=1,Sim Group=Time,Sim Function=Day of Month,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=5,BranchCompare2=0
+Rule Expression=,Variable=Day
+Rule Expression=,Constant=8
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get time series gate opening.
+Rule Operation=Type=2,Var Name=Gate TS,Var Type=1,Conn=Dummy Connection,Gate=Gate #1,Sim Group=Storage Area Connections,Sim Function=Gate.Opening,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Set the gate opening to the time series gate opening.
+Rule Operation=Type=0,Var Type=1,Comment=Note that the Gate Open Rate (under Gate Parameters) has
+Rule Operation=Type=0,Var Type=1,Comment=been set to 100.  This allows the gate opening to be immediately
+Rule Operation=Type=0,Var Type=1,Comment=set equal to the value from the time series.
+Rule Operation=Type=0,Var Type=1,Comment=If the gate opening rate was too slow the gate opening might
+Rule Operation=Type=0,Var Type=1,Comment=not adjust quickly enough to keep up with the time series.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Variable=Gate TS
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=5,BranchCompare2=0
+Rule Expression=,Variable=Day
+Rule Expression=,Constant=9
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get flow time series.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=2,Var Name=Flow TS,Var Type=1,SA=Dummy #1,Sim Group=Storage Areas,Sim Function=Net Inflow,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Use (that is "fix") the flow through the gates to the
+Rule Operation=Type=0,Var Type=1,Comment=time series flow (from the lateral inflow).
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Drop Gates,Sim Group=Inline Structures,Sim Function=Gate.Flow (Fixed)
+Rule Expression=,Variable=Flow TS
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=4,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Stop using time series.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Turn the fixed flow "off".
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Gate.Flow (Fixed)
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Adjust gate opening rate to a smaller; more realistic value.
+Rule Operation=Type=0,Var Type=1,Comment=This will improve stability by preventing sudden gate movements.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Gate.Opening Rate
+Rule Expression=,Constant=0.05
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Gate.Closing Rate
+Rule Expression=,Constant=0.05
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Move the gate into new position.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Drop Gates,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=5
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Add additional  to rules for "operational" control of the
+Rule Operation=Type=0,Var Type=1,Comment=gates; as desired.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+
+Rule Gate Data=Drop Gates  ,100,100,15,1,4.5
+Boundary Location=Nittany River   ,Weir Reach      ,36.85   ,        ,                ,                
+Friction Slope=0.0005
+Boundary Location=                ,                ,        ,        ,Dummy Connection,                
+Gate Name=Gate #1     
+Gate DSS Path=
+Gate Use DSS=False
+Gate Time Interval=1HOUR
+Gate Use Fixed Start Time=False
+Gate Fixed Start Date/Time=,
+Gate Openings= 100 
+       5    5.25     5.5    5.75       6    5.73    5.47     5.2    5.33    5.45
+    5.58     5.7    5.74    5.78    5.82    5.86     5.9    5.94    5.98    6.02
+    6.06     6.1    6.14    6.18    6.22    6.26     6.3       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+Boundary Location=                ,                ,        ,        ,                ,Dummy #1        
+Interval=1HOUR
+Lateral Inflow Hydrograph= 100 
+  242.59  244.63  246.59  248.82  251.33  253.68  550.49  899.18  884.24  876.49
+  864.64  856.01  845.68  837.27  828.72  467.38  243.27   249.5  251.61  256.65
+  259.73  264.08  267.37  270.88  273.93  276.79  279.35   281.6  283.55  285.17
+  590.57  897.63  880.89  870.75   856.4  844.33  830.02  816.97  803.19  441.48
+  238.31  239.58  236.98  237.98  237.33  238.54  239.41  241.21  243.19  248.45
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0       0       0
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

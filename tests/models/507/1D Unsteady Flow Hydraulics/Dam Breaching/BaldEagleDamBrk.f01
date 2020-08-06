@@ -1,0 +1,53 @@
+Flow Title=1000 cfs steady Flow
+Program Version=4.00
+Number of Profiles= 10 
+Profile Names=1000,2000,5000,10000,13000,16000,20000,25000,40000,50000
+River Rch & RM=Bald Eagle Cr.,Lock Haven      ,137520  
+    1000    2000    5000   10000   13000   16000   20000   25000   40000   50000
+River Rch & RM=Bald Eagle Cr.,Lock Haven      ,-897    
+    6000    7000   10000   15000   18000   21000   25000   30000   45000   55000
+Boundary for River Rch & Prof#=Bald Eagle Cr.,Lock Haven      , 1 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0003
+Boundary for River Rch & Prof#=Bald Eagle Cr.,Lock Haven      , 2 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0003
+Boundary for River Rch & Prof#=Bald Eagle Cr.,Lock Haven      , 3 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0003
+Boundary for River Rch & Prof#=Bald Eagle Cr.,Lock Haven      , 4 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0003
+Boundary for River Rch & Prof#=Bald Eagle Cr.,Lock Haven      , 5 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0003
+Gate Openings=Bald Eagle Cr.  ,Lock Haven      ,81454   ,Gate #1     ,
+       2       2       4       2       8       2      12       2      15       2
+      15       2      15       2      15       2       0       0       0       0
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 
+Storage Area Elev=190             , 10 
+     535     535     535     535     535     535     535     535     535     535
+Storage Area Elev=191             , 10 
+     537     537     537     537     537     537     537     537     537     537
+Storage Area Elev=192             , 10 
+     546     546     546     546     546     546     546     546     546     546
+Storage Area Elev=193             , 10 
+   559.7   559.7   559.7   559.7   559.7   559.7   559.7   559.7   559.7   559.7
+Storage Area Elev=194             , 10 
+     595     595     595     595     595     595     595     595     595     595
+Storage Area Elev=195             , 10 
+   615.6   615.6   615.6   615.6   615.6   615.6   615.6   615.6   615.6   615.6
+Storage Area Elev=255             , 10 
+     631     631     631     631     631     631     631     631     631     631

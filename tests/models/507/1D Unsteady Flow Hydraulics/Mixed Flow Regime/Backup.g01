@@ -1,0 +1,1914 @@
+Geom Title=Mixed Flow Geometry Data
+Program Version=5.00
+Viewing Rectangle= 0.3945 , 0.4318 , 1 , 0 
+
+River Reach=Mixed Reach     ,Mixed Reach     
+Reach XY= 2 
+          0.4286          0.9452          0.4286          0.1018
+Rch Text X Y=0.4286,0.73435
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,0.5682  ,20,20,20
+BEGIN DESCRIPTION:
+Ninetenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      80       0      70      20      70      20      80
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=71,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.56442* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    79.8       0    69.8      20    69.8      20    79.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.56064* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    79.6       0    69.6      20    69.6      20    79.6
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.6,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.55686* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    79.4       0    69.4      20    69.4      20    79.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.55308* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    79.2       0    69.2      20    69.2      20    79.2
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70.2,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.5493  ,20,20,20
+BEGIN DESCRIPTION:
+Eighteenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      79       0      69      20      69      20      79
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=70,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.5455*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    78.8       0    68.8      20    68.8      20    78.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.5417*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    78.6       0    68.6      20    68.6      20    78.6
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.6,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.5379*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    78.4       0    68.4      20    68.4      20    78.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.5341*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    78.2       0    68.2      20    68.2      20    78.2
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69.2,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.5303  ,20,20,20
+BEGIN DESCRIPTION:
+Sevententh Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      78       0      68      20      68      20      78
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=69,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.52652* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    77.8       0    67.8      20    67.8      20    77.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.52274* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    77.6       0    67.6      20    67.6      20    77.6
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.6,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.51896* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    77.4       0    67.4      20    67.4      20    77.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.51518* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    77.2       0    67.2      20    67.2      20    77.2
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68.2,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.5114  ,20,20,20
+BEGIN DESCRIPTION:
+Sixtenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      77       0      67      20      67      20      77
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=68,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.50762* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    76.8       0    66.8      20    66.8      20    76.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=67.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.50384* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    76.6       0    66.6      20    66.6      20    76.6
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=67.6,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.50006* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    76.4       0    66.4      20    66.4      20    76.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=67.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.49628* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    76.2       0    66.2      20    66.2      20    76.2
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=67.2,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.4925  ,20,20,20
+BEGIN DESCRIPTION:
+Fiftenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      76       0      66      20      66      20      76
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=67,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.4887*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    75.8       0    65.8      20    65.8      20    75.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=66.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.4849*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    75.6       0    65.6      20    65.6      20    75.6
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=66.6,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.4811*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    75.4       0    65.4      20    65.4      20    75.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=66.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.4773*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    75.2       0    65.2      20    65.2      20    75.2
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=66.2,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.4735  ,20,20,20
+BEGIN DESCRIPTION:
+Fourtenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0      75       0      65      20      65      20      75
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=66,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.46972* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.992       0  64.992      20  64.992      20  74.992
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.992,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.46594* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.984       0  64.984      20  64.984      20  74.984
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.984,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.46216* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.976       0  64.976      20  64.976      20  74.976
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.976,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.45838* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.968       0  64.968      20  64.968      20  74.968
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.968,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.4546  ,20,20,20
+BEGIN DESCRIPTION:
+Thirteenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.96       0   64.96      20   64.96      20   74.96
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.96,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.45081* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.952       0  64.952      20  64.952      20  74.952
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.952,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.44702* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.944       0  64.944      20  64.944      20  74.944
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.944,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.44323* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.936       0  64.936      20  64.936      20  74.936
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.936,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.43944* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.928       0  64.928      20  64.928      20  74.928
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.928,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.43565* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.92       0   64.92      20   64.92      20   74.92
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.92,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.43186* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.912       0  64.912      20  64.912      20  74.912
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.912,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.42807* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.904       0  64.904      20  64.904      20  74.904
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.904,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.42428* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.896       0  64.896      20  64.896      20  74.896
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.896,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.42049* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.888       0  64.888      20  64.888      20  74.888
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.888,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.4167  ,20,20,20
+BEGIN DESCRIPTION:
+Twelth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.88       0   64.88      20   64.88      20   74.88
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.88,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.41291* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.872       0  64.872      20  64.872      20  74.872
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.872,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.40912* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.864       0  64.864      20  64.864      20  74.864
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.864,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.40533* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.856       0  64.856      20  64.856      20  74.856
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.856,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.40154* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.848       0  64.848      20  64.848      20  74.848
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.848,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.39775* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.84       0   64.84      20   64.84      20   74.84
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.84,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.39396* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.832       0  64.832      20  64.832      20  74.832
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.832,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.39017* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.824       0  64.824      20  64.824      20  74.824
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.824,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.38638* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.816       0  64.816      20  64.816      20  74.816
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.816,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.38259* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.808       0  64.808      20  64.808      20  74.808
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.808,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.3788  ,20,20,20
+BEGIN DESCRIPTION:
+Eleventh Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    74.8       0    64.8      20    64.8      20    74.8
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.37501* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.792       0  64.792      20  64.792      20  74.792
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.792,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.37122* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.784       0  64.784      20  64.784      20  74.784
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.784,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.36743* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.776       0  64.776      20  64.776      20  74.776
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.776,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.36364* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.768       0  64.768      20  64.768      20  74.768
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.768,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.35985* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.76       0   64.76      20   64.76      20   74.76
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.76,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.35606* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.752       0  64.752      20  64.752      20  74.752
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.752,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.35227* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.744       0  64.744      20  64.744      20  74.744
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.744,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.34848* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.736       0  64.736      20  64.736      20  74.736
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.736,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.34469* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.728       0  64.728      20  64.728      20  74.728
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.728,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.3409  ,20,20,20
+BEGIN DESCRIPTION:
+Tenth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.33711* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.33332* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.32953* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.32574* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.32195* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.31816* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.31437* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.31058* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.30679* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.3030  ,20,20,20
+BEGIN DESCRIPTION:
+Ninth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.72       0   64.72      20   64.72      20   74.72
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.72,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.29921* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.704       0  64.704      20  64.704      20  74.704
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.704,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.29542* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.688       0  64.688      20  64.688      20  74.688
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.688,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.29163* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.672       0  64.672      20  64.672      20  74.672
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.672,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.28784* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.656       0  64.656      20  64.656      20  74.656
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.656,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.28405* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.64       0   64.64      20   64.64      20   74.64
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.64,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.28026* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.624       0  64.624      20  64.624      20  74.624
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.624,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.27647* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.608       0  64.608      20  64.608      20  74.608
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.608,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.27268* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.592       0  64.592      20  64.592      20  74.592
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.592,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.26889* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.576       0  64.576      20  64.576      20  74.576
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.576,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.2651  ,20,20,20
+BEGIN DESCRIPTION:
+Eighth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.56       0   64.56      20   64.56      20   74.56
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.56,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.26132* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.552       0  64.552      20  64.552      20  74.552
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.552,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.25754* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.544       0  64.544      20  64.544      20  74.544
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.544,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.25376* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.536       0  64.536      20  64.536      20  74.536
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.536,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.24998* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.528       0  64.528      20  64.528      20  74.528
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.528,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.2462*  ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.52       0   64.52      20   64.52      20   74.52
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.52,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.24242* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.512       0  64.512      20  64.512      20  74.512
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.512,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.23864* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.504       0  64.504      20  64.504      20  74.504
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.504,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.23486* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.496       0  64.496      20  64.496      20  74.496
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.496,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.23108* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.488       0  64.488      20  64.488      20  74.488
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.488,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.2273  ,20,20,20
+BEGIN DESCRIPTION:
+Seventh Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.48       0   64.48      20   64.48      20   74.48
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.48,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.22291* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.472       0  64.472      20  64.472      20  74.472
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.472,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.21852* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.464       0  64.464      20  64.464      20  74.464
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.464,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.21413* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.456       0  64.456      20  64.456      20  74.456
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.456,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.20974* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.448       0  64.448      20  64.448      20  74.448
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.448,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.20535* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0   74.44       0   64.44      20   64.44      20   74.44
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.44,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.20096* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.432       0  64.432      20  64.432      20  74.432
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.432,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.19657* ,20,20,20
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.424       0  64.424      20  64.424      20  74.424
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.424,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.19218  ,10,10,10
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.416       0  64.416      20  64.416      20  74.416
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.416,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.189985*,10,10,10
+Node Last Edited Time=Dec/20/2001 16:34:09
+#Sta/Elev= 4 
+       0   74.41       0   64.41      20   64.41      20   74.41
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.41,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.18779  ,10,10,10
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0  74.408       0  64.408      20  64.408      20  74.408
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.408,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.185595*,10,10,10
+Node Last Edited Time=Dec/20/2001 16:34:12
+#Sta/Elev= 4 
+       0    74.4       0    64.4      20    64.4      20    74.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.1834  ,20,20,20
+BEGIN DESCRIPTION:
+Sixth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/19/2001 11:29:50
+#Sta/Elev= 4 
+       0    74.4       0    64.4      20    64.4      20    74.4
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.18021* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   74.26       0   64.26      20   64.26      20   74.26
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.26,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.17702* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   74.11       0   64.11      20   64.11      20   74.11
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=65.11,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.17383* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.97       0   63.97      20   63.97      20   73.97
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.97,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.17064* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.83       0   63.83      20   63.83      20   73.83
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.83,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.16745* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.68       0   63.69      20   63.69      20   73.68
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.69,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.16426* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.54       0   63.54      20   63.54      20   73.54
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.54,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.16107* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0    73.4       0    63.4      20    63.4      20    73.4
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.4,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.15788  ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.26       0   63.26      20   63.26      20   73.26
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.25999,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.15469  ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:58
+#Sta/Elev= 4 
+       0   73.11       0   63.11      20   63.11      20   73.11
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=64.11,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.1515  ,20,20,20
+BEGIN DESCRIPTION:
+Fifth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/20/2001 15:42:42
+#Sta/Elev= 4 
+       0   72.97       0   62.97      20   62.97      20   72.97
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.97,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.14771* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.83       0   62.83      20   62.83      20   72.83
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.83,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.14392* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.68       0   62.68      20   62.68      20   72.68
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.68,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.14013* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.54       0   62.54      20   62.54      20   72.54
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.54,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.13634* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.39       0   62.39      20   62.39      20   72.39
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.39,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.13255* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.25       0   62.25      20   62.25      20   72.25
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.25,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.12876* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   72.11       0   62.11      20   62.11      20   72.11
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=63.11,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.12497* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   71.96       0   61.96      20   61.96      20   71.96
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.96,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.12118* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   71.82       0   61.82      20   61.82      20   71.82
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.82,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.11739* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:43:59
+#Sta/Elev= 4 
+       0   71.67       0   61.67      20   61.67      20   71.67
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.67,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.1136  ,20,20,20
+BEGIN DESCRIPTION:
+Fourth Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/20/2001 15:42:52
+#Sta/Elev= 4 
+       0   71.53       0   61.53      20   61.53      20   71.53
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.53,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.109816*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   71.39       0   61.39      20   61.39      20   71.39
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.39,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.106032*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   71.24       0   61.24      20   61.24      20   71.24
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.24,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.102248*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0    71.1       0    61.1      20    61.1      20    71.1
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=62.1,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.098464*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.96       0   60.96      20   60.96      20   70.96
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.96,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.09468* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.82       0   60.81      20   60.81      20   70.82
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.81,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.090896*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.67       0   60.67      20   60.67      20   70.67
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.67,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.087112*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.53       0   60.53      20   60.53      20   70.53
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.53,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.083328*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.39       0   60.39      20   60.39      20   70.39
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.39,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.079544*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:01
+#Sta/Elev= 4 
+       0   70.24       0   60.24      20   60.24      20   70.24
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.24,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.07576 ,20,20,20
+BEGIN DESCRIPTION:
+Third Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/20/2001 15:43:02
+#Sta/Elev= 4 
+       0    70.1       0    60.1      20    60.1      20    70.1
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=61.1,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.071972*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.96       0   59.96      20   59.96      20   69.96
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.96,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.068184*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.81       0   59.81      20   59.81      20   69.81
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.81,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.064396*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.67       0   59.67      20   59.67      20   69.67
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.67,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.060608*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.52       0   59.52      20   59.52      20   69.52
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.52,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.05682* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.38       0   59.38      20   59.38      20   69.38
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.38,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.053032*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.24       0   59.24      20   59.24      20   69.24
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.24,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.049244*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   69.09       0   59.09      20   59.09      20   69.09
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=60.09,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.045456*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0   68.95       0   58.95      20   58.95      20   68.95
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.95,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.041668*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:02
+#Sta/Elev= 4 
+       0    68.8       0    58.8      20    58.8      20    68.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.03788 ,20,20,20
+BEGIN DESCRIPTION:
+Second Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/20/2001 15:43:14
+#Sta/Elev= 4 
+       0   68.66       0   58.66      20   58.66      20   68.66
+#Mann= 3 , 0 , 0 
+       0       0       0       0    .015       0      20       0       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.66,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.034092*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   68.52       0   58.52      20   58.52      20   68.52
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.52,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.030304*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   68.37       0   58.37      20   58.37      20   68.37
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.37,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.026516*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   68.23       0   58.23      20   58.23      20   68.23
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.23,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.022728*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   68.09       0   58.09      20   58.09      20   68.09
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=59.09,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.01894* ,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   67.95       0   57.94      20   57.94      20   67.95
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.94,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.015152*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0    67.8       0    57.8      20    57.8      20    67.8
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.8,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.011364*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   67.66       0   57.66      20   57.66      20   67.66
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.66,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.007576*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   67.52       0   57.52      20   57.52      20   67.52
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.52,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,.003788*,20,20,20
+Node Last Edited Time=Dec/20/2001 15:44:04
+#Sta/Elev= 4 
+       0   67.37       0   57.37      20   57.37      20   67.37
+#Mann= 2 , 0 , 0 
+       0       0       0       0    .015       0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.37,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+Type RM Length L Ch R = 1 ,0.00000 ,,,
+BEGIN DESCRIPTION:
+First Cross Section
+END DESCRIPTION:
+Node Last Edited Time=Dec/20/2001 15:43:22
+#Sta/Elev= 4 
+       0   67.23       0   57.23      20   57.23      20   67.23
+#Mann= 3 , 0 , 0 
+       0               0       0    .015       0      20               0
+Bank Sta=0,20
+XS Rating Curve= 0 ,0
+XS HTab Starting El and Incr=58.23,0.45, 50 
+XS HTab Horizontal Distribution= 5 , 5 , 5 
+Exp/Cntr=0,0
+
+LCMann Time=Dec/30/1899 00:00:00
+LCMann Region Time=Dec/30/1899 00:00:00
+LCMann Table=0
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5
