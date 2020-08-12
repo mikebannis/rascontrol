@@ -1,6 +1,6 @@
 from win32com.universal import com_error
 
-from rascontrol.rascontroller import RasController
+from rascontrol.rascontrol import RasController
 
 HEC_RAS_VERSIONS = ["400", "41", "500", "501", "503", "504", "505", "506", "507"]
 
