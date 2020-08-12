@@ -1,5 +1,5 @@
 """
-rascontroller.py
+rascontrol.py
 
 Provides API to control HEC-RAS through the win32com interface. Primary object is RasController.
 
@@ -13,7 +13,7 @@ import logging
 import win32com.client
 import psutil
 
-from rascontrol.exceptions import LockedPlan, NoOutputFile, FileNotFound, CurrentPlanNotRun, CrossSectionNotFound, \
+from .exceptions import LockedPlan, NoOutputFile, FileNotFound, CurrentPlanNotRun, CrossSectionNotFound, \
     CulvertNotFound, BridgeNotFound, MultipleOpeningNotFound, InlineStructureNotFound, LateralStructureNotFound, \
     RCException, NoProject, RASOpen
 

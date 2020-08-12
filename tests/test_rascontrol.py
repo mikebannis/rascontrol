@@ -2,7 +2,7 @@ from __future__ import print_function
 
 import os
 
-from rascontrol.rascontroller import RasController
+from rascontrol.rascontrol import RasController
 from tests.util import detect_hec_ras_version
 
 WSEL = 2
