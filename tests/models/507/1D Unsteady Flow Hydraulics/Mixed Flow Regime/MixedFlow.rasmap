@@ -1,0 +1,75 @@
+<RASMapper>
+  <Version>2.0.26244</Version>
+  <Geometries Checked="True" Expanded="True" TopNode="True">
+    <Layer Name="Mixed Flow Geometry Data" Type="RASGeometry" Checked="True" Expanded="True" Filename=".\MixedFlow.g01.hdf">
+      <Layer Name="Rivers" Type="RASRiver" Checked="True">
+        <Pen A="255" R="0" G="0" B="255" Width="1" />
+      </Layer>
+      <Layer Name="Bank Lines" Type="RASBankLines" Checked="True">
+        <Pen A="255" R="255" G="0" B="0" Width="1" />
+      </Layer>
+      <Layer Name="River Edge Lines" Type="RASEdgeLines" Checked="True">
+        <Pen A="255" R="169" G="169" B="169" Width="1" />
+      </Layer>
+      <Layer Name="XS" Type="RASXS" Checked="True">
+        <Pen A="255" R="0" G="128" B="0" Width="1" />
+      </Layer>
+      <Layer Name="XS Interpolation Surfaces" Type="RASXSInterpolationSurface">
+        <PointSymbol Type="1" Size="4" pA="255" pR="0" pG="0" pB="255" bA="255" bR="255" bG="255" bB="255" />
+        <Pen A="255" R="0" G="0" B="128" Width="1" />
+        <SurfaceFill Alpha="255" Colors="-1,-16777216" Values="0,1" Stretched="True" />
+      </Layer>
+      <Layer Name="Storage Areas" Type="RASStorageArea" />
+      <Layer Name="2D Flow Areas" Type="RASD2FlowArea" />
+      <Layer Name="..." Type="RASMoreLayers" />
+    </Layer>
+  </Geometries>
+  <Results Expanded="True">
+    <Layer Name="Mixed Flow" Type="RASResults" Expanded="True" Selected="True" Filename=".\MixedFlow.p02.hdf">
+      <Layer Name="Geometry" Type="RASGeometry" Filename=".\MixedFlow.p02.hdf">
+        <Layer Name="Rivers" Type="RASRiver" />
+        <Layer Name="XS" Type="RASXS" />
+        <Layer Name="Storage Areas" Type="RASStorageArea" />
+        <Layer Name="2D Flow Areas" Type="RASD2FlowArea" />
+        <Layer Name="..." Type="RASMoreLayers" />
+      </Layer>
+      <Layer Name="depth" Type="RASResultsMap">
+        <SurfaceFill Alpha="150" Colors="-16711681,-16777077" Values="0,15" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="depth" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+      <Layer Name="velocity" Type="RASResultsMap">
+        <SurfaceFill Alpha="255" Colors="-16777077,-16776961,-7278960,-256,-23296,-47872,-7667712" Values="0,2,4,6,8,10,15" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="velocity" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+      <Layer Name="elevation" Type="RASResultsMap">
+        <SurfaceFill Alpha="255" Colors="-8388864,-16744448,-256,-23296,-65536,-16181,-65281" Values="59.2999992370605,61.6703421274821,64.0406850179036,66.4110279083252,68.7813707987468,71.1517136891683,73.5220565795898" Stretched="True" />
+        <Contour On="False" Interval="5" Color="-16777216" />
+        <MapParameters MapType="elevation" OutputMode="Dynamic Surface" ContourPolygonValue="0" ProfileIndex="2147483647" ProfileName="Max" Hours="True" />
+      </Layer>
+    </Layer>
+  </Results>
+  <MapLayers />
+  <Terrains />
+  <CurrentView>
+    <MaxX>0.460996207205098</MaxX>
+    <MinX>0.402893676676505</MinX>
+    <MaxY>0.952542179944216</MaxY>
+    <MinY>0.905827028084036</MinY>
+  </CurrentView>
+  <VelocitySettings>
+    <Density>1.5</Density>
+    <Lifetime>100</Lifetime>
+    <Radius>0.75</Radius>
+    <Method>2</Method>
+    <Timestep>1</Timestep>
+    <StaticColor>Black</StaticColor>
+  </VelocitySettings>
+  <AnimationSettings>
+    <DelayTimer>0</DelayTimer>
+  </AnimationSettings>
+  <CurrentSettings>
+    <Folders />
+  </CurrentSettings>
+</RASMapper>

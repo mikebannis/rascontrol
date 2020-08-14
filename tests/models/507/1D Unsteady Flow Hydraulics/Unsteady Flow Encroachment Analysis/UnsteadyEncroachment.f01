@@ -1,0 +1,13 @@
+Flow Title=Base + 1 ft Target Depth
+Number of Profiles= 2 
+Profile Names=PF#1        ,PF#2        
+River Rch & RM=Beaver Creek,Kentwood        ,5.99    
+   14000   14000
+Boundary for River Rch & Prof#=Beaver Creek,Kentwood        , 1 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=211.8
+Boundary for River Rch & Prof#=Beaver Creek,Kentwood        , 2 
+Up Type= 0 
+Dn Type= 1 
+Dn Known WS=212.8

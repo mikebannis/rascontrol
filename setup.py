@@ -1,7 +1,15 @@
 from setuptools import setup
 
-setup(name='rascontrol', version='0.011', 
+setup(
+      name='rascontrol',
+      version='0.011',
       description='Control RAS using win32 COM objects', 
-      author='Mike Bannister', author_email='mikebannis@gmail.com', 
-      packages=['rascontrol'])
-
+      author='Mike Bannister',
+      author_email='mikebannis@gmail.com',
+      packages=['rascontrol'],
+      install_requires=[
+            "psutil",
+            "pywin32",
+            "pytest"
+      ]
+)

@@ -1,0 +1,179 @@
+Geom Title=Flow Split With Junction Hydraulics On
+Program Version=4.01
+Viewing Rectangle=-0.1128 , 1.1543 , 1.0107 , 0.0107 
+
+Junct Name=Junction        
+Junct Desc=, 0 , 0 ,-1 ,-1
+Junct X Y & Text X Y=0.4653465,0.5884017,0.4653465,0.5884017
+Up River,Reach=Split           ,Upper           
+Dn River,Reach=Split           ,Right Branch    
+Dn River,Reach=Split           ,Left Branch     
+Junc L&A=200,
+Junc L&A=180,
+
+River Reach=Split           ,Upper           
+Reach XY= 6 
+-0.06082036775100.960396039603960.106082036775110.83026874115983
+0.210749646393210.728429985855730.315417256011320.72842998585573
+0.410183875530410.652050919377650.465346534653470.58840169731259
+Rch Text X Y=0.0707214,0.8673975
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,101     ,550,500,450
+Node Last Edited Time=Apr/30/2009 16:19:23
+#Sta/Elev= 8 
+     110   94.53  120.37   84.53  203.31   82.53  217.71   74.53  246.51   75.53
+  260.91   83.53  374.96   85.53  385.33   95.53
+#Mann= 4 ,-1 , 0 
+     110     .06       0  203.31    .035       0  260.91     .05       0
+  385.33     .05       0
+Bank Sta=203.31,260.91
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,100     ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:19:30
+#Sta/Elev= 8 
+     110    93.3     120    83.3     200    81.3     210    73.3     230    74.3
+     240    82.3     350    84.3     360    94.3
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,99      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:19:43
+#Sta/Elev= 8 
+     110      93     120      83     200      81     210      73     230      74
+     240      82     350      84     360      94
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,98      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:16:51
+#Sta/Elev= 8 
+     110    90.6     120    80.6     200    78.6     210    70.6     230    71.6
+     240    79.6     350    81.6     360    91.6
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+River Reach=Split           ,Left Branch     
+Reach XY= 7 
+0.465346534653470.58840169731259 0.61759547383310.57001414427157
+0.746308345120230.543140028288540.867949080622350.44837340876945
+1.002319660537480.345120226308351.060311173974540.17538896746818
+1.091428571428570.12305516265912
+Rch Text X Y=0.621867,0.4720651
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,97      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:05:00
+#Sta/Elev= 8 
+     110    89.2     120    79.2     200    77.2     210    69.2     230    70.2
+     240    78.2     350    80.2     360    90.2
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,96      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:05:18
+#Sta/Elev= 8 
+     110    88.9     120    78.9     200    76.9     210    68.9     230    69.9
+     240    77.9     350    79.9     360    89.9
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,95      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:05:33
+#Sta/Elev= 8 
+     110    88.7     120    78.7     200    76.7     210    68.7     230    69.7
+     240    77.7     350    79.7     360    89.7
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,94      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:05:47
+#Sta/Elev= 8 
+     110    88.6     120    78.6     200    76.6     210    68.6     230    69.6
+     240    77.6     350    79.6     360    89.6
+#Mann= 3 ,-1 , 0 
+     110     .06       0     200    .035       0     240     .05       0
+Bank Sta=200,240
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+River Reach=Split           ,Right Branch    
+Reach XY= 6 
+0.465346534653470.588401697312590.451202263083450.49080622347949
+0.458274398868460.415841584158420.487977369165490.24611032531825
+0.519094766619520.145685997171150.640735502121640.04950495049505
+Rch Text X Y=0.5091938,0.4536775
+Reverse River Text= 0 
+
+Type RM Length L Ch R = 1 ,10      ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:06:35
+#Sta/Elev= 8 
+     110    89.1     117    79.1     173    77.1     180    69.1     194    70.1
+     201    78.1     278    80.1     285    90.1
+#Mann= 3 ,-1 , 0 
+     110     .06       0     173    .035       0     201     .05       0
+Bank Sta=173,201
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,9       ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:06:56
+#Sta/Elev= 8 
+     110    88.7     117    78.7     173    76.7     180    68.7     194    69.7
+     201    77.7     278    79.7     285    89.7
+#Mann= 3 ,-1 , 0 
+     110     .06       0     173    .035       0     201     .05       0
+Bank Sta=173,201
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,8       ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:07:16
+#Sta/Elev= 8 
+     110    88.4     117    78.4     173    76.4     180    68.4     194    69.4
+     201    77.4     278    79.4     285    89.4
+#Mann= 3 ,-1 , 0 
+     110     .06       0     173    .035       0     201     .05       0
+Bank Sta=173,201
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Type RM Length L Ch R = 1 ,7       ,500,500,500
+Node Last Edited Time=Apr/30/2009 16:07:32
+#Sta/Elev= 8 
+     110    88.2     117    78.2     173    76.2     180    68.2     194    69.2
+     201    77.2     278    79.2     285    89.2
+#Mann= 3 ,-1 , 0 
+     110     .06       0     173    .035       0     201     .05       0
+Bank Sta=173,201
+XS Rating Curve= 0 ,0
+Exp/Cntr=0.3,0.1
+
+Chan Stop Cuts=-1 
+
+
+
+Use User Specified Reach Order=0
+GIS Ratio Cuts To Invert=-1
+GIS Limit At Bridges=0
+Composite Channel Slope=5

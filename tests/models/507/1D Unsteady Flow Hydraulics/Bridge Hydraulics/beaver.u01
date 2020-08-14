@@ -1,0 +1,50 @@
+Flow Title=Unsteady flow data -  Tidal D.S. BC
+Program Version=5.02
+Use Restart= 0 
+Restart Filename=beaver.p03.12FEB1990 2400.rst
+Initial Flow Loc=Beaver Creek    ,Kentwood        ,5.99    ,50
+Boundary Location=Beaver Creek    ,Kentwood        ,5.99    ,        ,                ,                ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+      50      50      50      50      50      50      50      50      50      50
+DSS File=dss
+DSS Path=/BEAVER CREEK KENTWOOD/5.99/FLOW/01FEB1999/1HOUR/10 YEAR EVNT/
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Beaver Creek    ,Kentwood        ,5.0     ,        ,                ,                ,                ,                
+Interval=1HOUR
+Stage Hydrograph= 55 
+   205.6  206.33  207.07   207.8  208.53  209.27     210  209.67  209.33     209
+  208.67  208.33     208  208.67  209.33     210  210.67  211.33     212     211
+     210     209     208     207     206  206.67  207.33     208  208.67  209.33
+     210  209.67  209.33     209  208.67  208.33     208  208.67  209.33     210
+  210.67  211.33     212     211     210     209     208     207     206  206.67
+  207.33     208  208.67  209.33     210
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Observed HWM=Beaver Creek    ,Kentwood        ,5.99    ,,220
+Observed HWM=Beaver Creek    ,Kentwood        ,5.875   ,,219.2
+Observed HWM=Beaver Creek    ,Kentwood        ,5.76    ,,218.4
+Observed HWM=Beaver Creek    ,Kentwood        ,5.685   ,,218.3
+Observed HWM=Beaver Creek    ,Kentwood        ,5.61    ,,218.1
+Observed HWM=Beaver Creek    ,Kentwood        ,5.41    ,,217.8
+Observed HWM=Beaver Creek    ,Kentwood        ,5.39    ,,215.2
+Observed HWM=Beaver Creek    ,Kentwood        ,5.13    ,,213.6
+Observed HWM=Beaver Creek    ,Kentwood        ,5.065   ,,212.5
+Observed HWM=Beaver Creek    ,Kentwood        ,5.0     ,,211.8

@@ -1,0 +1,29 @@
+Proj Title=Water supply diversion into canal
+Current Plan=p01
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Unsteady File=u01
+Plan File=p01
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+Advanced Rule example for water supply diversion
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=HRTBC.
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Reach=CowHouseCk      ,1               
+GIS Export Profiles= 0 

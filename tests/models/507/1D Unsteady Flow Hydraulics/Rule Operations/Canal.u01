@@ -1,0 +1,411 @@
+Flow Title=Unsteady flow with Rule Diversion
+Program Version=4.00
+Use Restart= 0 
+Restart Filename=HBR01.r29
+Initial Flow Loc=Diversion Canal ,1               ,79      ,0.5
+Initial Flow Loc=Green           ,1               ,605400  ,54.7
+Initial Flow Loc=Green           ,1               ,605100  ,77
+Initial Flow Loc=Green           ,1               ,601322.*,100
+Initial Flow Loc=Green           ,2               ,600877.*,500
+Initial RRR Elev=Diversion Canal ,1               ,73.75   ,22.1
+Initial RRR Elev=Green           ,2               ,600043  ,22.1
+Boundary Location=Diversion Canal ,1               ,73.3    ,        ,                ,                
+BEGIN BOUNDARY DESCRIPTION:
+Advanced rule example, water supply operating regulations for canal diversion.
+END BOUNDARY DESCRIPTION:
+Rule Operation=Type=0,Var Type=1,Comment=Create user variables for storing volumes.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=1,Var Name=Green Dam Vol since midnight,Var Type=1,Real=0
+Rule Operation=Type=1,Var Name=Canal Dam Vol since midnight,Var Type=1,Real=0
+Rule Operation=Type=1,Var Name=Canal Dam Vol Diversion,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get time step and flows and then compute volumes (do this every time step).
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the current time step.
+Rule Operation=Type=2,Var Name=Time Step hours,Var Type=1,Sim Group=Solution,Sim Function=Time Step,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Compute the time step in seconds.
+Rule Operation=Type=5,Var Name=Time Step seconds,Var Type=1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=3600,Variable=Time Step hours
+Rule Expression=
+Rule Expression=
+Rule Expression=
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get current flow at Green Dam and Canal Dam.
+Rule Operation=Type=2,Var Name=Green Dam Flow,Var Type=1,River=Green,Reach=2,RS=600042,Gate=SMain,Sim Group=Inline Structures,Sim Function=Structure.Total Flow,Time=1
+Rule Operation=Type=2,Var Name=Canal Dam Flow,Var Type=1,River=Diversion Canal,Reach=1,RS=73.3,Sim Group=Inline Structures,Sim Function=Structure.Total Flow,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Add in the new volume (add the new volume--flow*time-- to the current volume).
+Rule Operation=Type=5,Var Type=1,Existing Var=Green Dam Vol since midnight,Use Existing=-1,MathOperator1=3,MathOperator2=1,MathOperator3=0
+Rule Expression=,Variable=Green Dam Flow
+Rule Expression=,Variable=Time Step seconds
+Rule Expression=,Variable=Green Dam Vol since midnight
+Rule Operation=Type=5,Var Name=Canal Dam Vol since midnight,Var Type=1,Existing Var=Canal Dam Vol since midnight,Use Existing=-1,MathOperator1=3,MathOperator2=1,MathOperator3=0
+Rule Expression=,Variable=Canal Dam Flow
+Rule Expression=,Variable=Time Step seconds
+Rule Expression=,Variable=Canal Dam Vol since midnight
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Check to see if it is midnight.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get Day of Month for the beginning and end of the time step.
+Rule Operation=Type=2,Var Name=Day Beg time step,Var Type=1,Sim Group=Time,Sim Function=Day of Month,Time=1
+Rule Operation=Type=2,Var Name=Day End time step,Var Type=1,Sim Group=Time,Sim Function=Day of Month,Time=2
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=If time is midnight then determine next days diversion; if any.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=6,BranchCompare2=0
+Rule Expression=,Variable=Day Beg time step
+Rule Expression=,Variable=Day End time step
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Time is midnight.  Following operations are only performed once a day.
+Rule Operation=Type=0,Var Type=1,Comment=Compute allowable flow through Canal Dam and set gate openings.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Allowable diversion is based on the total flow for the previous 24 hour flow.
+Rule Operation=Type=0,Var Type=1,Comment=Flow into Green reservoir is assumed to equal flow out of the resevoir.  (Over the long term).
+Rule Operation=Type=0,Var Type=1,Comment=Add the 24 hour volume at Green Dam and Canal Dam.  Divide by 86400 seconds to get prior 24 hour flow (in cfs).
+Rule Operation=Type=5,Var Name=HR 24hour ave Flow,Var Type=1,MathOperator1=1,MathOperator2=4,MathOperator3=0
+Rule Expression=,Variable=Green Dam Vol since midnight
+Rule Expression=,Variable=Canal Dam Vol since midnight
+Rule Expression=,Constant=86400
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Reset the volumes to zero (for the next days accounting).
+Rule Operation=Type=5,Var Type=1,Existing Var=Green Dam Vol since midnight,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Vol since midnight,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Determine allowable diversion based on prior days average flow.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Name=Canal Dam Flow Diversion,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=HR 24hour ave Flow
+Rule Expression=,Constant=100
+Rule Operation=Type=0,Var Type=1,Comment=Flow too low.  No diversion allowed.
+Rule Operation=Type=5,Var Name=Canal Dam Flow Diversion,Var Type=1,Existing Var=Canal Dam Vol Diversion,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=1
+Rule Expression=,Variable=HR 24hour ave Flow
+Rule Expression=,Constant=150
+Rule Operation=Type=0,Var Type=1,Comment=Allowable diversion is 10 percent of prior days flow.
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Flow Diversion,Use Existing=-1,MathOperator1=3,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.1,Variable=HR 24hour ave Flow
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=HR 24hour ave Flow
+Rule Expression=,Constant=215
+Rule Operation=Type=0,Var Type=1,Comment=10% to 30% (sliding scale).
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Flow Diversion,Use Existing=-1,MathOperator1=3,MathOperator2=4,MathOperator3=1
+Rule Expression=,Variable=HR 24hour ave Flow,Constant=-150
+Rule Expression=,Constant=49.5
+Rule Expression=,Constant=65
+Rule Expression=,Constant=15
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=HR 24hour ave Flow
+Rule Expression=,Constant=1001
+Rule Operation=Type=0,Var Type=1,Comment=Allowable diversion is 30 percent of prior days flow.
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Flow Diversion,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.3,Variable=HR 24hour ave Flow
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=4,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1,Comment=Diversion capped at 300cfs.
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Flow Diversion,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=300
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Allowable volume diversion is allowable flow in cfs times 86400 seconds in a day.
+Rule Operation=Type=5,Var Type=1,Existing Var=Canal Dam Vol Diversion,Use Existing=-1,MathOperator1=3,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Canal Dam Flow Diversion
+Rule Expression=,Constant=86400
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=The Gates are only adjusted once.  In order to make sure the full-allowable-amount is diverted;
+Rule Operation=Type=0,Var Type=1,Comment=The Volume is to be diverted in ~20 hours and then the gates will be closed.
+Rule Operation=Type=0,Var Type=1,Comment=So 24 hour flow is multiplied by 1.2 to get 20 hour flow.
+Rule Operation=Type=5,Var Name=Canal Dam 20hour flow,Var Type=1,MathOperator1=3,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Canal Dam Flow Diversion
+Rule Expression=,Constant=1.2
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Convert 20 hour cfs flow  to 20 hour MGD flow.
+Rule Operation=Type=5,Var Name=Canal Dam 20 hour MGD,Var Type=1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.646317,Variable=Canal Dam 20hour flow
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the Head on each gate group from lookup tables.
+Rule Operation=Type=6,Var Name=Head Opening #1,Var Type=1,TableMode=1,Table2D=0,TableArgX=Flow MGD,TableArgY=
+Rule Expression=,Variable=Canal Dam 20 hour MGD
+Rule Table=25,1
+       0    9.96   13.08   16.48   20.13   24.01   28.11   32.43   36.94   41.65
+   46.54   51.61   56.22   64.85   73.88   83.29   93.08  103.21  110.82  124.94
+  139.61  154.82  170.54  186.76  203.46
+       0       1     1.2     1.4     1.6     1.8       2     2.2     2.4     2.6
+     2.8       3       2     2.2     2.4     2.6     2.8       3     2.4     2.6
+     2.8       3     3.2     3.4     3.6
+Rule Operation=Type=6,Var Name=Head Opening #2,Var Type=1,Gate=Gate #1,TableMode=1,Table2D=0,TableArgX=Flow MGD,TableArgY=
+Rule Expression=,Variable=Canal Dam 20 hour MGD
+Rule Table=25,1
+       0    9.96   13.08   16.48   20.13   24.01   28.11   32.43   36.94   41.65
+   46.54   51.61   56.22   64.85   73.88   83.29   93.08  103.21  110.82  124.94
+  139.61  154.82  170.54  186.76  203.46
+       0       0       0       0       0       0       0       0       0       0
+       0       0       2     2.2     2.4     2.6     2.8       3     2.4     2.6
+     2.8       3     3.2     3.4     3.6
+Rule Operation=Type=6,Var Name=Head Opening #3,Var Type=1,Gate=Gate #1,TableMode=1,Table2D=0,TableArgX=Flow MGD,TableArgY=
+Rule Expression=,Variable=Canal Dam 20 hour MGD
+Rule Table=25,1
+       0    9.96   13.08   16.48   20.13   24.01   28.11   32.43   36.94   41.65
+   46.54   51.61   56.22   64.85   73.88   83.29   93.08  103.21  110.82  124.94
+  139.61  154.82  170.54  186.76  203.46
+       0       0       0       0       0       0       0       0       0       0
+       0       0       0       0       0       0       0       0     2.4     2.6
+     2.8       3     3.2     3.4     3.6
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Initialize user gate opening variables to zero
+Rule Operation=Type=0,Var Type=1,Comment=(These are user defined variables.  The gates are not yet being set)
+Rule Operation=Type=5,Var Name=Gate Opening #1,Var Type=1,Gate=Gate #1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=5,Var Name=Gate Opening #2,Var Type=1,Gate=Gate #1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=5,Var Name=Gate Opening #3,Var Type=1,Gate=Gate #1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the WSEL just upstream of Canal Dam.
+Rule Operation=Type=0,Var Type=1,Comment=Then back out the gate opening from the desired Head on each gate.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=2,Var Name=Wsel Upstream,Var Type=1,River=Diversion Canal,Reach=1,RS=73.75,Sim Group=Cross Sections,Sim Function=WS Elevation,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Name=Gate Opening #1,Var Type=1,Gate=Gate #1,Branch Type=0,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=Head Opening #1
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Head is greater than zero.  Determined gate opening for this gate.
+Rule Operation=Type=0,Var Type=1,Comment=The desired Head plus 22.5 minus the upstream water surface will give the drop gate opening.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=5,Var Name=Gate Opening #1,Var Type=1,Existing Var=Gate Opening #1,Use Existing=-1,Gate=Gate #1,MathOperator1=2,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Head Opening #1,Constant=22.5
+Rule Expression=,Variable=Wsel Upstream
+Rule Operation=Type=4,Var Type=1,Gate=Gate #1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Set gate #1 to the new opening height (finally!)
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Gate #1,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Variable=Gate Opening #1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Repeat for gate #2 and #3.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=Head Opening #2
+Rule Expression=,Constant=0
+Rule Operation=Type=5,Var Name=Gate Opening #1,Var Type=1,Existing Var=Gate Opening #2,Use Existing=-1,Gate=Gate #1,MathOperator1=2,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Head Opening #2,Constant=22.5
+Rule Expression=,Variable=Wsel Upstream
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=3,Var Type=1,Gate=Gate #2,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Variable=Gate Opening #2
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=Head Opening #3
+Rule Expression=,Constant=0
+Rule Operation=Type=5,Var Name=Gate Opening #1,Var Type=1,Existing Var=Gate Opening #3,Use Existing=-1,Gate=Gate #1,MathOperator1=2,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Head Opening #3,Constant=22.5
+Rule Expression=,Variable=Wsel Upstream
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=3,Var Type=1,Gate=Gate #3,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Variable=Gate Opening #3
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=This is the end of the midnight (once-a-day) operations
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the four hour running average flow at Green Dam.
+Rule Operation=Type=2,Var Name=Green Dam 4 Hour Ave Flow,Var Type=1,River=Green,Reach=2,RS=600042,Gate=SMain,Sim Group=Inline Structures,Sim Function=Structure.Total Flow,Time=5,LBStart=4,LBEnd=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Check if the allowable amount of flow has been diverted.
+Rule Operation=Type=0,Var Type=1,Comment=Check if the four hour average running flow at Green Dam is less than 10 cfs.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=1,Branch Or=-1,BranchCompare1=4,BranchCompare2=1
+Rule Expression=,Variable=Canal Dam Vol since midnight
+Rule Expression=,Variable=Canal Dam Vol Diversion
+Rule Expression=,Variable=Green Dam 4 Hour Ave Flow
+Rule Expression=,Constant=10
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Either the allowable volume has been diverted or the Green Dam flow is too low.
+Rule Operation=Type=0,Var Type=1,Comment=Make sure all the gates are closed.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Gate #1,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=0
+Rule Operation=Type=3,Var Type=1,Gate=Gate #2,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=0
+Rule Operation=Type=3,Var Type=1,Gate=Gate #3,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=End of Canal Dam rule set.
+
+Rule Gate Data=Gate #1     ,1,1,4,0,0.1
+Rule Gate Data=Gate #2     ,1,1,4,0,0
+Rule Gate Data=Gate #3     ,1,1,4,0,0
+Rule Gate Data=Gate #4     ,1,1,4,0,0
+Rule Gate Data=Gate #5     ,1,1,4,0,0
+Rule Gate Data=Gate #6     ,1,1,4,0,0
+Rule Gate Data=Gate #7     ,1,1,4,0,0
+Rule Gate Data=Gate #8     ,1,1,4,0,0
+Boundary Location=Diversion Canal ,1               ,10      ,        ,                ,                
+Interval=6HOUR
+Stage Hydrograph= 100 
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+      10      10      10      10      10      10      10      10      10      10
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=0
+Boundary Location=Green           ,1               ,605400  ,        ,                ,                
+Interval=1DAY
+Flow Hydrograph= 10 
+    54.7  104.36  105.89      94  164.64  205.32  380.21  215.44  132.74  129.34
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/605400_MORRIS/FLOW/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,1               ,605101.*,        ,                ,                
+Interval=1DAY
+Lateral Inflow Hydrograph= 10 
+   32.72   10.44   18.69   29.18   15.32   36.94    3.17       0   18.27   37.58
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/605101_TROUT/FLOW/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,1               ,605100  ,        ,                ,                
+Interval=1DAY
+Lateral Inflow Hydrograph= 10 
+       0       0       0      57      83     829       0       0      45       0
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/605100_RUNOFF/RUNOFF/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,1               ,602447.*,        ,                ,                
+Interval=1DAY
+Lateral Inflow Hydrograph= 10 
+       0    5.88    7.47   11.37   13.97   16.27    6.26    9.21    2.32    1.37
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/602447_CYPRESS/FLOW/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,1               ,602400  ,        ,                ,                
+Interval=1DAY
+Lateral Inflow Hydrograph= 10 
+       0       0       0      15      25     347       0       0      11       0
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/602400_RUNOFF/RUNOFF/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,1               ,601300  ,        ,                ,                
+Interval=1DAY
+Lateral Inflow Hydrograph= 10 
+       0       0       0       4       7     127       0       0       2       0
+DSS File=HRTBC-Input.dss
+DSS Path=/HR/601300_RUNOFF/RUNOFF/01JAN1988/1DAY/FORECAST/
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Green           ,2               ,600042  ,        ,                ,                
+Navigation Dam=4,1,1200,0.01,0.05,0.05, 0 ,5.6
+Navigation Dam SFT= 0 
+Navigation Dam Flow Monitor RRR=Green           ,1               ,605400  
+Navigation Dam Hinge Point RRR=CowHouseCk      ,1               ,12500   
+Navigation Dam CP Hinge Point=23,22.85,22.8,22.75,22.6,22.4,22.2,22,21.8,10000,1.05,1.025,0.925,0.95,0.2
+Navigation Dam CP Min Pool=23.5,22.35,22.3,22.1,22,21.9,21.7,21.5,21.3,10000,1.07,1.03,0.93,0.97,0.2
+Navigation Dam CP Max Pool=,,,,,,,,,,,,,,
+Boundary Location=Green           ,2               ,600040  ,        ,                ,                
+Interval=1YEAR
+Stage Hydrograph= 100 
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2     1.2
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=0
+Observed DSS Loc=CowHouseCk      ,1               ,12500   
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/COWHOUSE (12500)/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1               ,605400  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/HR - 1@ MB(605400)/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1               ,605020  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/HR-1 @US OF S-155/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1               ,604995  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/HR-1 @DS OF S-155/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1b              ,601700  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/FOWLER AVE (601700)/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1b              ,601000  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/HR-1B (UPSTREAM OF HARNEY)/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1b              ,600045  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/US OF TAMPA DAM/STAGE/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=Hillsborough    ,1b              ,600040  
+Observed DSS Filename=
+Observed DSS Pathname=/HILLSBOROUGH RIVER/DS OF TAMPA DAM (600040)/FLOW/01JAN2002/1DAY/OBSERVED/
+Observed DSS Dn Dist=
+

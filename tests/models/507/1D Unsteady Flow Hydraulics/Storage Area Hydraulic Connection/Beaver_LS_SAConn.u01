@@ -1,0 +1,40 @@
+Flow Title=14000 cfs hydrograph
+Program Version=3.12
+Use Restart= 0 
+Initial Flow Loc=Beaver Creek    ,Kentwood        ,5.99    ,5000
+Initial Storage Elev=Bayou           ,206
+Initial Storage Elev=Ramden          ,204
+Boundary Location=Beaver Creek    ,Kentwood        ,5.99    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+ 5024.65 5098.34 5220.25 5389.05 5602.89 5859.42 6155.85 6488.91 6854.97    7250
+ 7669.69 8109.42  8564.4 9029.62    9500 9970.38 10435.610890.5811330.31   11750
+12145.0312511.0912844.1513140.5813397.1113610.9513779.7513901.6613975.35   14000
+13975.3513901.6613779.7513610.9513397.1113140.5812844.1512511.0912145.03   11750
+11330.3110890.58 10435.6 9970.38 9727.97 9497.38 9278.04  9069.4 8870.94 8682.15
+ 8502.57 8331.74 8169.25 8014.69 7867.66  7727.8 7594.77 7468.22 7347.84 7233.33
+ 7124.41 7020.81 6922.25  6828.5 6739.32  6654.5 6573.81 6497.05 6424.04 6354.59
+ 6288.52 6225.68  6165.9 6109.04 6054.95  6003.5 5954.56 5908.01 5863.72  5821.6
+ 5781.53 5743.41 5707.16 5672.67 5639.86 5608.66 5578.97 5550.73 5523.87 5498.32
+ 5474.02  5450.9 5428.91 5407.99  5388.1 5369.17 5351.16 5334.04 5317.75 5302.25
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Beaver Creek    ,Kentwood        ,5.0     ,        ,                ,                
+Interval=1HOUR
+Rating Curve= 20 
+  204.14     200  206.09     500  207.26    1000  208.47    2000   209.3    3000
+  209.83    4000  210.25    5000  210.68    6000  210.99    7000  211.27    8000
+  211.53    9000  211.78   10000  212.02   11000  212.25   12000  212.47   13000
+  212.68   14000     213   16000     214   21000     215   26000     216   30000
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

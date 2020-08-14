@@ -1,0 +1,99 @@
+Flow Title=Ungaged
+Program Version=5.00
+Use Restart= 0 
+Initial Flow Loc=RedFox          ,Upper           ,100     ,10000
+Initial Flow Loc=RedFox          ,Upper           ,50      ,10100
+Boundary Location=RedFox          ,Upper           ,100     ,        ,                ,                ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+   10000   10600   11200   11800   12400   13000   13600   14200   14800   15000
+   14900 14662.5   14425 14187.5   13950 13712.5   13475 13237.5   1300012857.14
+12714.2912571.4312428.5712285.7112142.86   1200011972.9711945.9511918.9211891.89
+11864.8711837.8411810.8111783.7811756.7611729.73 11702.711675.6811648.6511621.62
+11594.5911567.5711540.5411513.5111486.4911459.4611432.4311405.4111378.3811351.35
+11324.32 11297.311270.2711243.2411216.2211189.1911162.1611135.1311108.1111081.08
+11054.0511027.03   1100010972.9710945.9510918.9210891.8910864.8710837.8410810.81
+10783.7810756.7610729.73 10702.710675.6810648.6510621.6210594.5910567.5710540.54
+10513.5110486.4910459.4610432.4310405.4110378.3810351.3510324.32 10297.310270.27
+10243.2410216.2210189.1910162.1610135.1310108.1110081.0810054.0510027.03   10000
+DSS Path=
+DSS Path2=/REDFOX UPPER/20./FLOW/01JAN2000/30MIN/LAT INFLOW/
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=RedFox          ,Upper           ,60      ,        ,                ,                ,                ,                
+Interval=1HOUR
+Observed Stage and Flow Hydrograph= 0 
+DSS File=dss
+DSS Path=/REDFOX UPPER/60/STAGE/01JAN2000/30MIN/Obs Stage/
+DSS Path2=/REDFOX UPPER/60/FLOW/01JAN2000/30MIN/Obs Flow/
+Use DSS=True
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=RedFox          ,Upper           ,20.     ,        ,                ,                ,                ,                
+Interval=30MIN
+Observed Stage and Flow Hydrograph= 97 
+   109.3 10117.8   109.3 10117.6   109.310121.96  109.31 10132.4  109.3110156.78
+  109.3310202.98  109.3510274.48  109.3810372.27  109.4310495.78  109.4810647.02
+  109.55 10847.4  109.64 11098.2  109.7511394.83  109.8711731.24  110.01 12102.1
+  110.1612505.19  110.3212933.45  110.4913382.31  110.6613847.97  110.8314324.23
+     11114798.58  111.1715257.06  111.3315685.96  111.4816079.68  111.6116435.79
+  111.73 16750.6  111.8317004.94  111.9117206.02  111.9717362.09  112.0217480.94
+  112.0517568.07  112.0817627.04   112.117655.73   112.117659.33   112.117641.54
+  112.0917605.64  112.0817554.46  112.06 17489.7  112.0417411.54  112.0117324.86
+  111.9817233.42  111.9517138.67  111.9217041.47  111.8816942.46  111.8516842.07
+  111.8216740.53  111.7816637.83  111.7516534.35  111.7116430.34  111.68 16325.6
+  111.6416220.34   111.616115.26  111.57 16010.4  111.5315907.17   111.515808.72
+  111.46 15715.4  111.4315627.07   111.415543.63  111.3715464.32  111.3415388.75
+  111.3215316.51  111.2915247.19  111.2715180.38  111.2415115.66  111.2215052.96
+   111.214991.81  111.1814932.03  111.1514873.66  111.1314816.34  111.1114759.98
+  111.0914704.37  111.07 14649.5  111.0514595.07  111.03   14541  111.0114487.43
+  110.9914434.08  110.9714381.12  110.9614328.17  110.9414275.46  110.9214222.85
+   110.914170.33  110.8814117.98  110.8614065.77  110.8414013.63  110.8213961.58
+   110.813909.54  110.7813857.54  110.76 13805.6  110.7413753.66  110.7313701.94
+  110.7113650.15  110.6913598.36  110.67 13546.6  110.6513494.82  110.6313443.06
+  110.6113391.48  110.5913340.03
+DSS File=dss
+DSS Path=/REDFOX UPPER/20/STAGE/01JAN2000/30MIN/OBS STAGE/
+DSS Path2=/REDFOX UPPER/20/FLOW/01JAN2000/30MIN/Obs FLOW/
+Use DSS=True
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=RedFox          ,Upper           ,0       ,        ,                ,                ,                ,                
+Friction Slope=0.0003
+Observed DSS Loc=RedFox          ,Upper           ,80      
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/80/STAGE/01JAN2000/30MIN/OBS STAGE/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=RedFox          ,Upper           ,80      
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/80/FLOW/01JAN2000/30MIN/OBS FLOW/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=RedFox          ,Upper           ,60      
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/60/STAGE/01JAN2000/30MIN/OBS STAGE/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=RedFox          ,Upper           ,60      
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/60/FLOW/01JAN2000/30MIN/OBS FLOW/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=RedFox          ,Upper           ,20.     
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/20/STAGE/01JAN2000/30MIN/OBS STAGE/
+Observed DSS Dn Dist=
+
+Observed DSS Loc=RedFox          ,Upper           ,20.     
+Observed DSS Filename=dss
+Observed DSS Pathname=/REDFOX UPPER/20/FLOW/01JAN2000/30MIN/OBS FLOW/
+Observed DSS Dn Dist=
+

@@ -1,0 +1,125 @@
+HEC-RAS 5.0.4 Beta 2 March 6, 2018
+       1       2       0       0
+       0       0
+       F
+       1
+Initial Conditions Flow Information
+       2        Initial Profile
+   10000       1   10100      51
+Flow and Seasonal Roughness Flag (plan)
+       F       F
+       2       0       0
+       3       0   .0003
+       1       2       0       0
+       0       0
+       F
+Project Title, Plan Title and Plan ShortID
+Simple test of unsteady flow
+Lat Inflow
+Lat Inflow                                                      
+Job Control Information
+  Computation Interval  = 10MIN
+  Warmup Interval       =  3.402823E+38 
+  Instantaneous Profile = 1HOUR
+  Hydrograph Interval   = 30MIN
+  Theta Simulation      =       .6
+  Theta Warmup          =       .8
+  Friction Slope Method =        2
+  Maximum Iterations    =       20
+  Max Iter WOImprovement=        0
+  Number Warmup Steps   =        1
+  Abort DZ Tolerance    =      100
+  DZ Tolerance          =      .01
+  DZSA Tolerance        =       .1
+  DQ Tolerance          =  3.1E+38
+  Weir Flow Stability   =        2
+  Spillway Stability    =        1
+  Write Restart File    =        F       F
+  Echo Input TS         =        F
+  Echo Parameters       =        F
+  Echo Output TS        =        F
+  DSS Message Level     =        4
+  Write HDF5 File       =        T
+  Write DSS File        =        T
+d:\HEC Data\HEC-RAS\Example Data\1D Unsteady Flow Hydraulics\UngagedAreaInflows\Ungaged_area.dss
+Computational Time Window
+  Start Date/Time       = 02Jan2000 0100
+  End Date/Time         = 04Jan2000 0100
+Initial Conditions (use restart file?)
+       F
+Log File Information
+       T-3.4E+38 3.4E+38
+Computation Level Output
+       F-3.4E+38 3.4E+38       F       F       F       F       F       F       F       F       F   1HOUR
+Mixed Flow - Acceleration term reduction based on Froude number
+       F      10       1       1
+Number of Gate Groups and Internal Boundaries with Gates
+       0       0       0       0
+Breach Data
+       0
+Hydrograph Data
+       1
+       F       F       T       F       F
+Upstream Flow Hydrograph
+      49
+       0   10000       1   10600       2   11200       3   11800       4   12400
+       5   13000       6   13600       7   14200       8   14800       9   15000
+      10   14900      11 14662.5      12   14425      13 14187.5      14   13950
+      15 13712.5      16   13475      17 13237.5      18   13000      1912857.14
+      2012714.29      2112571.43      2212428.57      2312285.71      2412142.86
+      25   12000      2611972.97      2711945.95      2811918.92      2911891.89
+      3011864.87      3111837.84      3211810.81      3311783.78      3411756.76
+      3511729.73      36 11702.7      3711675.68      3811648.65      3911621.62
+      4011594.59      4111567.57      4211540.54      4311513.51      4411486.49
+      4511459.46      4611432.43      4711405.41      4811378.38
+ 3.4E+38
+       F       F       F       T       F
+Downstream Normal Depth
+   .0003
+Internal Observed Stage/Flow Boundaries
+       0
+Ground Water Interflows
+       0
+Old River Diversions
+       F
+Lateral Inflows, Ungaged Lateral Inflows, Outlet TS, and Observed DSS
+       2       0       0       0
+      21      31       T       F                       F
+Uniform Lateral Inflow Time Series
+      49
+       0     100       1     100       2     100       3     100       4     100
+       5  206.25       6   312.5       7  418.75       8     525       9  631.25
+      10   737.5      11  843.75      12     950      13  966.67      14  983.33
+      15    1000      16  983.33      17  966.67      18     950      19     935
+      20     920      21     905      22     890      23     875      24     860
+      25     845      26     830      27     815      28     800      29     785
+      30     770      31     755      32     740      33     725      34     710
+      35     695      36     680      37     665      38     650      39     635
+      40     620      41     605      42     590      43     575      44     560
+      45     545      46     530      47     515      48     500
+ 3.4E+38
+      51       0       F       F                       F
+Lateral Inflow Time Series
+      49
+       0     100       1     100       2     100       3     100       4     100
+       5     450       6     800       7    1150       8    1500       9    1850
+      10    2200      11    2550      12    2900      13 2933.33      14 2966.67
+      15    3000      16 2966.67      17 2933.33      18    2900      19 2838.71
+      20 2777.42      21 2716.13      22 2654.84      23 2593.55      24 2532.26
+      25 2470.97      26 2409.68      27 2348.39      28  2287.1      29 2225.81
+      30 2164.52      31 2103.23      32 2041.94      33 1980.65      34 1919.36
+      35 1858.07      36 1796.77      37 1735.48      38 1674.19      39  1612.9
+      40 1551.61      41 1490.32      42 1429.03      43 1367.74      44 1306.45
+      45 1245.16      46 1183.87      47 1122.58      48 1061.29
+ 3.4E+38
+Stage and Flow Boundary and Ungaged Areas
+       0       0
+Time Slicing Parameters
+       F
+HYDROGRAPH LOCATIONS
+ 7 
+       1      21      31      41      55      81      91
+Rules (number of rule sets, number of lookbacks, number of tables)
+       0       0       0
+Extra Commands
+       0

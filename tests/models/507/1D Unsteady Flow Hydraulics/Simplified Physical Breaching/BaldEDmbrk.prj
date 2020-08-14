@@ -1,0 +1,38 @@
+Proj Title=DamBreak with Simplified Physical Breach
+Current Plan=p01
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g02
+Unsteady File=u02
+Plan File=p01
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+This model does not represent actual water surface elevations for Bald Eagle Creek.  This data set is intended to be used only as an example Unsteady Flow Dam Break Analysis.
+END DESCRIPTION:
+DSS Start Date=18FEB1999
+DSS Start Time=0000
+DSS End Date=23FEB1999
+DSS End Time=0500
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+Specific Locations Profile Table=Gary's fav locations in Bald Eag     , 8 
+Bald Eagle      ,Loc Hav         ,137690.8
+Bald Eagle      ,Loc Hav         ,128280.7
+Bald Eagle      ,Loc Hav         ,81849.49
+Bald Eagle      ,Loc Hav         ,81084.18
+Bald Eagle      ,Loc Hav         ,49715.77
+Bald Eagle      ,Loc Hav         ,23872.06
+Bald Eagle      ,Loc Hav         ,1212.855
+Bald Eagle      ,Loc Hav         ,659.942 
+GIS Export Reach=Bald Eagle      ,Loc Hav         
+GIS Export Profiles= 0 

@@ -1,0 +1,74 @@
+Flow Title=50, 100, 500 yr flow data
+Version=Version 3.0 Beta
+Number of Profiles= 3 
+Profile Names=50 yr,100 yr,500 yr
+River Rch & RM=Kulai Gorge,headwaters      ,0.31    
+     560     750    1150
+River Rch & RM=Wailupe,upper           ,1.63    
+    2150    2550    4100
+River Rch & RM=Wailupe,upper           ,1.44    
+    2300    2800    4400
+River Rch & RM=Wailupe,lower           ,1.18    
+    3050    3730    5800
+River Rch & RM=Wailupe,lower           ,1.04    
+    3175    3850    6000
+River Rch & RM=Wailupe,lower           ,0.89    
+    3300    3970    6200
+River Rch & RM=Wailupe,lower           ,0.72    
+    3500    4210    6350
+River Rch & RM=Wailupe,lower           ,0.57    
+    3700    4450    6500
+River Rch & RM=Wailupe,lower           ,0.45    
+    3875    4625    6700
+River Rch & RM=Wailupe,lower           ,0.40    
+    4050    4800    6900
+River Rch & RM=Wailupe,lower           ,0.04    
+    3650    4300    6000
+River Rch & RM=Kului Gorge,Headwaters      ,0.31    
+     560     750    1150
+River Rch & RM=Kului Gorge,Headwaters      ,0.31    
+     560     750    1150
+Boundary for River Rch & Prof#=Kului Gorge,Headwaters      , 1 
+Up Type= 3 
+Up Slope=.19
+Dn Type= 0 
+Boundary for River Rch & Prof#=Kului Gorge,Headwaters      , 2 
+Up Type= 3 
+Up Slope=.19
+Dn Type= 0 
+Boundary for River Rch & Prof#=Kului Gorge,Headwaters      , 3 
+Up Type= 3 
+Up Slope=.19
+Dn Type= 0 
+Boundary for River Rch & Prof#=Wailupe,upper           , 1 
+Up Type= 3 
+Up Slope=.052
+Dn Type= 0 
+Boundary for River Rch & Prof#=Wailupe,upper           , 2 
+Up Type= 3 
+Up Slope=.052
+Dn Type= 0 
+Boundary for River Rch & Prof#=Wailupe,upper           , 3 
+Up Type= 3 
+Up Slope=.052
+Dn Type= 0 
+Boundary for River Rch & Prof#=Wailupe,lower           , 1 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=.002
+Boundary for River Rch & Prof#=Wailupe,lower           , 2 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=.002
+Boundary for River Rch & Prof#=Wailupe,lower           , 3 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=.002
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 

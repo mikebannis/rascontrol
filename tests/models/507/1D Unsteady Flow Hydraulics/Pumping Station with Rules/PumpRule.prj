@@ -1,0 +1,29 @@
+Proj Title=Simple PUMP
+Current Plan=p03
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Unsteady File=u02
+Plan File=p03
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+DSS Caption Additional Text=Jensen
+BEGIN DESCRIPTION:
+
+END DESCRIPTION:
+DSS Start Date=01JAN2000
+DSS Start Time=0
+DSS End Date=01JAN2000
+DSS End Time=2300
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=..\Other\unsteady\SIMPLE_PUMP.
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Profiles= 0 

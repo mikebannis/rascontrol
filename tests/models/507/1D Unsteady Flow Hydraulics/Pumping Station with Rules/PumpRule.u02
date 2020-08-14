@@ -1,0 +1,142 @@
+Flow Title=Unsteady Flow 02
+Program Version=4.20
+Use Restart= 0 
+Initial Flow Loc=RedFox          ,RedFox          ,5       ,100
+Boundary Location=RedFox          ,RedFox          ,5       ,        ,                ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+     100     100     100     100     100     100     100     100     100     100
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=RedFox          ,RedFox          ,0       ,        ,                ,                ,                
+Interval=1HOUR
+Stage Hydrograph= 26 
+     106  106.08  106.17  106.25  106.33  106.42   106.5  106.85   107.2   107.2
+     107  106.83  106.67   106.5  106.36  106.23  106.09  105.95  105.82  105.68
+  105.55  105.41  105.27  105.14     105     105
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=                ,                ,        ,        ,                ,                ,PUMP STA #1     
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=Get the (target position) Gate Opening.  When the Inline Operation Rules set the gate opening to 0.0
+Rule Operation=Type=0,Var Type=1,Comment=It still takes several minutes for the gate to actually close.  If the gate is in the process of opening/closing
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=the (target) value reflects the eventual opening height.  Whereas the standard Gate Opening
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=reflects the actual/current gate opening.  When the gate opening is not changing-the values
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=will-of course-be the same.
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=2,Var Name=GateOpen,Var Type=1,River=RedFox,Reach=RedFox,RS=2.5,Gate=Gate #1,PumpGroup=Group #1,PumpName=Pump #1,Sim Group=Inline Structures,Sim Function=Gate.Opening (target position),Time=1
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=GateOpen
+Rule Expression=,Constant=0.1
+Rule Expression=
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=The gate is closing (or has already closed).  Turn Pump #1 on.  It will stay on until it is specifically
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=turned off.  Set new WSEL On elevation for Pump #2 and Pump #3.  These two pumps will turn on
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=when the WSEL at the inlet (trigger) of the pump exceeds the new value (106.8 and 106.9).  Since
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=the WSEL Off value has not been changed-these two pumps will turn off based on the WSEL Off
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=elevation that was originally entered with the pump data on the geometry editor (106.5 and 106.25).
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=Pumps 2 and 3 are being turned on in a different manner to Pump 1 in order to illustrate the two
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=different modes of pump control.  Click the <Pump Considerations> button for more info.
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Sim Group=Pump Stations,Sim Function=Turn Pump On
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #2,Sim Group=Pump Stations,Sim Function=WSEL On
+Rule Expression=,Constant=106.8
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #3,Sim Group=Pump Stations,Sim Function=WSEL On
+Rule Expression=,Constant=106.9
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=GateOpen
+Rule Expression=,Constant=9
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=The gate is opening (or has already opened).  Turn Pump #1 off.  Pumps 2 and 3 should have
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=already turned off (based on WSEL Off elevation) before the gate started opening.
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=Resest WSEL On to a high value.  This is to prevent these two pumps from turning on too
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Comment=soon during the next rising hydrograph.
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1,Sim Group=Pump Stations,Sim Function=Turn Pump Off
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #2,Sim Group=Pump Stations,Sim Function=WSEL On
+Rule Expression=,Constant=200
+Rule Operation=Type=3,Var Type=1,PumpGroup=Group #1,PumpName=Pump #3,Sim Group=Pump Stations,Sim Function=WSEL On
+Rule Expression=,Constant=200
+Rule Operation=Type=0,Var Type=1,PumpGroup=Group #1,PumpName=Pump #1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=3,Var Type=1
+
+Boundary Location=RedFox          ,RedFox          ,2.5     ,        ,                ,                ,                
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the water surface upstream and downstream of structure
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=2,Var Name=WSEL_US,Var Type=1,River=RedFox,Reach=RedFox,RS=3,Sim Group=Cross Sections,Sim Function=WS Elevation,Time=1
+Rule Operation=Type=2,Var Name=WSEL_DS,Var Type=1,River=RedFox,Reach=RedFox,RS=1,Sim Group=Cross Sections,Sim Function=WS Elevation,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=WSEL_DS
+Rule Expression=,Constant=106.66
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=The tailwater is high--close the gate (this will trigger the pump to come on)
+Rule Operation=Type=0,Var Type=1,Comment=The close rate is 1 ft/min (this has been set on the previous editor)
+Rule Operation=Type=0,Var Type=1,Comment=So it will take several minutes to fully close
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Gate #1,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=3,Branch Or=0,BranchCompare1=1,BranchCompare2=3
+Rule Expression=,Variable=WSEL_DS
+Rule Expression=,Constant=106.5
+Rule Expression=,Variable=WSEL_US
+Rule Expression=,Variable=WSEL_DS,Constant=0.2
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Tailwater is low enough and there is enough upstream head to open gates
+Rule Operation=Type=0,Var Type=1,Comment=(This will cause the pumps to turn off and stay off)
+Rule Operation=Type=0,Var Type=1,Comment=It will take several minutes to open
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=3,Var Type=1,Gate=Gate #1,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Constant=10
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+
+Rule Gate Data=Gate #1     ,1,1,10,0,10
+Boundary Location=RedFox          ,RedFox          ,.5*     ,        ,                ,                ,                
+Interval=1HOUR
+Lateral Inflow Hydrograph= 100 
+    1000    1875    2750    3625    4500    5375    6250    7125    8000    8000
+    6500    5000 4623.08 4246.15 3869.23 3492.31 3115.39 2738.46 2361.54 1984.62
+ 1607.69 1230.77  853.85  476.92     100      10   11.22   12.43   13.65   14.86
+   16.08    17.3   18.51   19.73   20.95   22.16   23.38   24.59   25.81   27.03
+   28.24   29.46   30.68   31.89   33.11   34.32   35.54   36.76   37.97   39.19
+   40.41   41.62   42.84   44.05   45.27   46.49    47.7   48.92   50.14   51.35
+   52.57   53.78      55   56.22   57.43   58.65   59.86   61.08    62.3   63.51
+   64.73   65.95   67.16   68.38   69.59   70.81   72.03   73.24   74.46   75.68
+   76.89   78.11   79.32   80.54   81.76   82.97   84.19   85.41   86.62   87.84
+   89.05   90.27   91.49    92.7   93.92   95.14   96.35   97.57   98.78     100
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

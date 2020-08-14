@@ -1,0 +1,39 @@
+Flow Title=Unsteady flow data
+Version=Version 3.1 Beta  Mar 2002
+Use Restart= 0 
+Initial Flow Loc=Beaver Creek    ,Kentwood        ,5.99    ,3000
+Initial Storage Elev=STo #1          ,205
+Boundary Location=Beaver Creek    ,Kentwood        ,5.99    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+ 3046.56 3185.75 3416.02 3734.86 4138.78 4623.36 5183.27 5812.39 6503.83    7250
+ 8042.74 8873.36 9732.7510611.51   1150012388.4913267.2514126.6414957.26   15750
+16496.1717187.6117816.7318376.6418861.2219265.1419583.9819814.2519953.44   20000
+19953.4419814.2519583.9819265.1418861.2218376.6417816.7317187.6116496.17   15750
+14957.2614126.6413267.2512388.4911930.6111495.0611080.7510686.6510311.77 9955.17
+ 9615.96  9293.3 8986.37 8694.41 8416.69 8152.51 7901.22 7662.19 7434.81 7218.52
+ 7012.78 6817.08 6630.92 6453.83 6285.39 6125.16 5972.74 5827.76 5689.85 5558.66
+ 5433.88 5315.17 5202.26 5094.86 4992.69  4895.5 4803.06 4715.12 4631.48 4551.91
+ 4476.22 4404.22 4335.74 4270.59 4208.63 4149.68 4093.61 4040.28 3989.54 3941.28
+ 3895.37 3851.71 3810.17 3770.66 3733.07 3697.32 3663.31 3630.96 3600.19 3570.92
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Beaver Creek    ,Kentwood        ,5.0     ,        ,                ,                
+Interval=1HOUR
+Rating Curve= 20 
+  204.14     200  206.09     500  207.26    1000  208.47    2000   209.3    3000
+  209.83    4000  210.25    5000  210.68    6000  210.99    7000  211.27    8000
+  211.53    9000  211.78   10000  212.02   11000  212.25   12000  212.47   13000
+  212.68   14000     213   16000     214   21000     215   26000     216   30000
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

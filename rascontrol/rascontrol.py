@@ -5,14 +5,19 @@ Provides API to control HEC-RAS through the win32com interface. Primary object i
 
 Mike Bannister 2018
 """
+from __future__ import print_function
+import os
+from collections import namedtuple
+import logging
 
 import win32com.client
 import psutil
-import sys
-import os
-import time
-from collections import namedtuple
 
+from .exceptions import LockedPlan, NoOutputFile, FileNotFound, CurrentPlanNotRun, CrossSectionNotFound, \
+    CulvertNotFound, BridgeNotFound, MultipleOpeningNotFound, InlineStructureNotFound, LateralStructureNotFound, \
+    RCException, NoProject, RASOpen
+
+log = logging.getLogger(__name__)
 
 SimpleXS = namedtuple('SimpleXS', ['xs_id', 'river', 'reach'])
 SimpleCulvert = namedtuple('SimpleCulvert', ['culvert_id', 'river', 'reach'])
@@ -42,55 +47,6 @@ CH_STA_R = 159  # right station of channel
 
 DEBUG = False
 
-class NoOutputFile(Exception):
-    pass
-
-class FileNotFound(Exception):
-    pass
-
-class RCException(Exception):
-    """ Base class for all rascontrol exceptions """
-    pass
-
-class RASOpen(RCException):
-    """ 
-    rascontrol won't currently run if RAS is already open and raise RASOpen if
-    it is.  I'm not sure why I did this. In HydrologyManager I blocked HM from
-    starting if excel was already running to prevent accidently closing all
-    excel spreadsheets on the computer. It may be a carry over habit from that
-    project. There may also be a HEC-RAS controller specific reason for it as
-    well that I can't remember.
-    """
-    pass
-
-class NoProject(RCException):
-    """ Indicates a project has not yet been opened """
-    pass
-
-class LockedPlan(RCException):
-    pass
-
-class CurrentPlanNotRun(RCException):
-    """Indicates that the current plan has not yet been run"""
-    pass
-
-class CrossSectionNotFound(RCException):
-    pass
-
-class CulvertNotFound(RCException):
-    pass
-
-class BridgeNotFound(RCException):
-    pass
-
-class MultipleOpeningNotFound(RCException):
-    pass
-
-class InlineStructureNotFound(RCException):
-    pass
-
-class LateralStructureNotFound(RCException):
-    pass
 
 class Plan(object):
     """ Holds information for a plan """
@@ -103,12 +59,13 @@ class Plan(object):
         return self.name
 
     def __repr__(self):
-        return 'Plan name = "' + self.name + '"/Filename = "' + self.filename + '"'
+        return 'Plan name = "{}"/Filename = "{}"'.format(self.name, self.filename)
 
     def _get_filename(self, name):
         fname, _ = self.rc.com_rc.Plan_GetFilename(name)
         # _ is the plan name, as we already have this it's ignored
         return fname
+
 
 class Profile(object):
     def __init__(self, name, code, rc):
@@ -117,7 +74,7 @@ class Profile(object):
         self.rc = rc   # RasController object
 
     def __repr__(self):
-        return 'Profile name = "'+self.name + '"/Profile code = "' + str(self.code)+'"'
+        return 'Profile name = "{}"/Profile code = "{}"'.format(self.name, self.code)
 
 
 class River(object):
@@ -147,7 +104,7 @@ class River(object):
         This switches the codes after assigning each reach their respective nodes
         """
         
-        if self.rc.output_getreaches(self.code)==self.rc.geometry_getreaches(self.code):
+        if self.rc.output_getreaches(self.code) == self.rc.geometry_getreaches(self.code):
             pass
         else:
             new_reach_codes = {}
@@ -160,7 +117,7 @@ class River(object):
                 reach.code = updated_code
         
     def __repr__(self):
-        return 'River name = "'+self.name + '", River code = "' + str(self.code)+'"'
+        return 'River name = "{}"/River code = "{}"'.format(self.name, self.code)
 
 
 class Reach(object):
@@ -188,7 +145,7 @@ class Reach(object):
         return nodes
 
     def __repr__(self):
-        return 'Reach name = "'+self.name + '", Reach code = "' + str(self.code)+'"'
+        return 'Reach name = "{}"/Reach code = "{}"'.format(self.name, self.code)
 
 
 class Node(object):
@@ -220,8 +177,17 @@ class Node(object):
             node_type = 'XS'
         else:
             node_type = self.node_type
-        return 'Node name ="' + self.node_id + '", Node type ="' + node_type + '", Node code = "' + str(self.code) + \
-                '"'
+        return 'Node name = "{}"/Node type = "{}"/Node code = "{}"'.format(self.node_id, node_type, self.code)
+
+
+def terminate_hec_ras_process():
+    for p in psutil.process_iter():
+        try:
+            if p.name().lower() == 'ras.exe':
+                p.terminate()
+        except psutil.Error:
+            # TODO: This should be handled better.
+            pass
 
 
 class RasController(object):
@@ -284,20 +250,16 @@ class RasController(object):
         self.project_is_open = False  # has a project been opened? set by self.open_project()
 
         # See if RAS is open and abort if so
-        if True:
-            for p in psutil.process_iter():
-                try:
-                    if p.name() == 'ras.exe':
-                    # TODO: As of 4/1/2019, the line above should be the line below. 'ras.exe' is not currently working,
-                    # So this test completely fails.
-                    #if p.name() == 'ras.exe' or p.name() == 'Ras.exe':
-                        raise RASOpen('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
-                except psutil.Error:
-                    # TODO: This should be handled better. 
-                    pass
+        for p in psutil.process_iter():
+            try:
+                if p.name().lower() == 'ras.exe':
+                    raise RASOpen('HEC-RAS appears to be open. Please close HEC-RAS. Exiting.')
+            except psutil.Error:
+                # TODO: This should be handled better.
+                pass
 
         # RAS is not open yet, open it
-        self.com_rc = win32com.client.DispatchEx('RAS' + version + '.HECRASController')
+        self.com_rc = win32com.client.Dispatch('RAS{}.HECRASController'.format(version))
         self._plan_lock = False  # get_profiles() seems to lock the current plan in place. Not sure why
         
         # flag to determine if the model has been run
@@ -313,7 +275,7 @@ class RasController(object):
         simple_list = self._simple_node_list('xs')
         return simple_list 
 
-    def get_xs(self, xs_id, river = None, reach = None):
+    def get_xs(self, xs_id, river=None, reach=None):
         """
         Returns requested cross section, ignores river and reach if not specified
         Raises CrossSectionNotFound if cross section is not in model
@@ -336,7 +298,7 @@ class RasController(object):
         simple_list = self._simple_node_list('culvert')
         return simple_list 
 
-    def get_culvert(self, culvert_id, river = None, reach = None):
+    def get_culvert(self, culvert_id, river=None, reach=None):
         """
         Returns requested culvert, ignores river and reach if not specified
         Raises CulvertNotFound if culvert is not in model
@@ -528,10 +490,13 @@ class RasController(object):
 
         ******** This function does not appear to work!
         """
-        if int(self.version[0]) >= 5:
+        try:
             self.com_rc.QuitRAS()
-        else:
-            raise NotImplementedError('close() is only availble in RAS 5')
+        except AttributeError:
+            log.warning('client.QuitRAS() is only available in RAS 5')
+        finally:
+            # Remove process from running tasks
+            terminate_hec_ras_process()
 
     def get_current_plan(self):
         """
@@ -540,7 +505,6 @@ class RasController(object):
         """
         pass
  
-    # TODO - Add plan filename to plan objects
     def get_plans(self, basedir=None):
         """
         returns list of Plan objects
@@ -565,7 +529,7 @@ class RasController(object):
         """
         # Check if get_profiles() has already been run
         if self._plan_lock:
-            raise LockedPlan('The plan can not be changed after running get_profiles(). I don\'t know why')
+            raise LockedPlan('The plan can not be changed after running get_profiles().')
         self.com_rc.Plan_SetCurrent(plan.name)
         self.com_rc.PlanOutput_SetCurrent(plan.name)
 
@@ -575,7 +539,7 @@ class RasController(object):
         :return: status, messages
         """
         # RAS 5 appears to return and extra boolean, this should be tested more extensively
-        if self.version[0] == 4:
+        if self.version[0] == "4":
             status, _, messages = self.com_rc.Compute_CurrentPlan(None, None)
         else:
             status, _, messages, _ = self.com_rc.Compute_CurrentPlan(None, None)
@@ -603,7 +567,8 @@ class RasController(object):
         if self._model_ran is False:
             raise CurrentPlanNotRun('Run the current plan before reading the compute message.')
         if not os.path.isfile(compute_msg_file):
-            raise FileNotFound('{} does not exist. The model needs to run for this file to be created'.format(compute_msg_file))
+            raise FileNotFound('{} does not exist. The model needs to run for this file to be created'.format(
+                compute_msg_file))
         
         return_strings = []
         with open(compute_msg_file, 'r') as compute_msg:
@@ -622,6 +587,9 @@ class RasController(object):
         self._plan_lock = True  # Prevent plan from changing see above
         river_code = 2  # The value of this term appears to do nothing
         _, profile_names = self.com_rc.Output_GetProfiles(river_code, None)
+
+        print(profile_names)
+
         profiles = []
         for i, name in enumerate(profile_names):
             new_prof = Profile(name, i+1, self)
@@ -633,7 +601,10 @@ class RasController(object):
         Returns list of all rivers as River objects
         :return: list of River objects
         """
-        river_names = self._output_getrivers()
+        _, river_names = self.com_rc.Output_GetRivers(0, None)
+        if river_names is None:
+            raise NoOutputFile('Output file does not appear to exist. Model may not have run successfully.')
+
         rivers = []
         for i, name in enumerate(river_names):
             new_prof = River(name, i+1, self)
@@ -653,8 +624,8 @@ class RasController(object):
         """
         result, plan_name, unknown_bool, message = self.com_rc.PlanOutput_IsCurrent(plan.name, show, None)
         if DEBUG:
-            print '>>> In is_output_current'
-            print '>>>', (result, unknown_bool, message)
+            print('>>> In is_output_current')
+            print('>>>', (result, unknown_bool, message))
         return result, message
 
     # Methods below here are semi-private and are intended to be called from the River, Reach, and Node classes
@@ -699,7 +670,6 @@ class RasController(object):
         value = self.com_rc.Output_NodeOutput(river_id, reach_id, node_id, 0, profile, value_type)[0]
         return value
 
-
     # TODO - remove once obsolete - change this to work with Plan objects
     def _current_plan_file(self):
         """
@@ -707,179 +677,3 @@ class RasController(object):
         :return: string
         """
         return self.com_rc.CurrentPlanFile()
-
-    # TODO - move into get_rivers()
-    def _output_getrivers(self):
-        """
-        Returns list of names of rivers in current project
-        :return: list of strings
-        """
-        _, rivers = self.com_rc.Output_GetRivers(0, None)
-        if rivers is None:
-            raise NoOutputFile('Output file does not appear to exist. Model may not have run successfully.')
-        return rivers
-
-    # TODO - remove this, only in for testing
-    def _nodes(self, river_id, reach_id):
-        """
-        Gets list of reaches for river represented by self
-        :return: list of Reach objects
-        """
-        node_ids, node_types = self.output_getnodes(river_id, reach_id)
-        return node_ids, node_types
-
-
-def main_old():
-    rc = RasController(version='503')
-    #rc = RasController(version='41')
-    # rc.open_project('x:/python/rascontrol/rascontrol/models/HG.prj')
-    # rc.open_project("c:/Users/mike.bannister/Downloads/ras5/HEC-RAS_5.0_Beta_2015-08-21/RAS_50 Test Data/BaldEagleCrkMulti2D/BaldEagleDamBrk.prj")
-    rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
-
-    plans = rc.get_plans()
-    print '***************Plans', plans  # returns plan names
-    fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
-    print fname, name
-    x = rc.com_rc.Plan_GetFilename(plans[1].name)
-    print x
-    # rc.show()
-    time.sleep(2)
-    print 'running...'
-    #rc.run_current_plan()
-
-    if not True:
-        #rc.close()
-
-        #sys.exit()
-        print 'current plan at start', rc._current_plan_file(), '\n'
-        plan = plans[0]
-        print 'setting plan to',plan
-        rc.set_plan(plan)
-        
-        result, message = rc.is_output_current(plan, show=True)
-        print 'is output current?', result
-        
-        print '\nrunning current plan...'
-        print rc.run_current_plan()
-        result, message = rc.is_output_current(plan, show=True)
-        print 'Ran. is output current?', result
-        
-        plan = plans[1]
-        print '\nsetting plan to',plan
-        rc.set_plan(plan)
-        
-        print 'current plan after set_plan()', rc._current_plan_file()
-        result, message = rc.is_output_current(plan, show=True)
-        print 'is output current?', result
-        
-        print '\nrunning current plan...'
-        print rc.run_current_plan()
-        result, message = rc.is_output_current(plan, show=True)
-        print 'Ran. is output current?', result
-        rc.close()
-        sys.exit()
-
-        otherterm = rc.get_profiles()
-        print 'profiles in current plan', otherterm
-        print
-        """
-        the call to rc.get_profiles() seems to be locking the plan in place. But is it? next step is to check if I can get WSELs
-        or similar even after the get_profiles() for right profiles after swapping plans. or bail and just stop the damn
-        user from changing the profile =P
-        """
-        plans = rc.get_plans()
-        print '***************Plans', plans
-        print 'current plan before set_plan()', rc._current_plan_file()
-        plan = plans[0]
-        print plan
-        rc.set_plan(plan)
-
-        print 'current plan after set_plan()', rc._current_plan_file()
-        result, message = rc.is_output_current(plan, show=True)
-        print result
-        profs = rc.get_profiles()
-        print profs
-        sys.exit()  # ------------------------------------------------------------------------
-        
-    
-    print rc._current_plan_file()
-    #rc.show()
-    #print rc.run_current_plan()
-    print 'done'
-    # print rc.run_current_plan()
-    river_id = 2
-    reach_id = 1
-    profile_id = 1
-    node_ids, node_types = rc._nodes(river_id, reach_id)
-    # print node_ids, node_types
-    if not True:
-        for x, y in zip(node_ids, node_types):
-            # Get numeric node code
-            temp = rc.com_rc.Geometry_GetNode(river_id, reach_id, x)
-            print temp
-            node_id = temp[0]
-            # 0 below is for BR up/down, 2 is code for wsel
-            wsel1 = rc.com_rc.Output_NodeOutput(river_id, reach_id, node_id, 0, profile_id, 2)[0]
-            #wsel2 = rc.com_rc.Output_NodeOutput(river_id, reach_id, node_id, 0, 2, 2)[0]
-            print x,'/', y,'/', node_id,'/', wsel1
-            #kkprint x,'/', y,'/', node_id,'/', wsel1, wsel2, wsel1-wsel2
-            #sys.exit()
-
-
-    profs = rc.get_profiles()
-    print profs
-    with open('out.txt', 'wt') as outfile:
-        rivers = rc.get_rivers()
-        for riv in rivers:
-            for reach in riv.reaches:
-                print riv
-                print reach
-                for node in reach.nodes:
-                    if node.node_type == '':
-                        #print node, node.value(profs[0], MIN_CH_EL)
-                        min_el = node.value(profs[0], MIN_CH_EL)
-                        outfile.write(','.join([str(riv), str(reach), str(node), str(min_el)]))
-                        for prof in profs:
-                            outfile.write(','+str(node.value(prof, WSEL)))
-                        outfile.write('\n')
-    rc.close()
-
-def main():
-    rc = RasController(version='503')
-    rc.open_project("x:/python/rascontrol/rascontrol/models/GHC.prj")
-
-    plans = rc.get_plans()
-    print '***************Plans', plans  # returns plan names
-    fname, name = rc.com_rc.Plan_GetFilename(plans[0].name)
-    print 'fname, name', fname, name
-    
-    print 'current plan file', rc._current_plan_file()
-    
-    profs = rc.get_profiles()
-    print profs
-    print rc.get_xs(300138)
-    
-    #import pdb; pdb.set_trace()
-
-    x= rc.simple_xs_list()
-    for y in x:
-        print y
-
-    if not True:
-        with open('out.txt', 'wt') as outfile:
-            rivers = rc.get_rivers()
-            for riv in rivers:
-                for reach in riv.reaches:
-                    print 'river/reach', riv, reach
-                    for node in reach.nodes:
-                        if node.node_type == '':
-                            #print node, node.value(profs[0], MIN_CH_EL)
-                            min_el = node.value(profs[0], MIN_CH_EL)
-                            outfile.write(','.join([str(riv), str(reach), str(node), node.node_id, str(min_el)]))
-                            for prof in profs:
-                                outfile.write(','+str(node.value(prof, WSEL)))
-                            outfile.write('\n')
-    rc.close()
-
-if __name__ == '__main__':
-    main()

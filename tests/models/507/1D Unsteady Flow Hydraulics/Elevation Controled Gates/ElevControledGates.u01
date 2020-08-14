@@ -1,0 +1,40 @@
+Flow Title=Unsteady Flow Hydrograph
+Version=Version 3.1 Beta  Mar 2002
+Use Restart= 0 
+Initial Flow Loc=Nittany River   ,Weir Reach      ,60.1    ,5000
+Boundary Location=Nittany River   ,Weir Reach      ,60.1    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+ 5179.57 5716.45 6605.13 7836.48 9397.8711273.2813443.4715886.1618576.2921486.26
+24586.2127844.3231227.1634700.0338227.2841772.7245299.9748772.8452155.68 55413.8
+58513.7461423.7164113.8466556.5368726.7270602.1372163.5273394.8874283.5574820.43
+   7500074820.4374283.5573394.8872163.5270602.1368726.7266556.5364113.8461423.71
+58513.74 55413.852155.6848772.8445299.9741772.72 39979.338273.3436650.5835106.96
+33638.6332241.91 30913.3 29649.528447.3327303.7926216.02 25181.324197.05 23260.8
+22370.2121523.0520717.2119950.6819221.5318527.9317868.1717240.58 16643.616075.73
+15535.5615021.7414532.9714068.0413625.7913205.1112804.9412424.29 12062.211717.77
+11390.1411078.4910782.0410500.0510231.81 9976.65 9733.94 9503.06 9283.44 9074.53
+ 8875.82 8686.79 8506.98 8335.95 8173.25 8018.49 7871.28 7731.24 7598.04 7471.33
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Nittany River   ,Weir Reach      ,41.75   ,        ,                ,                
+Elev Controlled Gate=Left Group  ,6,4,0.1,0.1,10,2,2
+Boundary Location=Nittany River   ,Weir Reach      ,36.85   ,        ,                ,                
+Rating Curve= 21 
+   -20.5       0     -18    5000     -15   10000      -4   20000       5   33200
+       6   37600     7.3   42000     8.6   47500      10   53000    11.3   59000
+    12.6   65000    13.8   71500    14.8   79000    15.4   85500    16.6   93000
+    17.4  101000    18.3  108000    19.2  116500    20.2  126000    21.2  135000
+    23.2  152000
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

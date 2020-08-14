@@ -1,0 +1,38 @@
+Flow Title=Unsteady flow data -  Small Event
+Version=Version 3.0.1  Mar 2001
+Use Restart= 0 
+Restart Filename=
+Initial Flow Loc=Beaver Creek    ,Kentwood        ,5.99    ,500
+Boundary Location=Beaver Creek    ,Kentwood        ,5.99    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+  567.11  767.69 1099.56 1559.07 2141.19 2839.54 3646.48 4553.15 5549.63    6625
+ 7767.48 8964.5410203.0811469.53   1275014030.4715296.9216535.4617732.52   18875
+19950.3720946.8521853.5222660.4623358.8123940.9324400.4424732.3124932.89   25000
+24932.8924732.3124400.4423940.9323358.8122660.4621853.5220946.8519950.37   18875
+17732.5216535.4615296.9214030.4713370.5812742.8812145.7911577.8211037.5410523.62
+10034.76 9569.75 9127.41 8706.65 8306.41 7925.68 7563.53 7219.04 6891.34 6579.64
+ 6283.13 6001.08 5732.79 5477.58 5234.82  5003.9 4784.25  4575.3 4376.55 4187.48
+ 4007.64 3836.57 3673.85 3519.06 3371.82 3231.76 3098.53  2971.8 2851.24 2736.57
+ 2627.49 2523.73 2425.04 2331.15 2241.84 2156.89 2076.09 1999.22  1926.1 1856.55
+ 1790.39 1727.46 1667.59 1610.65 1556.48 1504.96 1455.95 1409.32 1364.98 1322.79
+DSS File=C:\HEC\Ras30\Unsteady\beaver.dss
+DSS Path=/BEAVER CREEK KENTWOOD/5.99/FLOW/01FEB1999/1HOUR/10 YEAR EVNT/
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Beaver Creek    ,Kentwood        ,5.0     ,        ,                ,                
+Rating Curve= 20 
+  204.14     200  206.09     500  207.26    1000  208.47    2000   209.3    3000
+  209.83    4000  210.25    5000  210.68    6000  210.99    7000  211.27    8000
+  211.53    9000  211.78   10000  212.02   11000  212.25   12000  212.47   13000
+  212.68   14000     213   16000     214   21000     215   26000     216   30000
+DSS File=
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=

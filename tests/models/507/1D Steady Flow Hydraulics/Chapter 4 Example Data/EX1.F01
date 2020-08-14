@@ -1,0 +1,41 @@
+Flow Title=10, 2 and 1% chance events
+Number of Profiles= 3 
+Profile Names=10 yr       ,50 yr       ,100 yr      
+River Rch & RM=Butte Cr.,Tributary   ,0.2     
+     100     500    1500
+River Rch & RM=Fall River,Upper Reach ,10      
+     500    2000    5000
+River Rch & RM=Fall River,Lower Reach ,9.79    
+     600    2500    6500
+River Rch & RM=Fall River,Lower Reach ,9.6     
+     650    2700    7000
+Boundary for River Rch & Prof#=Fall River,Upper Reach , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Fall River,Upper Reach , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Fall River,Upper Reach , 3 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Butte Cr.,Tributary   , 1 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Butte Cr.,Tributary   , 2 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Butte Cr.,Tributary   , 3 
+Up Type= 0 
+Dn Type= 0 
+Boundary for River Rch & Prof#=Fall River,Lower Reach , 1 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=Fall River,Lower Reach , 2 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=Fall River,Lower Reach , 3 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004

@@ -1,0 +1,170 @@
+Flow Title=Unsteady Flow Hydrograph
+Program Version=4.00
+Use Restart= 0 
+Initial RRR Elev=Nittany River   ,Weir Reach      ,41.76   ,110
+Boundary Location=Nittany River   ,Weir Reach      ,60.1    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+     350     375     393     412     416     417     412     411     413     419
+     428     439     452     467     484     501     515     522     525     523
+     518     509     497     484     469     453     436     418     399     381
+     362     343     324     304     285     265     245     227     209     195
+     185     181     201     233     269     304     338     369     398     425
+     449     472     492     511     529     546     563     579     592     608
+     622     636     650     663     677     686     702     714     726     738
+     750     762     775     786     797     809     819     830     841     852
+     863     874     883     893     903     913     924     935     947     959
+     973     983     993    1001    1011    1020    1029    1038    1047    1055
+Flow Hydrograph QMult= 15 
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Nittany River   ,Weir Reach      ,58      ,        ,                ,                
+BEGIN BOUNDARY DESCRIPTION:
+Divert flow out of the system by using a two way table.  Note the lateral structure is "abstract" (no weir or gate flow computations are used).
+END BOUNDARY DESCRIPTION:
+Rule Operation=Type=0,Var Type=1,Comment=Get the Hour of the Day
+Rule Operation=Type=2,Var Name=Hour of Day,Var Type=1,Sim Group=Time,Sim Function=Hour of Day,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the average flow at the dam over the last hour;
+Rule Operation=Type=0,Var Type=1,Comment=Average flow over an hour is used to prevent sudden changes.
+Rule Operation=Type=2,Var Name=Flow at Inline Weir,Var Type=1,River=Nittany River,Reach=Weir Reach,RS=41.75,Gate=small gates,Sim Group=Inline Structures,Sim Function=Structure.Total Flow,Time=5,LBStart=1,LBEnd=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Based on both the Flow and the Time;
+Rule Operation=Type=0,Var Type=1,Comment=Use a 2-way table to look up the flow to divert.
+Rule Operation=Type=6,Var Name=Flow to Divert,Var Type=1,TableMode=1,Table2D=-1,TableArgX=Inline Flow,TableArgY=Hour
+Rule Expression=,Variable=Flow at Inline Weir
+Rule Expression=,Variable=Hour of Day
+Rule Table=3,5
+       0   10000   20000
+       0       6      12      18      24
+       0     500    1000
+       0     600    1400
+       0    1000    2000
+       0     900    1700
+       0     500    1000
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Set the amount of flow to divert.
+Rule Operation=Type=3,Var Type=1,Sim Group=Lateral Structures,Sim Function=Structure.Total Flow (Fixed)
+Rule Expression=,Variable=Flow to Divert
+
+Boundary Location=Nittany River   ,Weir Reach      ,41.75   ,        ,                ,                
+BEGIN BOUNDARY DESCRIPTION:
+Rules to make flow adjustments every four hour based on various pool operations.
+END BOUNDARY DESCRIPTION:
+Rule Operation=Type=0,Var Type=1,Comment=Create a user defined variable.
+Rule Operation=Type=0,Var Type=1,Comment=Note that this variable is an integer.
+Rule Operation=Type=1,Var Name=H4 Integer,Var Type=2,Integer=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the Hour of day (0410 would equal "4")
+Rule Operation=Type=2,Var Name=Hour,Var Type=1,Sim Group=Time,Sim Function=Hour of Day,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Take the hour of the day and divide by 4.
+Rule Operation=Type=0,Var Type=1,Comment=Since "H4" is an integer the result will be rounded to an integer.
+Rule Operation=Type=5,Var Type=1,Existing Var=H4 Integer,Use Existing=-1,MathOperator1=4,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=Hour
+Rule Expression=,Constant=4
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get minutes past the hour (0410 would equal "10").
+Rule Operation=Type=2,Var Name=Minute,Var Type=1,Sim Group=Time,Sim Function=Minute of Hour,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Make adjustments once every four hours.
+Rule Operation=Type=0,Var Type=1,Comment=H4 * 4 will only equal Hour every fourth hour.
+Rule Operation=Type=0,Var Type=1,Comment=Minute only equals 0 once an hour.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=1,Branch Or=0,BranchCompare1=5,BranchCompare2=5
+Rule Expression=,Variable=Minute
+Rule Expression=,Constant=0
+Rule Expression=,Coefficient=4,Variable=H4 Integer
+Rule Expression=,Variable=Hour
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get WSEL at dam; flow at dam; and flow at upstream boundary.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=2,Var Name=WSEL at dam,Var Type=1,River=Nittany River,Reach=Weir Reach,RS=41.76,Sim Group=Cross Sections,Sim Function=WS Elevation,Time=1
+Rule Operation=Type=2,Var Name=Flow,Var Type=1,River=Nittany River,Reach=Weir Reach,RS=41.75,Gate=small gates,Sim Group=Inline Structures,Sim Function=Structure.Total Flow,Time=1
+Rule Operation=Type=2,Var Name=Flow Upstream,Var Type=1,River=Nittany River,Reach=Weir Reach,RS=60.1,Sim Group=Cross Sections,Sim Function=Flow,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=The "new flow" is average of the flow at dam and at upstream end.
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,MathOperator1=1,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.5,Variable=Flow
+Rule Expression=,Coefficient=0.5,Variable=Flow Upstream
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Adjust "Flow New" up or down depending on WSEL at dam.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=110.3
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=1.5,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=110.2
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=1.2,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=3,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=110.1
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=1.1,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=109.7
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.68,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=109.8
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.833,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=1,BranchCompare2=0
+Rule Expression=,Variable=WSEL at dam
+Rule Expression=,Constant=109.9
+Rule Operation=Type=5,Var Name=Flow New,Var Type=1,Existing Var=Flow New,Use Existing=-1,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Coefficient=0.91,Variable=Flow New
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get Day of Month (08FEB1999 would equal "08")
+Rule Operation=Type=2,Var Name=Day of Month,Var Type=1,Sim Group=Time,Sim Function=Day of Month,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=0,Branch Or=0,BranchCompare1=5,BranchCompare2=0
+Rule Expression=,Variable=Day of Month
+Rule Expression=,Constant=8
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Force the flow to a "fixed" value.
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Structure.Total Flow (Fixed)
+Rule Expression=,Variable=Flow New
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=4,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Turn the "fixed" flow off.
+Rule Operation=Type=3,Var Type=1,Sim Group=Inline Structures,Sim Function=Structure.Total Flow (Fixed)
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Have the RAS program adjust the gates to get the new flow.
+Rule Operation=Type=0,Var Type=1,Comment=The "desired" flow; stays "on" until it is turned "off";
+Rule Operation=Type=0,Var Type=1,Comment=So when "Day of Month" = 9; the gates will be ajusted every time step
+Rule Operation=Type=0,Var Type=1,Comment=in order to maintain the "desired" flow
+Rule Operation=Type=3,Var Type=1,Gate=small gates,Sim Group=Inline Structures,Sim Function=Gate.Flow (Desired)
+Rule Expression=,Variable=Flow New
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=2,Branch Or=0,BranchCompare1=4,BranchCompare2=0
+Rule Expression=,Variable=Day of Month
+Rule Expression=,Constant=10
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=For "Day of Month" = 10; turn the "desired" flow "off".
+Rule Operation=Type=0,Var Type=1,Comment=The gates will be ajusted once every four hours for the new flow;
+Rule Operation=Type=0,Var Type=1,Comment=They will be left in that position (allowing the flow to change);
+Rule Operation=Type=0,Var Type=1,Comment=until the next adjustment; four hours later.
+Rule Operation=Type=3,Var Type=1,Gate=small gates,Sim Group=Inline Structures,Sim Function=Gate.Flow (Desired)
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+
+Rule Gate Data=small gates ,0.1,0.1,15,0.1,5
+Rule Gate Data=large gates ,1,1,15,0,0
+Boundary Location=Nittany River   ,Weir Reach      ,36.85   ,        ,                ,                
+Friction Slope=0.0005

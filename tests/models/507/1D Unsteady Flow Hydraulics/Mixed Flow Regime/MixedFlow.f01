@@ -1,0 +1,24 @@
+Flow Title=Flow data with two profiles
+Version=Version 3.0.2  Dec 2001
+Number of Profiles= 2 
+Profile Names=PF 1,PF 2
+River Rch & RM=Mixed Reach,Mixed Reach     ,0.5682  
+    1000     500
+Boundary for River Rch & Prof#=Mixed Reach,Mixed Reach     , 1 
+Up Type= 3 
+Up Slope=0.01
+Dn Type= 3 
+Dn Slope=0.004
+Boundary for River Rch & Prof#=Mixed Reach,Mixed Reach     , 2 
+Up Type= 3 
+Up Slope=0.01
+Dn Type= 3 
+Dn Slope=0.004
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 

@@ -1,0 +1,120 @@
+Plan Title=Method 5 Encroachment
+Version=Version 3.1 Beta  Mar 2002
+Short Identifier=SteadyFlow  
+Simulation Date=,,,
+Geom File=g01
+Flow File=f01
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Calc Critical at every XS
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,10,10, 2 
+Encroach River=Beaver Creek    
+Encroach Reach=Kentwood        
+Encroach Node=5.99    
+       4       1        
+Encroach Node=5.95166*
+       4       1        
+Encroach Node=5.91333*
+       4       1        
+Encroach Node=5.875*  
+       4       1        
+Encroach Node=5.83666*
+       4       1        
+Encroach Node=5.79833*
+       4       1        
+Encroach Node=5.76    
+       4       1        
+Encroach Node=5.7225* 
+       4       1        
+Encroach Node=5.685*  
+       4       1        
+Encroach Node=5.6475* 
+       4       1        
+Encroach Node=5.61    
+       4       1        
+Encroach Node=5.57666*
+       4       1        
+Encroach Node=5.54333*
+       4       1        
+Encroach Node=5.51*   
+       4       1        
+Encroach Node=5.47666*
+       4       1        
+Encroach Node=5.44333*
+       4       1        
+Encroach Node=5.41    
+       4       1        
+Encroach Node=5.4     
+       4       1        
+Encroach Node=5.39    
+       4     .95        
+Encroach Node=5.3575* 
+       4     .95        
+Encroach Node=5.325*  
+       4     .95        
+Encroach Node=5.2925* 
+       4     .95        
+Encroach Node=5.26*   
+       4     .95        
+Encroach Node=5.2275* 
+       4     .95        
+Encroach Node=5.195*  
+       4     .95        
+Encroach Node=5.1625* 
+       4     .95        
+Encroach Node=5.13    
+       4      .9        
+Encroach Node=5.104*  
+       4      .9        
+Encroach Node=5.078*  
+       4      .9        
+Encroach Node=5.052*  
+       4       1        
+Encroach Node=5.026*  
+       4       1        
+Encroach Node=5.0     
+       4       1        
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+UNET Theta= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET MxIter= 20 
+UNET MaxInSteps= 1 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET Convert EG Bridges=-1 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+Instantaneous Interval=1HOUR
+DSS File=dss
+Write IC File= 0 
+IC Time=,,
+Echo Input=False
+Echo Output=False
+Write Detailed= 0 

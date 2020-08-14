@@ -1,0 +1,63 @@
+<RASMapper>
+  <Layer Name="Geometry" Bold="False" Checked="True" Expanded="True" Type="RASGeometryGroup">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <Layer Name="Geometry\base geo data" Bold="False" Checked="True" Expanded="True" Type="RASGeometry">
+    <Source Filename=".\3Reach_with_Lat.g01.gmz" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\River" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="255" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\XS Edge Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\Bank Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="255" G="0" B="0" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\Junction" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="188" G="143" B="143" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\XS" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\Storage Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\2D Flow Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="0" Width="1" />
+    <Brush A="64" R="173" G="216" B="230" />
+  </Layer>
+  <Layer Name="Geometry\base geo data\XS Interpolation Surface" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="188" G="143" B="143" />
+  </Layer>
+  <Layer Name="Results" Bold="False" Checked="True" Expanded="False" Type="RASResultsGroup">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <CurrentView>
+    <MaxX>2010628.44056804</MaxX>
+    <MinX>2001968.47876739</MinX>
+    <MaxY>325128.712164341</MaxY>
+    <MinY>318582.193422187</MinY>
+  </CurrentView>
+  <CurrentSettings />
+  <Version>2.0.0.23827</Version>
+</RASMapper>

@@ -1,0 +1,115 @@
+Plan Title=100 yr Base flood - Unsteady Flow
+Program Version=3.10
+Short Identifier=100yrUnsty  
+Simulation Date=01JAN2002,0100,05JAN2002,2400
+Geom File=g01
+Flow File=u01
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Calc Critical at every XS
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,10,10, 2 
+Encroach River=Beaver Creek    
+Encroach Reach=Kentwood        
+Encroach Node=5.99    
+       5       1     1.2
+Encroach Node=5.875*  
+       5       1     1.2
+Encroach Node=5.76    
+       5       1     1.2
+Encroach Node=5.685*  
+       5       1     1.2
+Encroach Node=5.61    
+       5       1     1.2
+Encroach Node=5.49*   
+       5       1     1.2
+Encroach Node=5.41    
+       5       1     1.2
+Encroach Node=5.4     
+       5       1     1.2
+Encroach Node=5.39    
+       5       1     1.2
+Encroach Node=5.24*   
+       5       1     1.2
+Encroach Node=5.13    
+       5       1     1.2
+Encroach Node=5.065*  
+       5       1     1.2
+Encroach Node=5.0     
+       5       1     1.2
+Computation Interval=1MIN
+Output Interval=1HOUR
+Run HTab= 1 
+Run UNet= 1 
+Run PostProcess= 1 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET MxIter= 20 
+UNET MaxInSteps= 1 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET Convert EG Bridges=-1 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+Instantaneous Interval=1HOUR
+DSS File=dss
+Write IC File= 0 
+IC Time=,,
+Echo Input=False
+Echo Output=False
+Write Detailed= 0 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.99    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.95166*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.91333*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.875*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.83666*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.79833*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.76    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.7225* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.685*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.6475* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.61    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.57666*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.54333*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.51*   
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.47666*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.44333*
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.41    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.39    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.3575* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.325*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.2925* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.26*   
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.2275* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.195*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.1625* 
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.13    
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.104*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.078*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.052*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.026*  
+Stage Flow Hydrograph=Beaver Creek    ,Kentwood        ,5.0     

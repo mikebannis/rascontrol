@@ -1,6 +1,5 @@
-
 *.lock
-.idea
-.idea/*
+.idea/
 *.pyc
-rascontrol/models/2D/*
+.cache
+*/__pycache

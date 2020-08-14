@@ -1,0 +1,149 @@
+<RASMapper>
+  <Layer Name="Geometry" Bold="False" Checked="True" Expanded="False" Type="RASGeometryGroup">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="154" G="205" B="50" Width="1" />
+    <Brush A="64" R="154" G="205" B="50" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break" Bold="False" Checked="False" Expanded="False" Type="RASGeometry">
+    <Source Filename=".\BaldEagleDamBrk.g02.gmz" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\River" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="255" Width="1" />
+    <Brush A="64" R="46" G="139" B="87" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\XS Edge Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="253" G="245" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\Bank Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="255" G="0" B="0" Width="1" />
+    <Brush A="64" R="46" G="139" B="87" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\Junction" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="253" G="245" B="230" Width="1" />
+    <Brush A="64" R="253" G="245" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\XS" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="253" G="245" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\Storage Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\2D Flow Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="0" Width="1" />
+    <Brush A="64" R="173" G="216" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data for Dam Break\XS Interpolation Surface" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="253" G="245" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA" Bold="False" Checked="False" Expanded="False" Type="RASGeometry">
+    <Source Filename=".\BaldEagleDamBrk.g03.gmz" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\River" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="255" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\XS Edge Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\Bank Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="255" G="0" B="0" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\Junction" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="255" G="228" B="196" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\XS" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\Storage Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\2D Flow Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="0" Width="1" />
+    <Brush A="64" R="173" G="216" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data - Reservoir as SA\XS Interpolation Surface" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="255" G="228" B="196" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006" Bold="False" Checked="False" Expanded="False" Type="RASGeometry">
+    <Source Filename=".\BaldEagleDamBrk.g01.gmz" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\River" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="255" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\XS Edge Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\Bank Line" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="255" G="0" B="0" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\Junction" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="135" G="206" B="235" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\XS" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\Storage Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="255" B="255" Width="1" />
+    <Brush A="64" R="0" G="255" B="255" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\2D Flow Area" Bold="False" Checked="True" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="0" B="0" Width="1" />
+    <Brush A="64" R="173" G="216" B="230" />
+  </Layer>
+  <Layer Name="Geometry\Existing GIS Data Nov 2006\XS Interpolation Surface" Bold="False" Checked="False" Expanded="False" Type="RASGeometryPart">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="0" G="128" B="0" Width="1" />
+    <Brush A="64" R="135" G="206" B="235" />
+  </Layer>
+  <Layer Name="Results" Bold="False" Checked="True" Expanded="False" Type="RASResultsGroup">
+    <PointSymbol Type="1" Size="2" pA="255" pR="255" pG="0" pB="0" bA="255" bR="255" bG="0" bB="0" />
+    <Pen A="255" R="189" G="183" B="107" Width="1" />
+    <Brush A="64" R="189" G="183" B="107" />
+  </Layer>
+  <CurrentView>
+    <MaxX>2072433.82032896</MaxX>
+    <MinX>1960928.54011384</MinX>
+    <MaxY>361299.21124815</MaxY>
+    <MinY>284286.87245685</MinY>
+  </CurrentView>
+  <CurrentSettings />
+  <Version>2.0.0.25458</Version>
+</RASMapper>

@@ -1,0 +1,75 @@
+Flow Title=Unsteady Flow Hydrograph
+Program Version=4.00
+Use Restart= 0 
+Initial Flow Loc=Nittany River   ,Weir Reach      ,60.1    ,350
+Initial RRR Elev=Nittany River   ,Weir Reach      ,41.76   ,16.5
+Boundary Location=Nittany River   ,Weir Reach      ,60.1    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 100 
+     350     375     393     412     416     417     412     411     413     419
+     428     439     452     467     484     501     515     522     525     523
+     518     509     497     484     469     453     436     418     399     381
+     362     343     324     304     285     265     245     227     209     195
+     185     181     201     233     269     304     338     369     398     425
+     449     472     492     511     529     546     563     579     592     608
+     622     636     650     663     677     686     702     714     726     738
+     750     762     775     786     797     809     819     830     841     852
+     863     874     883     893     903     913     924     935     947     959
+     973     983     993    1001    1011    1020    1029    1038    1047    1055
+DSS Path=
+Use DSS=False
+CWMS InputPosition= 0 
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Nittany River   ,Weir Reach      ,41.75   ,        ,                ,                
+BEGIN BOUNDARY DESCRIPTION:
+Simple example showing gate adjustments based on water surface at 0600 and 1500 hours.
+END BOUNDARY DESCRIPTION:
+Rule Operation=Type=0,Var Type=1,Comment=Get the Hour of day at the start and end of the time step.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=2,Var Name=Hour Beg,Var Type=1,Sim Group=Time,Sim Function=Hour of Day,Time=1
+Rule Operation=Type=2,Var Name=Hour End,Var Type=1,Sim Group=Time,Sim Function=Hour of Day,Time=2
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Get the WSEL at the dam.
+Rule Operation=Type=2,Var Name=WSEL at dam,Var Type=1,River=Nittany River,Reach=Weir Reach,RS=41.76,Sim Group=Cross Sections,Sim Function=WS Elevation,Time=1
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=If the start of the time step is hour "5" and the end of the time step is hour "6"
+Rule Operation=Type=0,Var Type=1,Comment=then this is the last time step in hour 5 and the next time step
+Rule Operation=Type=0,Var Type=1,Comment=will start at 0600.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Name=WSEL at dam,Var Type=1,Gate=Drop Gates,Branch Type=1,Branch Or=0,BranchCompare1=5,BranchCompare2=5
+Rule Expression=,Variable=Hour Beg
+Rule Expression=,Constant=5
+Rule Expression=,Variable=Hour End
+Rule Expression=,Constant=6
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=Compute the elevation of the drop gates so that
+Rule Operation=Type=0,Var Type=1,Comment=there is 3.5 feet of head on the drop gate.
+Rule Operation=Type=5,Var Name=Gate Elv New,Var Type=1,Gate=Drop Gates,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=WSEL at dam,Constant=-3.5
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=20 feet minus the elevation of the gate is the
+Rule Operation=Type=0,Var Type=1,Comment=new gate opening height.
+Rule Operation=Type=0,Var Type=1,Comment=Set the gate opening to this height.
+Rule Operation=Type=3,Var Name=WSEL at dam,Var Type=1,Gate=Drop Gates,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Coefficient=-1,Variable=Gate Elv New,Constant=20
+Rule Operation=Type=4,Var Type=1,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=0,Var Type=1,Comment=At hour 1500 put 1.5 feet of head on the drop gate.
+Rule Operation=Type=0,Var Type=1
+Rule Operation=Type=4,Var Name=WSEL at dam,Var Type=1,Gate=Drop Gates,Branch Type=1,Branch Or=0,BranchCompare1=5,BranchCompare2=5
+Rule Expression=,Variable=Hour Beg
+Rule Expression=,Constant=14
+Rule Expression=,Variable=Hour End
+Rule Expression=,Constant=15
+Rule Operation=Type=5,Var Name=Gate Elv New,Var Type=1,Existing Var=Gate Elv New,Use Existing=-1,Gate=Drop Gates,MathOperator1=0,MathOperator2=0,MathOperator3=0
+Rule Expression=,Variable=WSEL at dam,Constant=-1.5
+Rule Operation=Type=3,Var Name=WSEL at dam,Var Type=1,Gate=Drop Gates,Sim Group=Inline Structures,Sim Function=Gate.Opening
+Rule Expression=,Coefficient=-1,Variable=Gate Elv New,Constant=20
+Rule Operation=Type=4,Var Name=WSEL at dam,Var Type=1,Gate=Drop Gates,Branch Type=5,Branch Or=0,BranchCompare1=0,BranchCompare2=0
+
+Rule Gate Data=Drop Gates  ,0.2,0.2,15,1,5
+Boundary Location=Nittany River   ,Weir Reach      ,36.85   ,        ,                ,                
+Friction Slope=0.0005

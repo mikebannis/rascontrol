@@ -1,0 +1,42 @@
+Flow Title=Base Hydrographs
+Version=Version 3.0.1  Mar 2001
+Use Restart= 0 
+Initial Flow Loc=Fall River      ,Upper Reach     ,10.4    ,630.86
+Initial Flow Loc=Fall River      ,Lower Reach     ,9.79    ,931.19
+Initial Flow Loc=Butte Cr.       ,Butte Cr.       ,0.4     ,300.33
+Boundary Location=Fall River      ,Upper Reach     ,10.4    ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 73 
+  505.71  522.79  551.11  590.46  640.54  700.96  771.27  850.93  939.34 1035.82
+ 1139.64    1250 1366.07 1486.97 1611.77 1739.53 1869.27    2000 2130.73 2260.47
+ 2388.23 2513.03 2633.93    2750 2860.37 2964.18 3060.66 3149.07 3228.73 3299.04
+ 3359.46 3409.54 3448.89 3477.21 3494.29    3500 3494.29 3477.21 3448.89 3409.54
+ 3359.46 3299.04 3228.73 3149.07 3060.66 2964.18 2860.37    2750 2633.93 2513.03
+ 2388.23 2260.47 2130.73    2000 1869.27 1739.53 1611.77 1486.97 1366.07    1250
+ 1139.64 1035.82  939.34  850.93  771.27  700.96  640.54  590.46  551.11  522.79
+  505.71     500     500
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
+Boundary Location=Fall River      ,Lower Reach     ,9.3     ,        ,                ,                
+Friction Slope=.0004
+Boundary Location=Butte Cr.       ,Butte Cr.       ,0.4     ,        ,                ,                
+Interval=1HOUR
+Flow Hydrograph= 73 
+  302.57  310.24  322.93  340.52  362.83  389.62  420.62  455.52  493.95  535.52
+   579.8  626.35  674.67  724.29  774.68  825.32  875.71  925.33  973.65  1020.2
+ 1064.48 1106.05 1144.48 1179.38 1210.38 1237.17 1259.48 1277.07 1289.77 1297.44
+    1300 1297.44 1289.77 1277.07 1259.48 1237.17 1210.38 1179.38 1144.48 1106.05
+ 1064.48  1020.2  973.65  925.33  875.71  825.32  774.68  724.29  674.67  626.35
+   579.8  535.52  493.95  455.52  420.62  389.62  362.83  340.52  322.93  310.24
+  302.57     300     300     300     300     300     300     300     300     300
+     300     300     300
+DSS Path=
+Use DSS=False
+Use Fixed Start Time=False
+Fixed Start Date/Time=,
+Is Critical Boundary=False
+Critical Boundary Flow=
