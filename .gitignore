@@ -1,5 +1,5 @@
 *.lock
 .idea/
 *.pyc
-.cache
+.cache/
 */__pycache
